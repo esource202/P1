@@ -807,6 +807,243 @@
                 padding: 2rem 1.5rem;
             }
         }
+
+        /* Lamp Pull - "View My Work" */
+        .lamp-pull-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 180px;
+            cursor: grab;
+            touch-action: none;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .lamp-pull-container:active {
+            cursor: grabbing;
+        }
+
+        .lamp-visual {
+            position: relative;
+            width: 100%;
+            height: 150px;
+        }
+
+        /* wire from ceiling */
+        .lamp-wire {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 14px;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* light beam, only visible when lit */
+        .lamp-beam {
+            position: absolute;
+            top: 46px;
+            left: 50%;
+            width: 150px;
+            height: 120px;
+            transform: translateX(-50%);
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+            background: linear-gradient(180deg, rgba(255, 214, 90, 0.4) 0%, rgba(255, 214, 90, 0.08) 55%, rgba(255, 214, 90, 0) 100%);
+            opacity: 0;
+            transition: opacity 0.6s ease;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .lamp-pull-container.lit .lamp-beam {
+            opacity: 1;
+        }
+
+        /* pendant shade - trapezoid shape */
+        .lamp-shade {
+            position: absolute;
+            top: 14px;
+            left: 50%;
+            width: 56px;
+            height: 26px;
+            transform: translateX(-50%);
+            clip-path: polygon(38% 0%, 62% 0%, 100% 100%, 0% 100%);
+            background: linear-gradient(180deg, #3d4470, #1e2340);
+            box-shadow: var(--shadow-sm);
+            transition: background 0.4s ease;
+            z-index: 2;
+        }
+
+        .lamp-pull-container.lit .lamp-shade {
+            background: linear-gradient(180deg, #4d5590, #2a3050);
+        }
+
+        /* glowing opening at the bottom of the shade */
+        .lamp-shade-opening {
+            position: absolute;
+            top: 39px;
+            left: 50%;
+            width: 44px;
+            height: 8px;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            background: #14172c;
+            transition: background 0.4s ease, box-shadow 0.4s ease;
+            z-index: 2;
+        }
+
+        .lamp-pull-container.lit .lamp-shade-opening {
+            background: radial-gradient(circle, #fff6cf, #ffd65a);
+            box-shadow: 0 0 20px 8px rgba(255, 214, 90, 0.75);
+        }
+
+        .lamp-bulb-wrap {
+            position: absolute;
+            top: 36px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .lamp-bulb {
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 30%, #5a6088, #2c3154);
+            box-shadow: 0 0 0 rgba(255, 214, 90, 0);
+            transition: background 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+        }
+
+        .lamp-pull-container.lit .lamp-bulb {
+            background: radial-gradient(circle at 35% 30%, #fff6cf, #ffd65a);
+            box-shadow: 0 0 20px 8px rgba(255, 214, 90, 0.7), 0 0 45px 20px rgba(255, 214, 90, 0.3);
+        }
+
+        .lamp-cord-track {
+            position: absolute;
+            top: 58px;
+            left: 50%;
+            width: 1px;
+            height: 46px;
+        }
+
+        .lamp-cord-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 46px;
+            margin-left: -1px;
+            transform-origin: top center;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.25));
+        }
+
+        .lamp-knob {
+            position: absolute;
+            top: 46px;
+            left: 0;
+            transform: translate(-50%, -50%);
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-violet));
+            box-shadow: 0 2px 10px rgba(0, 102, 255, 0.55);
+        }
+
+        /* the "View My Work" box - hidden until the cord is pulled */
+        .lamp-reveal-btn {
+            position: relative;
+            z-index: 2;
+            margin-top: 10px;
+            padding: 0.75rem 2rem;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-violet));
+            border: none;
+            border-radius: 50px;
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+            color: white;
+            cursor: default;
+            pointer-events: none;
+            opacity: 0;
+            transform: translateY(10px) scale(0.9);
+            box-shadow: 0 8px 25px rgba(0, 102, 255, 0.3);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .lamp-pull-container.lit .lamp-reveal-btn {
+            cursor: pointer;
+            pointer-events: auto;
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .lamp-reveal-btn:hover {
+            transform: translateY(-3px) scale(1);
+            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.45);
+        }
+
+        .lamp-hint {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-top: 2px;
+            transition: opacity 0.4s ease;
+        }
+
+        .lamp-pull-container.lit .lamp-hint {
+            opacity: 0;
+        }
+
+        /* Floating back / home button, shown on non-home pages */
+        .floating-back-btn {
+            position: fixed;
+            top: 85px;
+            left: 20px;
+            z-index: 999;
+            display: none;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.6rem 1.2rem;
+            background: rgba(20, 25, 50, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-light);
+            border-radius: 50px;
+            color: var(--text-white);
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        .floating-back-btn.show {
+            display: flex;
+        }
+
+        .floating-back-btn:hover {
+            background: rgba(0, 102, 255, 0.2);
+            border-color: var(--accent-blue);
+            transform: translateX(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .floating-back-btn {
+                top: 75px;
+                left: 12px;
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -830,6 +1067,9 @@
         </div>
     </nav>
 
+    <!-- Floating Back / Home Button -->
+    <button class="floating-back-btn" id="floatingBackBtn" onclick="navigateTo('home')">← Back</button>
+
     <!-- HOME PAGE -->
     <div id="home" class="page active">
         <div class="hero">
@@ -840,7 +1080,23 @@
                 <p>Turning Ideas Into Powerful Digital Experiences.</p>
                 <p style="font-size: 1.05rem; margin-top: 1rem;">I create modern websites, AI-powered advertisement creatives, brand identities and digital products for businesses and individuals.</p>
                 <div class="hero-buttons">
-                    <button class="btn-primary" onclick="navigateTo('work')">View My Work</button>
+                    <div class="lamp-pull-container" id="lampPullContainer">
+                        <div class="lamp-visual">
+                            <div class="lamp-wire"></div>
+                            <div class="lamp-beam"></div>
+                            <div class="lamp-shade"></div>
+                            <div class="lamp-shade-opening"></div>
+                            <div class="lamp-bulb-wrap">
+                                <div class="lamp-bulb"></div>
+                            </div>
+                            <div class="lamp-cord-track">
+                                <div class="lamp-cord-line" id="cordLine"></div>
+                                <div class="lamp-knob" id="cordKnob"></div>
+                            </div>
+                        </div>
+                        <button type="button" class="lamp-reveal-btn" id="lampRevealBtn" onclick="goToWorkFromLamp()">View My Work</button>
+                        <div class="lamp-hint" id="lampHint">Pull the cord to reveal</div>
+                    </div>
                     <button class="btn-secondary" onclick="navigateTo('work-with-me')">Work With Me</button>
                 </div>
             </div>
@@ -1209,6 +1465,21 @@
 
             // Scroll to top
             window.scrollTo(0, 0);
+
+            // Show/hide floating back button
+            const backBtn = document.getElementById('floatingBackBtn');
+            if (backBtn) {
+                if (pageId === 'home') {
+                    backBtn.classList.remove('show');
+                } else {
+                    backBtn.classList.add('show');
+                }
+            }
+
+            // Reset the lamp every time we return home, so it must be pulled again
+            if (pageId === 'home') {
+                resetLampPull();
+            }
         }
 
         // Mobile Menu Toggle
@@ -1328,9 +1599,146 @@ Message: ${message}`;
             }
         });
 
+        // Lamp Pull - "View My Work"
+        // The "View My Work" box stays hidden and unclickable until the
+        // cord is pulled past the threshold. Pulling toggles the lamp:
+        // once ON, pulling again turns it OFF and hides the box again.
+        // The cord itself moves with real spring physics (drag freely,
+        // release and it settles with a natural bounce), and a synthesized
+        // "click" plays each time the switch toggles.
+        const lampState = {
+            dragging: false,
+            startY: 0,
+            currentOffset: 0,
+            baseHeight: 46,
+            maxPull: 42,
+            threshold: 16,
+            springFrame: null,
+            audioCtx: null
+        };
+
+        function getLampEls() {
+            return {
+                container: document.getElementById('lampPullContainer'),
+                cordLine: document.getElementById('cordLine'),
+                knob: document.getElementById('cordKnob')
+            };
+        }
+
+        // Draw the cord/knob at a given offset with no CSS transition -
+        // used both while dragging and on every spring animation frame.
+        function drawLampCord(offset) {
+            const { cordLine, knob } = getLampEls();
+            if (!cordLine || !knob) return;
+            cordLine.style.transition = 'none';
+            knob.style.transition = 'none';
+            const scale = (lampState.baseHeight + offset) / lampState.baseHeight;
+            cordLine.style.transform = `scaleY(${scale})`;
+            knob.style.transform = `translate(-50%, calc(-50% + ${offset}px))`;
+        }
+
+        // Simple damped harmonic-oscillator spring: animates the cord from
+        // its current offset toward targetOffset with a natural overshoot
+        // and settle, like a real hanging chain being let go.
+        function springLampCord(fromOffset, targetOffset, onSettle) {
+            if (lampState.springFrame) {
+                cancelAnimationFrame(lampState.springFrame);
+                lampState.springFrame = null;
+            }
+            let current = fromOffset;
+            let velocity = 0;
+            const stiffness = 0.22;
+            const damping = 0.72;
+
+            function step() {
+                const force = (targetOffset - current) * stiffness;
+                velocity = (velocity + force) * damping;
+                current += velocity;
+                drawLampCord(current);
+
+                if (Math.abs(velocity) > 0.15 || Math.abs(targetOffset - current) > 0.15) {
+                    lampState.springFrame = requestAnimationFrame(step);
+                } else {
+                    lampState.springFrame = null;
+                    drawLampCord(targetOffset);
+                    if (onSettle) onSettle();
+                }
+            }
+            lampState.springFrame = requestAnimationFrame(step);
+        }
+
+        function lampPointerDown(e) {
+            if (lampState.springFrame) {
+                cancelAnimationFrame(lampState.springFrame);
+                lampState.springFrame = null;
+            }
+            lampState.dragging = true;
+            lampState.startY = e.clientY;
+            lampState.currentOffset = 0;
+        }
+
+        function lampPointerMove(e) {
+            if (!lampState.dragging) return;
+            let delta = e.clientY - lampState.startY;
+            if (delta < 0) delta = 0;
+            if (delta > lampState.maxPull) delta = lampState.maxPull;
+            lampState.currentOffset = delta;
+            drawLampCord(lampState.currentOffset);
+        }
+
+        function lampPointerUp() {
+            if (!lampState.dragging) return;
+            lampState.dragging = false;
+            const { container } = getLampEls();
+            const pulledEnough = lampState.currentOffset > lampState.threshold;
+            const wasLit = container && container.classList.contains('lit');
+
+            if (pulledEnough) {
+                // Toggle the lamp: on -> off, off -> on.
+                const turningOn = !wasLit;
+                if (container) container.classList.toggle('lit');
+            }
+
+            // Cord always springs back down to rest with a natural bounce,
+            // whether or not the pull crossed the toggle threshold.
+            springLampCord(lampState.currentOffset, 0);
+            lampState.currentOffset = 0;
+        }
+
+        function initLampPull() {
+            const { container } = getLampEls();
+            if (!container) return;
+            container.addEventListener('pointerdown', lampPointerDown);
+            window.addEventListener('pointermove', lampPointerMove);
+            window.addEventListener('pointerup', lampPointerUp);
+        }
+
+        // Called every time the user returns to the home page so the
+        // lamp must be pulled again to reveal the option.
+        function resetLampPull() {
+            const { container } = getLampEls();
+            if (lampState.springFrame) {
+                cancelAnimationFrame(lampState.springFrame);
+                lampState.springFrame = null;
+            }
+            if (container) container.classList.remove('lit');
+            drawLampCord(0);
+            lampState.currentOffset = 0;
+            lampState.dragging = false;
+        }
+
+        // Fires only when the lamp is lit (button has pointer-events
+        // disabled until then, so this is also a safety check).
+        function goToWorkFromLamp() {
+            const { container } = getLampEls();
+            if (!container || !container.classList.contains('lit')) return;
+            navigateTo('work');
+        }
+
         // Set initial active page
         window.addEventListener('load', () => {
             navigateTo('home');
+            initLampPull();
         });
     </script>
 </body>
