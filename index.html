@@ -1,492 +1,384 @@
 <!DOCTYPE html>
-<html lang="en" class="lock">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rakib — Graphic Designer, AI Creative & Web Designer</title>
 <meta name="description" content="Explore Rakib's portfolio featuring graphic design, AI-powered advertising creatives, web design and digital solutions.">
-<meta name="theme-color" content="#0a0a0b">
-<meta property="og:title" content="Rakib — Graphic Designer, AI Creative & Web Designer">
-<meta property="og:description" content="Explore Rakib's portfolio featuring graphic design, AI-powered advertising creatives, web design and digital solutions.">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0b'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='34' font-weight='700' fill='%23E5B453' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script>document.documentElement.classList.add('js');</script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
-/* ============ VARIABLES & RESET ============ */
 :root{
-  --bg:#0a0a0b; --bg2:#0e0e11; --panel:#101013;
-  --card:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012));
-  --border:rgba(255,255,255,.09); --border-hi:rgba(229,180,83,.4);
-  --text:#f4f3ef; --muted:#a2a2ab; --soft:#c9c9d0;
-  --accent:#e5b453; --accent-hi:#f2ce86; --accent-deep:#c08a2e;
-  --accent-soft:rgba(229,180,83,.12);
-  --gold-grad:linear-gradient(100deg,#f6dca4 0%,#e5b453 48%,#c08a2e 100%);
-  --green:#3ddc84;
-  --disp:'Space Grotesk',Inter,sans-serif; --body:'Inter',system-ui,-apple-system,sans-serif;
-  --ease:cubic-bezier(.22,.61,.36,1);
+  --bg:#0a0b0d;
+  --bg-2:#0f1013;
+  --card:#131519;
+  --card-2:#17191e;
+  --line:rgba(255,255,255,.08);
+  --line-strong:rgba(255,255,255,.14);
+  --text:#f4f4f2;
+  --muted:#9aa0aa;
+  --muted-2:#6d727c;
+  --accent:#ecb24a;
+  --accent-soft:#f6ce7c;
+  --accent-dim:rgba(236,178,74,.14);
+  --accent-glow:rgba(236,178,74,.28);
+  --radius:18px;
+  --nav-h:74px;
+  --font-display:'Syne',sans-serif;
+  --font-body:'Manrope',sans-serif;
+  --font-mono:'JetBrains Mono',monospace;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-html.js.lock, html.js.no-scroll{overflow:hidden}
-body{font-family:var(--body);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-::selection{background:rgba(229,180,83,.28);color:#fff}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 16px)}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.65;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--accent);color:#0a0b0d}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:#26282e;border-radius:8px;border:2px solid var(--bg)}
+::-webkit-scrollbar-thumb:hover{background:var(--accent)}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
-ul{list-style:none}
-button{font:inherit;cursor:pointer;background:none;border:none;color:inherit}
-::-webkit-scrollbar{width:10px}
-::-webkit-scrollbar-track{background:#0a0a0b}
-::-webkit-scrollbar-thumb{background:#2b2b31;border-radius:99px;border:2px solid #0a0a0b}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
-.skip-link{position:fixed;top:-60px;left:16px;z-index:400;background:var(--accent);color:#171310;padding:10px 18px;border-radius:10px;font-weight:600;font-size:14px;transition:top .3s}
-.skip-link:focus{top:14px}
+button{font-family:inherit;cursor:pointer}
 
-/* ============ UTILITIES ============ */
-.container{width:min(1150px,92%);margin-inline:auto}
-.section{padding:clamp(70px,9vw,118px) 0;position:relative;scroll-margin-top:84px}
-.sec-head{max-width:660px;margin-bottom:clamp(38px,5.5vw,60px)}
-.sec-head.center{margin-inline:auto;text-align:center}
-.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
-.eyebrow::before{content:"";width:26px;height:1px;background:var(--accent)}
-.sec-head.center .eyebrow::after{content:"";width:26px;height:1px;background:var(--accent)}
-h2{font-family:var(--disp);font-size:clamp(28px,4.4vw,44px);font-weight:600;letter-spacing:-.02em;line-height:1.12;margin:16px 0 14px}
-.sec-lead{color:var(--muted);font-size:clamp(14.5px,1.6vw,16.5px);line-height:1.75}
-.ic{width:20px;height:20px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.ic-sm{width:16px;height:16px}.ic-lg{width:26px;height:26px}
+/* ambient background */
+.bg-noise{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+.bg-grid{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse 90% 70% at 50% 0%,#000 30%,transparent 80%);
+  -webkit-mask-image:radial-gradient(ellipse 90% 70% at 50% 0%,#000 30%,transparent 80%);}
 
-/* Buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:999px;font-weight:600;font-size:15px;letter-spacing:.01em;transition:transform .3s var(--ease),box-shadow .3s,background .3s,border-color .3s;white-space:nowrap;border:1px solid transparent}
-.btn .ic{transition:transform .3s var(--ease)}
-.btn:hover .ic{transform:translateX(4px)}
-.btn-primary{background:linear-gradient(180deg,#eec065,#dca63e);color:#181206;box-shadow:0 12px 32px -12px rgba(229,180,83,.55)}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 44px -12px rgba(229,180,83,.65)}
-.btn-ghost{border-color:rgba(255,255,255,.16);color:var(--text);background:rgba(255,255,255,.02);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
-.btn-ghost:hover{transform:translateY(-3px);border-color:var(--border-hi);background:rgba(229,180,83,.06)}
-.btn-wa{background:linear-gradient(180deg,#27c764,#17a24a);color:#fff;box-shadow:0 12px 30px -12px rgba(32,180,90,.55)}
-.btn-wa:hover{transform:translateY(-3px);box-shadow:0 18px 40px -12px rgba(32,180,90,.65)}
-.btn-sm{padding:12px 22px;font-size:14px}
-.tag{display:inline-flex;align-items:center;padding:6px 13px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:12px;letter-spacing:.03em}
+.container{width:min(1180px,92%);margin:0 auto}
+section{position:relative;padding:110px 0;z-index:2}
 
-/* Reveal on scroll */
-html.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease var(--d,0s),transform .75s var(--ease) var(--d,0s)}
-html.js .reveal.visible{opacity:1;transform:none}
+/* ============ scroll progress ============ */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-soft));z-index:200;box-shadow:0 0 12px var(--accent-glow)}
 
-/* ============ LOADER ============ */
-.loader{position:fixed;inset:0;z-index:250;background:var(--bg);display:grid;place-items:center;transition:opacity .6s ease,visibility .6s}
-.loader.done{opacity:0;visibility:hidden}
-.loader-inner{display:grid;place-items:center;gap:20px;animation:lfade .8s ease both}
-.loader-ring{width:94px;height:94px;border-radius:50%;border:1px solid rgba(255,255,255,.1);display:grid;place-items:center;position:relative}
-.loader-ring::before{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid transparent;border-top-color:var(--accent);animation:spin 1s linear infinite}
-.loader-mono{font-family:var(--disp);font-size:36px;font-weight:700;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.loader-name{font-size:11px;font-weight:600;letter-spacing:.55em;color:var(--muted);text-indent:.55em}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes lfade{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+/* ============ nav ============ */
+.nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:100;display:flex;align-items:center;transition:background .35s ease,border-color .35s ease,backdrop-filter .35s ease;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(10,11,13,.78);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom-color:var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-family:var(--font-display);font-weight:800;font-size:1.45rem;letter-spacing:-.02em;display:flex;align-items:center;gap:2px}
+.logo .dot{color:var(--accent);font-size:1.8rem;line-height:0;transform:translateY(4px)}
+.logo .tag{font-family:var(--font-mono);font-size:.6rem;color:var(--muted);letter-spacing:.22em;text-transform:uppercase;margin-left:10px;padding:3px 8px;border:1px solid var(--line);border-radius:99px}
+.nav-links{display:flex;align-items:center;gap:6px;list-style:none}
+.nav-links a{font-size:.86rem;font-weight:600;color:var(--muted);padding:9px 14px;border-radius:10px;transition:color .25s,background .25s;position:relative}
+.nav-links a:hover{color:var(--text)}
+.nav-links a.active{color:var(--accent)}
+.nav-links a.active::after{content:"";position:absolute;left:14px;right:14px;bottom:4px;height:2px;background:var(--accent);border-radius:2px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.9rem;border-radius:12px;padding:13px 24px;border:1px solid transparent;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .3s,background .3s,border-color .3s,color .3s;will-change:transform}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--accent);color:#131007;box-shadow:0 6px 24px -8px var(--accent-glow)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 34px -8px var(--accent-glow);background:var(--accent-soft)}
+.btn-ghost{border-color:var(--line-strong);color:var(--text);background:rgba(255,255,255,.02)}
+.btn-ghost:hover{transform:translateY(-3px);border-color:var(--accent);color:var(--accent);background:var(--accent-dim)}
+.btn-sm{padding:10px 18px;font-size:.82rem}
+.nav-cta{margin-left:8px}
+.hamburger{display:none;width:46px;height:46px;border:1px solid var(--line-strong);border-radius:12px;background:transparent;position:relative;z-index:130}
+.hamburger span{position:absolute;left:12px;right:12px;height:2px;background:var(--text);border-radius:2px;transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .25s,top .35s}
+.hamburger span:nth-child(1){top:16px}
+.hamburger span:nth-child(2){top:22px}
+.hamburger span:nth-child(3){top:28px}
+.hamburger.open span:nth-child(1){top:22px;transform:rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){top:22px;transform:rotate(-45deg)}
 
-/* ============ NAVIGATION ============ */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .35s,border-color .35s,-webkit-backdrop-filter .35s,backdrop-filter .35s;border-bottom:1px solid transparent}
-.nav.scrolled{background:rgba(10,10,11,.78);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border-bottom-color:var(--border)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
-.logo{font-family:var(--disp);font-size:21px;font-weight:700;letter-spacing:-.02em;display:inline-flex;align-items:center;gap:2px}
-.logo b{color:var(--accent);font-weight:700}
-.nav-links{display:flex;gap:clamp(16px,2.4vw,30px)}
-.nav-links a{font-size:14.5px;color:var(--muted);font-weight:500;position:relative;padding:6px 0;transition:color .25s}
-.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--accent);transition:width .3s var(--ease)}
-.nav-links a:hover,.nav-links a.active{color:var(--text)}
-.nav-links a:hover::after,.nav-links a.active::after{width:100%}
-.nav-right{display:flex;align-items:center;gap:14px}
-.burger{display:none;width:44px;height:44px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.03);flex-direction:column;align-items:center;justify-content:center;gap:5px;z-index:102;transition:border-color .3s}
-.burger span{display:block;width:18px;height:1.8px;background:var(--text);border-radius:2px;transition:transform .35s var(--ease),opacity .25s}
-.burger.active span:nth-child(1){transform:translateY(6.8px) rotate(45deg)}
-.burger.active span:nth-child(2){opacity:0}
-.burger.active span:nth-child(3){transform:translateY(-6.8px) rotate(-45deg)}
-.mobile-menu{position:fixed;inset:0;z-index:99;background:rgba(9,9,10,.94);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);display:flex;flex-direction:column;justify-content:center;padding:90px 9% 44px;opacity:0;visibility:hidden;transition:opacity .45s ease,visibility .45s}
-.mobile-menu.open{opacity:1;visibility:visible}
-.mm-link{display:flex;align-items:baseline;gap:14px;font-family:var(--disp);font-size:clamp(25px,6.5vw,33px);font-weight:600;letter-spacing:-.01em;color:var(--text);padding:11px 0;border-bottom:1px solid rgba(255,255,255,.06);opacity:0;transform:translateX(28px);transition:opacity .5s var(--d),transform .5s var(--d),color .25s}
-.mm-link em{font:600 12px var(--body);font-style:normal;color:var(--accent);letter-spacing:.12em}
-.mm-link:hover{color:var(--accent)}
-.mobile-menu.open .mm-link{opacity:1;transform:none}
-.mm-cta{margin-top:28px;opacity:0;transform:translateY(16px);transition:opacity .5s .5s,transform .5s .5s}
-.mobile-menu.open .mm-cta{opacity:1;transform:none}
+/* mobile menu */
+.mobile-menu{position:fixed;inset:0;z-index:120;background:rgba(10,11,13,.97);backdrop-filter:blur(20px);display:flex;flex-direction:column;justify-content:center;padding:100px 8% 40px;transform:translateX(100%);transition:transform .5s cubic-bezier(.7,0,.2,1);visibility:hidden}
+.mobile-menu.open{transform:translateX(0);visibility:visible}
+.mobile-menu a{font-family:var(--font-display);font-weight:700;font-size:clamp(1.7rem,7vw,2.4rem);padding:10px 0;color:var(--text);display:flex;align-items:baseline;gap:14px;opacity:0;transform:translateY(20px);transition:opacity .5s,transform .5s,color .3s}
+.mobile-menu.open a{opacity:1;transform:none}
+.mobile-menu a i{font-family:var(--font-mono);font-size:.75rem;color:var(--accent);font-style:normal}
+.mobile-menu a:hover{color:var(--accent)}
+.mobile-menu .mm-foot{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;opacity:0;transition:opacity .6s .3s}
+.mobile-menu.open .mm-foot{opacity:1}
+body.menu-open{overflow:hidden}
 
-/* ============ HERO ============ */
-.hero{min-height:100svh;display:flex;align-items:center;padding:130px 0 90px;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.032) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.032) 1px,transparent 1px);background-size:58px 58px;-webkit-mask-image:radial-gradient(ellipse 85% 62% at 50% 0%,#000 35%,transparent 78%);mask-image:radial-gradient(ellipse 85% 62% at 50% 0%,#000 35%,transparent 78%);pointer-events:none}
-.orb{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none}
-.orb-1{width:500px;height:500px;top:-160px;right:-100px;background:radial-gradient(circle,rgba(229,180,83,.15),transparent 70%)}
-.orb-2{width:440px;height:440px;bottom:-180px;left:-140px;background:radial-gradient(circle,rgba(229,180,83,.07),transparent 70%)}
-.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(40px,6vw,84px);align-items:center;position:relative;z-index:2}
-html.js .h-reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease var(--d,0s),transform .9s var(--ease) var(--d,0s)}
-html.js body.loaded .h-reveal, html.js.loaded .h-reveal{opacity:1;transform:none}
-.status{display:inline-flex;align-items:center;gap:10px;padding:9px 18px;border:1px solid var(--border);border-radius:999px;background:rgba(255,255,255,.04);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font-size:13.5px;color:var(--soft);font-weight:500}
-.status i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(61,220,132,.5);animation:pulse 2.2s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(61,220,132,.45)}70%{box-shadow:0 0 0 9px rgba(61,220,132,0)}100%{box-shadow:0 0 0 0 rgba(61,220,132,0)}}
-.hero h1{font-family:var(--disp);font-size:clamp(44px,7.4vw,82px);font-weight:700;line-height:1.03;letter-spacing:-.03em;margin:26px 0 18px}
-.hero h1 .grad{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero-roles{font-family:var(--disp);font-weight:500;font-size:clamp(14.5px,2vw,18.5px);color:var(--soft);display:flex;flex-wrap:wrap;align-items:center;row-gap:6px}
-.dotsep{color:var(--accent);margin:0 10px;font-size:.85em}
-.hero-p{color:var(--muted);max-width:530px;line-height:1.8;font-size:clamp(15px,1.7vw,16.5px);margin:20px 0 34px}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-.hero-loc{display:flex;align-items:center;gap:8px;margin-top:30px;color:var(--muted);font-size:13.5px}
-.hero-loc .ic{width:15px;height:15px;color:var(--accent)}
-.scroll-cue{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:9px;color:var(--muted);font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;z-index:2}
-.scroll-cue .line{width:1px;height:46px;background:rgba(255,255,255,.1);overflow:hidden;position:relative}
-.scroll-cue .line::after{content:"";position:absolute;left:0;width:100%;height:42%;background:var(--accent);animation:drop 2.1s var(--ease) infinite}
-@keyframes drop{0%{top:-45%}100%{top:110%}}
+/* ============ hero ============ */
+.hero{min-height:100svh;display:flex;align-items:center;padding:calc(var(--nav-h) + 50px) 0 80px;overflow:hidden}
+.hero-glow{position:absolute;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,var(--accent-glow) 0%,transparent 62%);top:-160px;right:-120px;filter:blur(30px);opacity:.55;pointer-events:none;transition:transform .4s ease-out}
+.hero-glow-2{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.06) 0%,transparent 60%);bottom:-200px;left:-160px;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.eyebrow{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--accent)}
+.status-chip{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:600;color:var(--accent-soft);background:var(--accent-dim);border:1px solid rgba(236,178,74,.3);padding:8px 16px;border-radius:99px;margin-bottom:26px}
+.pulse{width:8px;height:8px;border-radius:50%;background:#5ad07a;position:relative;flex-shrink:0}
+.pulse::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid #5ad07a;animation:pulse 1.8s ease-out infinite}
+@keyframes pulse{0%{transform:scale(.6);opacity:1}100%{transform:scale(1.8);opacity:0}}
+.hero h1{font-family:var(--font-display);font-weight:800;font-size:clamp(2.9rem,7.2vw,5.4rem);line-height:1.02;letter-spacing:-.03em;margin-bottom:22px}
+.hero h1 .name{display:block;position:relative}
+.hero h1 .name em{font-style:normal;color:var(--accent);position:relative}
+.hero h1 .name em::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:10px;background:var(--accent-dim);z-index:-1;border-radius:3px}
+.hero-roles{font-family:var(--font-mono);font-size:clamp(.78rem,1.6vw,.95rem);color:var(--accent-soft);letter-spacing:.06em;margin-bottom:18px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.hero-roles .sep{color:var(--muted-2)}
+.hero-sub{color:var(--muted);font-size:1.06rem;max-width:520px;margin-bottom:34px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:48px}
+.hero-stats{display:flex;gap:0;border-top:1px solid var(--line);padding-top:26px;max-width:520px}
+.stat{flex:1;padding-right:20px}
+.stat + .stat{border-left:1px solid var(--line);padding-left:24px}
+.stat b{font-family:var(--font-display);font-size:1.7rem;font-weight:800;color:var(--text);display:block;line-height:1}
+.stat b span{color:var(--accent)}
+.stat small{font-size:.72rem;color:var(--muted-2);text-transform:uppercase;letter-spacing:.12em;font-weight:600}
 
-/* Photo */
-.photo-wrap{position:relative;width:min(380px,86%);margin-inline:auto}
-.photo-glow{position:absolute;inset:-44px;background:radial-gradient(circle at 32% 22%,rgba(229,180,83,.2),transparent 62%);filter:blur(34px);animation:float 9s ease-in-out infinite alternate;pointer-events:none}
-@keyframes float{from{transform:translateY(0)}to{transform:translateY(-16px)}}
-.photo-frame{position:relative;border-radius:30px}
-.photo-frame::before{content:"";position:absolute;inset:0;border-radius:30px;padding:1px;background:linear-gradient(140deg,rgba(229,180,83,.75),rgba(255,255,255,.08) 38%,rgba(255,255,255,.02) 62%,rgba(229,180,83,.45));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
-.photo{aspect-ratio:4/5;border-radius:30px;overflow:hidden;background:linear-gradient(160deg,#1b1b20 0%,#0d0d10 60%);display:grid;place-items:center;position:relative}
-.photo::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 85%,rgba(229,180,83,.1),transparent 55%)}
-.photo img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1}
-.photo-inner{display:grid;place-items:center;gap:10px;text-align:center;position:relative;z-index:1}
-.photo-mono{font-family:var(--disp);font-size:clamp(84px,10vw,120px);font-weight:700;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
-.photo-cap{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);text-indent:.32em}
-.badge-float{position:absolute;z-index:3}
-.badge-float .bf-in{display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:16px;border:1px solid var(--border);background:rgba(17,17,20,.72);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 20px 44px -18px rgba(0,0,0,.85);animation:float 7s ease-in-out infinite alternate}
-.bf-1{top:-22px;left:-30px}
-.bf-2{bottom:34px;right:-32px}.bf-2 .bf-in{animation-delay:1.4s;animation-duration:8s}
-.bf-ico{width:38px;height:38px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;flex-shrink:0}
-.bf-t{font-size:13px;font-weight:600;line-height:1.3}
-.bf-s{font-size:11.5px;color:var(--muted)}
+/* portrait */
+.hero-visual{position:relative;display:flex;justify-content:center}
+.portrait-wrap{position:relative;width:min(400px,86%);aspect-ratio:1/1.08}
+.portrait-frame{position:absolute;inset:0;border-radius:24px;overflow:hidden;border:1px solid var(--line-strong);background:var(--card);box-shadow:0 40px 80px -30px rgba(0,0,0,.8)}
+.portrait-frame::before{content:"";position:absolute;inset:0;background:linear-gradient(200deg,transparent 55%,rgba(10,11,13,.55));z-index:2;pointer-events:none}
+.portrait-frame img{width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:grayscale(1) contrast(1.05);transition:transform 1.2s cubic-bezier(.2,.7,.2,1),filter .8s}
+.portrait-wrap:hover .portrait-frame img{transform:scale(1.05);filter:grayscale(.35) contrast(1.05)}
+.corner{position:absolute;width:26px;height:26px;border:2px solid var(--accent);z-index:3}
+.corner.tl{top:-10px;left:-10px;border-right:0;border-bottom:0;border-radius:6px 0 0 0}
+.corner.tr{top:-10px;right:-10px;border-left:0;border-bottom:0;border-radius:0 6px 0 0}
+.corner.bl{bottom:-10px;left:-10px;border-right:0;border-top:0;border-radius:0 0 0 6px}
+.corner.br{bottom:-10px;right:-10px;border-left:0;border-top:0;border-radius:0 0 6px 0}
+.float-chip{position:absolute;z-index:4;display:flex;align-items:center;gap:9px;background:rgba(19,21,25,.85);backdrop-filter:blur(12px);border:1px solid var(--line-strong);border-radius:12px;padding:10px 15px;font-size:.78rem;font-weight:700;box-shadow:0 14px 30px -12px rgba(0,0,0,.7);animation:float 6s ease-in-out infinite}
+.float-chip i{color:var(--accent)}
+.fc-1{top:8%;left:-14%}
+.fc-2{bottom:22%;right:-16%;animation-delay:1.4s}
+.fc-3{bottom:-4%;left:6%;animation-delay:2.6s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hero-vertical{position:absolute;right:-46px;top:50%;transform:translateY(-50%) rotate(90deg);font-family:var(--font-mono);font-size:.68rem;letter-spacing:.5em;color:var(--muted-2);text-transform:uppercase;white-space:nowrap}
 
-/* ============ ABOUT ============ */
-.about-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(40px,6vw,76px);align-items:start}
-.about-copy p{color:var(--muted);font-size:15.5px;line-height:1.8;margin-bottom:18px}
-.about-copy p strong{color:var(--soft);font-weight:600}
-.about-sign{font-family:var(--disp);font-size:19px;font-weight:600;color:var(--text);margin-top:6px}
-.about-sign span{color:var(--accent);font-size:14px;font-weight:500;margin-left:8px}
-.facts{margin-top:30px;border:1px solid var(--border);border-radius:18px;overflow:hidden}
-.fact{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:13px 20px;border-bottom:1px solid var(--border);font-size:14px}
-.fact:last-child{border-bottom:none}
-.fact .k{color:var(--muted);font-size:12px;letter-spacing:.1em;text-transform:uppercase;flex-shrink:0}
-.fact .v{font-weight:500;color:var(--soft);text-align:right}
-.fact .v a:hover{color:var(--accent)}
-.fact .v.accent{color:var(--accent)}
-.journey{border:1px solid var(--border);border-radius:24px;background:var(--card);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);padding:clamp(24px,3.4vw,34px);position:sticky;top:100px}
-.journey h3{font-family:var(--disp);font-size:19px;font-weight:600;margin-bottom:24px;display:flex;align-items:center;gap:10px}
-.journey h3 .ic{color:var(--accent)}
-.tl{position:relative;padding-left:2px}
-.tl::before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--accent),rgba(255,255,255,.05))}
-.tl-item{position:relative;padding:0 0 24px 32px}
-.tl-item:last-child{padding-bottom:4px}
-.tl-item::before{content:"";position:absolute;left:2px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
-.tl-item:first-child::before{background:var(--accent);box-shadow:0 0 0 5px rgba(229,180,83,.15)}
-.tl-tag{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-.tl-title{font-family:var(--disp);font-size:16.5px;font-weight:600;margin:4px 0 3px}
-.tl-sub{font-size:13.5px;color:var(--muted);line-height:1.6}
-.tl-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
-.tl-chip{font-size:11.5px;font-weight:500;padding:5px 11px;border-radius:99px;border:1px solid var(--border);color:var(--soft);background:rgba(255,255,255,.02)}
+/* ============ marquee ============ */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;overflow:hidden;background:var(--bg-2);position:relative;z-index:2}
+.marquee-track{display:flex;gap:56px;width:max-content;animation:scroll 32s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--muted);letter-spacing:.04em;display:flex;align-items:center;gap:56px;white-space:nowrap}
+.marquee-track span i{color:var(--accent);font-size:.6rem}
+@keyframes scroll{to{transform:translateX(-50%)}}
 
-/* ============ SKILLS ============ */
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:18px}
-.skill-card{position:relative;overflow:hidden;border:1px solid var(--border);border-radius:20px;background:var(--card);padding:26px;transition:transform .35s var(--ease),border-color .35s,box-shadow .35s,background .35s}
-.skill-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
-.skill-card:hover{transform:translateY(-6px);border-color:var(--border-hi);box-shadow:0 24px 48px -24px rgba(0,0,0,.9)}
-.skill-card:hover::before{transform:scaleX(1)}
-.skill-ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);margin-bottom:18px;transition:transform .35s var(--ease)}
-.skill-card:hover .skill-ico{transform:rotate(-6deg) scale(1.06)}
-.skill-card h3{font-family:var(--disp);font-size:17px;font-weight:600;margin-bottom:8px}
-.skill-card p{font-size:13.8px;color:var(--muted);line-height:1.65}
-.add-skills{margin-top:44px;padding-top:36px;border-top:1px solid var(--border);text-align:center}
-.add-label{font-size:11.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
-.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-.chip{display:inline-flex;align-items:center;gap:9px;padding:10px 19px;border-radius:999px;border:1px solid var(--border);font-size:13.5px;font-weight:500;color:var(--soft);background:rgba(255,255,255,.02);transition:transform .3s var(--ease),border-color .3s,color .3s}
-.chip::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);opacity:.75}
-.chip:hover{transform:translateY(-3px);border-color:var(--border-hi);color:var(--text)}
+/* ============ section headers ============ */
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:60px;flex-wrap:wrap}
+.sec-title{font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,4.6vw,3.1rem);letter-spacing:-.02em;line-height:1.08;margin-top:14px;max-width:560px}
+.sec-title .thin{color:var(--muted-2);font-weight:600}
+.sec-index{font-family:var(--font-mono);font-size:.72rem;color:var(--muted-2);letter-spacing:.2em}
 
-/* ============ SERVICES ============ */
-#services{background:linear-gradient(180deg,transparent,rgba(255,255,255,.012) 20%,rgba(255,255,255,.012) 80%,transparent)}
-.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.service-card{position:relative;overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--border);border-radius:24px;background:var(--card);padding:clamp(26px,3vw,34px);transition:transform .4s var(--ease),border-color .4s,box-shadow .4s}
-.service-card:hover{transform:translateY(-7px);border-color:var(--border-hi);box-shadow:0 30px 60px -28px rgba(0,0,0,.95),0 0 40px -20px rgba(229,180,83,.25)}
-.s-num{position:absolute;top:16px;right:22px;font-family:var(--disp);font-size:62px;font-weight:700;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.09);transition:.4s;user-select:none}
-.service-card:hover .s-num{-webkit-text-stroke:1px rgba(229,180,83,.5);transform:translateY(-3px)}
-.s-ico{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);margin-bottom:20px}
-.service-card h3{font-family:var(--disp);font-size:clamp(18px,2vw,21px);font-weight:600;letter-spacing:-.01em;margin-bottom:10px;padding-right:70px}
-.service-card>p{color:var(--muted);font-size:14.5px;line-height:1.7;margin-bottom:24px}
-.s-foot{margin-top:auto;padding-top:20px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
-.s-lbl{display:block;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
-.s-val{font-family:var(--disp);font-size:18px;font-weight:700}
-.s-link{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-weight:600;font-size:14px;padding:10px 18px;border-radius:999px;border:1px solid rgba(229,180,83,.3);transition:.3s}
-.s-link .ic{width:15px;height:15px;transition:transform .3s var(--ease)}
-.s-link:hover{background:var(--accent);color:#181206;transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(229,180,83,.6)}
-.services-note{margin-top:26px;text-align:center;color:var(--muted);font-size:13.5px}
+/* ============ about ============ */
+#about{background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%)}
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}
+.about-card{position:sticky;top:calc(var(--nav-h) + 30px);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--card)}
+.about-card .ac-img{aspect-ratio:4/3.4;overflow:hidden;border-bottom:1px solid var(--line)}
+.about-card .ac-img img{width:100%;height:100%;object-fit:cover;object-position:center 18%;filter:grayscale(1);transition:filter .7s,transform 1s}
+.about-card:hover .ac-img img{filter:grayscale(.3);transform:scale(1.04)}
+.ac-body{padding:24px}
+.ac-body h3{font-family:var(--font-display);font-size:1.35rem;font-weight:800}
+.ac-body p{color:var(--muted);font-size:.88rem;margin-top:4px}
+.ac-body .sig{margin-top:16px;font-family:var(--font-display);font-style:italic;font-weight:700;font-size:1.6rem;color:var(--accent);opacity:.85}
+.about-text p{color:var(--muted);margin-bottom:18px;font-size:1.02rem}
+.about-text p strong{color:var(--text)}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:30px 0}
+.fact{background:var(--card);padding:16px 20px}
+.fact small{font-family:var(--font-mono);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-2);display:block;margin-bottom:4px}
+.fact b{font-size:.92rem;font-weight:700;color:var(--text)}
+.about-do{display:flex;flex-wrap:wrap;gap:10px}
+.about-do span{font-size:.8rem;font-weight:600;color:var(--muted);border:1px solid var(--line-strong);padding:8px 16px;border-radius:99px;transition:border-color .3s,color .3s,background .3s}
+.about-do span:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim)}
 
-/* ============ PROJECTS ============ */
-.project{display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(34px,5vw,60px);align-items:center;padding:clamp(26px,4vw,44px);border:1px solid var(--border);border-radius:28px;background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.007));position:relative;overflow:hidden;margin-bottom:36px;transition:border-color .4s}
-.project:last-child{margin-bottom:0}
-.project:hover{border-color:rgba(229,180,83,.28)}
-.project::before{content:"";position:absolute;top:-120px;left:-120px;width:380px;height:380px;background:radial-gradient(circle,rgba(229,180,83,.08),transparent 65%);pointer-events:none}
-.project.rev .p-visual{order:2}
-.p-visual{position:relative;transition:transform .5s var(--ease)}
-.project:hover .p-visual{transform:translateY(-6px)}
-.p-tags{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 14px}
-.p-num{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
-.project h3{font-family:var(--disp);font-size:clamp(23px,3vw,31px);font-weight:600;letter-spacing:-.015em;margin:6px 0 12px}
-.p-desc{color:var(--muted);font-size:15px;line-height:1.75}
-.p-feats{display:grid;grid-template-columns:1fr 1fr;gap:11px 20px;margin:24px 0 28px}
-.p-feats li{display:flex;align-items:center;gap:10px;font-size:13.6px;color:var(--soft)}
-.p-feats .ic{width:15px;height:15px;color:var(--accent);flex-shrink:0}
-.p-cta{display:flex;gap:12px;flex-wrap:wrap}
+/* ============ skills ============ */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.skill-card{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(160deg,var(--card) 0%,var(--bg-2) 100%);padding:28px;position:relative;overflow:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s,box-shadow .35s}
+.skill-card::after{content:attr(data-num);position:absolute;top:14px;right:20px;font-family:var(--font-mono);font-size:.7rem;color:var(--muted-2)}
+.skill-card:hover{transform:translateY(-6px);border-color:rgba(236,178,74,.4);box-shadow:0 24px 50px -24px rgba(0,0,0,.8),0 0 0 1px rgba(236,178,74,.12)}
+.skill-icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--accent-dim);color:var(--accent);font-size:1.25rem;margin-bottom:20px;border:1px solid rgba(236,178,74,.25);transition:transform .4s}
+.skill-card:hover .skill-icon{transform:rotate(-8deg) scale(1.08)}
+.skill-card h3{font-family:var(--font-display);font-size:1.15rem;font-weight:700;margin-bottom:6px}
+.skill-card p{font-size:.85rem;color:var(--muted);margin-bottom:20px;min-height:42px}
+.bar{height:5px;background:rgba(255,255,255,.07);border-radius:99px;overflow:hidden}
+.bar-fill{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-soft));border-radius:99px;transition:width 1.4s cubic-bezier(.2,.7,.2,1);box-shadow:0 0 10px var(--accent-glow)}
+.bar-label{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:.68rem;color:var(--muted-2);margin-top:8px}
 
-/* Mockups */
-.laptop{position:relative;z-index:1}
-.l-screen{border:1px solid rgba(255,255,255,.13);border-radius:16px 16px 0 0;overflow:hidden;background:#0c0c0f;box-shadow:0 34px 80px -30px rgba(0,0,0,.95)}
-.l-bar{display:flex;align-items:center;gap:7px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03)}
-.l-dot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.16)}
-.l-url{flex:1;margin:0 8px;min-width:0;font-size:10.5px;color:#8b8b93;background:rgba(255,255,255,.05);border-radius:7px;padding:4px 12px;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.l-view{aspect-ratio:16/10;position:relative;overflow:hidden}
-.screen{position:absolute;inset:0;overflow:hidden;transition:transform .65s var(--ease)}
-.project:hover .screen{transform:scale(1.045)}
-.l-base{height:13px;background:linear-gradient(180deg,#2a2a30,#151517);border:1px solid rgba(255,255,255,.08);border-top:none;border-radius:0 0 14px 14px;position:relative}
-.l-base::after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:92px;height:4px;background:rgba(255,255,255,.09);border-radius:0 0 6px 6px}
-.phone{position:absolute;right:-14px;bottom:-22px;width:clamp(94px,24%,118px);border:1px solid rgba(255,255,255,.15);border-radius:22px;background:#0c0c0f;padding:7px 7px 9px;box-shadow:0 26px 54px -18px rgba(0,0,0,.95);z-index:3;transition:transform .5s var(--ease)}
-.project:hover .phone{transform:translateY(-7px)}
-.phone-notch{width:32px;height:4px;background:rgba(255,255,255,.2);border-radius:99px;margin:2px auto 7px}
-.phone-view{aspect-ratio:9/16.5;border-radius:14px;overflow:hidden;position:relative;background:#0e0e11}
-/* screen internals */
-.b{display:block;height:8px;border-radius:4px;background:rgba(255,255,255,.14)}
-.w-24{width:24%}.w-30{width:30%}.w-35{width:35%}.w-40{width:40%}.w-45{width:45%}.w-50{width:50%}.w-60{width:60%}.w-70{width:70%}.w-80{width:80%}
-.b-gold{background:linear-gradient(90deg,#f2ce86,#d9a441)}
-.pill{display:inline-flex;align-items:center;justify-content:center;border-radius:99px;font-size:7px;font-weight:700;letter-spacing:.06em;padding:4px 9px;white-space:nowrap}
-.pill-a{background:linear-gradient(135deg,#efbf62,#dba33c);color:#191307}
-.pill-g{background:#22b45a;color:#fff}
-.pill-o{border:1px solid rgba(255,255,255,.28);color:#d8d8de}
-.sc-nav{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 14px}
-.sc-nav-links{display:flex;gap:8px;align-items:center;flex:1;justify-content:center}
-.sc-logo{display:flex;align-items:center;gap:6px}
-.sc-logo-dot{width:10px;height:10px;border-radius:4px;background:linear-gradient(135deg,#efbf62,#dba33c)}
-.sc-light{background:#faf7f1}
-.sc-light .b{background:rgba(32,27,18,.15)}
-.sc-light .pill-o{border-color:rgba(32,27,18,.28);color:#4a4335}
-.sc-hero{padding:16px 14px 12px;display:grid;gap:7px;justify-items:start}
-.sc-cats{display:flex;gap:6px;padding:0 14px 10px;flex-wrap:wrap}
-.sc-cat{font-size:7.5px;font-weight:600;padding:4px 10px;border-radius:99px;background:rgba(32,27,18,.055);color:#5b5340;border:1px solid rgba(32,27,18,.09)}
-.sc-cat.active{background:linear-gradient(135deg,#efbf62,#dba33c);color:#191307;border-color:transparent}
-.sc-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 14px}
-.sc-card{background:#fff;border:1px solid rgba(32,27,18,.08);border-radius:10px;padding:7px;display:grid;gap:6px}
-.food-img{height:36px;border-radius:7px;background:linear-gradient(135deg,#f6dca8,#e9bc72);position:relative;overflow:hidden}
-.food-img::after{content:"";position:absolute;inset:16% 20%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff6e4,#f0d294 72%)}
-.sc-row{display:flex;align-items:center;justify-content:space-between;gap:6px}
-.sc-add{font-size:6.5px;font-weight:700;letter-spacing:.08em;color:#8a6a1f;background:rgba(219,163,60,.2);padding:3px 7px;border-radius:6px}
-.sc-foot{display:flex;align-items:center;justify-content:space-between;margin-top:10px;padding:9px 14px;border-top:1px dashed rgba(32,27,18,.14)}
-.sc-note{font-size:7.5px;color:#6b6350;font-weight:600}
-.sc-dark{background:#0b0b0f}
-.sc-dark .sc-nav{border-bottom:1px solid rgba(255,255,255,.06)}
-.sc-brand{font-size:9px;font-weight:800;letter-spacing:.1em;color:#fff}
-.sc-brand i{font-style:normal;color:#e5b453}
-.sc-hero-g{padding:18px 14px 14px;display:grid;gap:8px;justify-items:start;background:radial-gradient(circle at 85% -10%,rgba(229,180,83,.17),transparent 55%)}
-.sc-cta{display:flex;gap:6px;margin-top:2px}
-.sc-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:2px 14px 14px}
-.sc-plan{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:9px 8px;display:grid;gap:6px;justify-items:start}
-.sc-plan.hot{border-color:rgba(229,180,83,.5);background:rgba(229,180,83,.06)}
-.sc-plan .b{height:6px}
-.ph-pad{position:absolute;inset:0;padding:10px;display:grid;gap:8px;justify-items:start;align-content:start}
-.ph-head{display:flex;align-items:center;justify-content:space-between;width:100%}
-.ph-img{height:56px;width:100%;border-radius:9px;background:linear-gradient(135deg,#f6dca8,#e9bc72);position:relative;overflow:hidden}
-.ph-img::after{content:"";position:absolute;inset:18% 22%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff6e4,#f0d294 72%)}
-.sc-dark .ph-img{background:linear-gradient(135deg,rgba(229,180,83,.35),rgba(229,180,83,.1))}
-.sc-dark .ph-img::after{display:none}
+/* ============ services ============ */
+#services{background:var(--bg-2)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.service-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:32px 28px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s,box-shadow .35s}
+.service-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent);transform:scaleX(0);transform-origin:left;transition:transform .5s}
+.service-card:hover{transform:translateY(-8px);border-color:var(--line-strong);box-shadow:0 30px 60px -28px rgba(0,0,0,.85)}
+.service-card:hover::before{transform:scaleX(1)}
+.svc-num{font-family:var(--font-mono);font-size:.78rem;color:var(--accent);letter-spacing:.2em;margin-bottom:22px;display:flex;align-items:center;gap:12px}
+.svc-num::after{content:"";flex:1;height:1px;background:var(--line)}
+.service-card h3{font-family:var(--font-display);font-size:1.28rem;font-weight:700;margin-bottom:12px;line-height:1.25}
+.service-card .desc{font-size:.88rem;color:var(--muted);margin-bottom:20px}
+.svc-list{list-style:none;margin-bottom:24px}
+.svc-list li{font-size:.83rem;color:var(--muted);padding:6px 0;display:flex;align-items:center;gap:10px;border-bottom:1px dashed var(--line)}
+.svc-list li:last-child{border-bottom:0}
+.svc-list li i{color:var(--accent);font-size:.7rem}
+.svc-price{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:20px;border-top:1px solid var(--line)}
+.price-tag{font-family:var(--font-mono);font-size:.82rem;color:var(--accent-soft);background:var(--accent-dim);border:1px solid rgba(236,178,74,.25);padding:7px 13px;border-radius:8px;white-space:nowrap}
+.svc-cta{font-size:.82rem;font-weight:700;color:var(--text);display:inline-flex;align-items:center;gap:8px;transition:gap .3s,color .3s}
+.svc-cta:hover{gap:13px;color:var(--accent)}
 
-/* ============ EXPERIENCE ============ */
-#experience{background:linear-gradient(180deg,transparent,rgba(255,255,255,.012) 20%,rgba(255,255,255,.012) 80%,transparent)}
-.exp-wrap{max-width:840px;margin-inline:auto;position:relative;padding:12px 0}
-.exp-line{position:absolute;left:50%;top:0;bottom:0;width:2px;margin-left:-1px;background:rgba(255,255,255,.07);border-radius:2px;overflow:hidden}
-.exp-fill{display:block;width:100%;height:0;background:linear-gradient(180deg,var(--accent),rgba(229,180,83,.15));transition:height 1.6s var(--ease) .2s}
-.exp-wrap.visible .exp-fill{height:100%}
-.exp-item{position:relative;margin-bottom:34px}
-.exp-item:last-child{margin-bottom:0}
-.exp-node{position:absolute;left:50%;top:26px;margin-left:-8px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:2px solid var(--accent);opacity:0;z-index:2}
-.exp-item:last-child .exp-node{box-shadow:0 0 0 6px rgba(229,180,83,.12)}
-.exp-wrap.visible .exp-node{animation:pop .55s cubic-bezier(.34,1.56,.64,1) both}
-.exp-item:nth-child(2) .exp-node{animation-delay:.5s}
-.exp-item:nth-child(3) .exp-node{animation-delay:.95s}
-@keyframes pop{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:scale(1)}}
-.exp-card{width:calc(50% - 48px);border:1px solid var(--border);border-radius:20px;background:var(--card);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);padding:24px 26px;position:relative;transition:transform .35s var(--ease),border-color .35s}
-.exp-card:hover{transform:translateY(-4px);border-color:var(--border-hi)}
-.exp-item:nth-child(odd) .exp-card{margin-left:auto;text-align:right}
-.exp-item:nth-child(odd) .exp-card::after{content:"";position:absolute;top:31px;left:calc(100% + 9px);width:31px;height:1px;background:linear-gradient(90deg,rgba(229,180,83,.5),transparent)}
-.exp-item:nth-child(even) .exp-card::after{content:"";position:absolute;top:31px;right:calc(100% + 9px);width:31px;height:1px;background:linear-gradient(270deg,rgba(229,180,83,.5),transparent)}
-.exp-dur{font-size:10.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
-.exp-card h3{font-family:var(--disp);font-size:19px;font-weight:600;margin:8px 0 8px}
-.exp-card p{font-size:14px;color:var(--muted);line-height:1.7}
+/* ============ projects ============ */
+.project{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;padding:50px 0}
+.project + .project{border-top:1px solid var(--line)}
+.project.flip .proj-info{order:2}
+.proj-tag{font-family:var(--font-mono);font-size:.72rem;color:var(--accent);letter-spacing:.24em;text-transform:uppercase;margin-bottom:16px;display:block}
+.proj-info h3{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;margin-bottom:16px;letter-spacing:-.01em}
+.proj-info .pdesc{color:var(--muted);margin-bottom:22px;max-width:440px}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:30px}
+.chips span{font-size:.74rem;font-weight:600;color:var(--muted);border:1px solid var(--line-strong);padding:6px 13px;border-radius:99px}
+.proj-actions{display:flex;gap:14px;flex-wrap:wrap}
 
-/* ============ WHY ============ */
-.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.why-card{border:1px solid var(--border);border-radius:20px;background:var(--card);padding:28px;transition:transform .35s var(--ease),border-color .35s,box-shadow .35s}
-.why-card:hover{transform:translateY(-6px);border-color:var(--border-hi);box-shadow:0 24px 50px -26px rgba(0,0,0,.9)}
-.why-ico{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);margin-bottom:18px;transition:transform .35s var(--ease)}
-.why-card:hover .why-ico{transform:rotate(-6deg) scale(1.06)}
-.why-card h3{font-family:var(--disp);font-size:16.5px;font-weight:600;margin-bottom:8px}
-.why-card p{font-size:13.8px;color:var(--muted);line-height:1.65}
+/* device mockups */
+.devices{position:relative;padding:20px 30px 40px 0;min-height:340px}
+.laptop{position:relative;width:100%;max-width:560px}
+.laptop-screen{border:10px solid #1c1e23;border-bottom-width:14px;border-radius:14px 14px 4px 4px;background:#000;overflow:hidden;position:relative;box-shadow:0 40px 80px -30px rgba(0,0,0,.9)}
+.laptop-screen::before{content:"";position:absolute;top:5px;left:50%;transform:translateX(-50%);width:6px;height:6px;border-radius:50%;background:#2a2d33;z-index:3}
+.laptop-base{height:14px;background:linear-gradient(180deg,#2a2d33,#17191d);border-radius:0 0 14px 14px;margin:0 -26px;position:relative}
+.laptop-base::after{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:90px;height:5px;background:#0d0e11;border-radius:0 0 8px 8px}
+.device-frame{width:100%;aspect-ratio:16/10;border:0;display:block;background:#111;pointer-events:none}
+.phone{position:absolute;right:-6px;bottom:-26px;width:148px;background:#1c1e23;border-radius:26px;padding:8px;box-shadow:0 30px 60px -20px rgba(0,0,0,.9);border:1px solid #2b2e35}
+.phone::before{content:"";position:absolute;top:12px;left:50%;transform:translateX(-50%);width:44px;height:12px;background:#0a0b0d;border-radius:99px;z-index:3}
+.phone-screen{border-radius:19px;overflow:hidden;background:#000;position:relative}
+.phone .device-frame{aspect-ratio:9/18.5}
+.live-badge{position:absolute;top:18px;left:18px;z-index:5;display:flex;align-items:center;gap:7px;background:rgba(10,11,13,.85);backdrop-filter:blur(8px);border:1px solid var(--line-strong);border-radius:99px;padding:5px 12px;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-soft)}
 
-/* ============ CONTACT ============ */
-#contact{overflow:hidden}
-#contact .orb-3{width:520px;height:520px;bottom:-220px;right:-160px;background:radial-gradient(circle,rgba(229,180,83,.1),transparent 70%)}
-.contact-grid{display:grid;grid-template-columns:1fr .96fr;gap:clamp(40px,6vw,72px);align-items:start;position:relative;z-index:2}
-.c-list{display:grid;gap:13px;margin:30px 0 26px}
-.c-item{display:flex;align-items:center;gap:16px;padding:14px 18px;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.02);transition:transform .3s var(--ease),border-color .3s}
-.c-item:hover{transform:translateX(5px);border-color:var(--border-hi)}
-.c-ico{width:42px;height:42px;border-radius:13px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;flex-shrink:0}
-.c-item .k{display:block;font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.c-item .v{font-size:14.5px;font-weight:500;color:var(--soft);word-break:break-word}
-.c-item a.v:hover{color:var(--accent)}
-.c-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px}
-.socials-label{font-size:11.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
-.socials{display:flex;gap:11px;flex-wrap:wrap}
-.soc{width:46px;height:46px;border-radius:14px;border:1px solid var(--border);display:grid;place-items:center;color:var(--muted);background:rgba(255,255,255,.02);transition:transform .3s var(--ease),border-color .3s,color .3s,background .3s}
-.soc:hover{transform:translateY(-4px);border-color:var(--border-hi);color:var(--text);background:var(--accent-soft)}
-.soc .ic{width:19px;height:19px}
-.form-card{border:1px solid var(--border);border-radius:24px;background:var(--card);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);padding:clamp(24px,3.6vw,38px);position:relative;overflow:hidden}
-.form-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
-.form-card h3{font-family:var(--disp);font-size:22px;font-weight:600;margin-bottom:6px}
-.form-card>p{font-size:14px;color:var(--muted);margin-bottom:26px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.field{display:grid;gap:8px;margin-bottom:16px}
-.field label{font-size:13px;font-weight:500;color:var(--soft)}
-.field input,.field select,.field textarea{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:13px 16px;color:var(--text);font:inherit;font-size:14.5px;transition:border-color .3s,box-shadow .3s}
-.field textarea{min-height:132px;resize:vertical}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:rgba(229,180,83,.55);box-shadow:0 0 0 3px rgba(229,180,83,.12)}
-.field select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a2a2ab' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:42px;cursor:pointer}
-.field select option{background:#141417;color:var(--text)}
-.form-note{font-size:12.5px;color:var(--muted);margin-top:14px;display:flex;align-items:center;gap:8px}
-.form-note .ic{width:14px;height:14px;color:var(--accent)}
+/* ============ experience ============ */
+#experience{background:var(--bg-2)}
+.timeline{position:relative;max-width:760px;margin:0 auto;padding-left:44px}
+.timeline::before{content:"";position:absolute;left:12px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--accent),var(--line) 70%,transparent)}
+.tl-item{position:relative;padding-bottom:52px}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot{position:absolute;left:-39px;top:4px;width:16px;height:16px;border-radius:50%;background:var(--bg-2);border:3px solid var(--accent);box-shadow:0 0 0 5px var(--accent-dim),0 0 18px var(--accent-glow)}
+.tl-item.now .tl-dot{animation:pulse-dot 2s ease-in-out infinite}
+@keyframes pulse-dot{0%,100%{box-shadow:0 0 0 5px var(--accent-dim),0 0 18px var(--accent-glow)}50%{box-shadow:0 0 0 9px rgba(236,178,74,.08),0 0 26px var(--accent-glow)}}
+.tl-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:26px 28px;transition:transform .35s,border-color .35s}
+.tl-item:hover .tl-card{transform:translateX(6px);border-color:rgba(236,178,74,.35)}
+.tl-year{font-family:var(--font-mono);font-size:.72rem;color:var(--accent);letter-spacing:.16em;margin-bottom:8px;display:inline-block}
+.tl-card h3{font-family:var(--font-display);font-size:1.25rem;font-weight:700;margin-bottom:8px}
+.tl-card p{color:var(--muted);font-size:.9rem}
+.tl-dur{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-size:.76rem;font-weight:700;color:var(--accent-soft);background:var(--accent-dim);padding:6px 13px;border-radius:99px}
 
-/* ============ FOOTER ============ */
-footer{border-top:1px solid var(--border);background:#08080a;padding:56px 0 28px}
-.f-grid{display:grid;grid-template-columns:1.5fr 1fr 1.2fr;gap:44px}
-.f-brand p{color:var(--muted);font-size:14px;margin:12px 0 22px;line-height:1.7}
-.f-h{font-size:11.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);margin-bottom:18px}
-.f-links{display:grid;gap:11px}
-.f-links a{color:var(--muted);font-size:14px;transition:color .25s,padding-left .25s}
-.f-links a:hover{color:var(--accent);padding-left:5px}
-.f-contact{display:grid;gap:11px;font-size:14px;color:var(--muted)}
-.f-contact li{display:flex;align-items:center;gap:10px}
-.f-contact .ic{width:15px;height:15px;color:var(--accent)}
-.f-contact a:hover{color:var(--accent)}
-.f-bottom{margin-top:46px;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:13px;color:var(--muted)}
-.f-bottom b{color:var(--soft);font-weight:600}
+/* ============ why ============ */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.why-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:30px 26px;display:flex;gap:18px;align-items:flex-start;transition:transform .35s,border-color .35s,background .35s}
+.why-card:hover{transform:translateY(-5px);border-color:rgba(236,178,74,.4);background:var(--card-2)}
+.why-card i{font-size:1.2rem;color:var(--accent);background:var(--accent-dim);width:48px;height:48px;border-radius:12px;display:grid;place-items:center;flex-shrink:0;border:1px solid rgba(236,178,74,.22)}
+.why-card h3{font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin-bottom:6px}
+.why-card p{font-size:.85rem;color:var(--muted)}
 
-/* ============ MISC ============ */
-.to-top{position:fixed;right:22px;bottom:22px;z-index:90;width:46px;height:46px;border-radius:14px;border:1px solid var(--border);background:rgba(15,15,18,.8);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);color:var(--soft);display:grid;place-items:center;opacity:0;visibility:hidden;transform:translateY(12px);transition:.35s}
-.to-top.show{opacity:1;visibility:visible;transform:none}
-.to-top:hover{border-color:var(--border-hi);color:var(--accent)}
-.toast{position:fixed;right:22px;bottom:82px;z-index:300;display:flex;align-items:center;gap:12px;max-width:min(360px,calc(100vw - 44px));padding:14px 18px;border-radius:14px;border:1px solid rgba(229,180,83,.3);background:rgba(16,16,19,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 20px 50px -18px rgba(0,0,0,.9);font-size:13.5px;color:var(--soft);opacity:0;visibility:hidden;transform:translateY(14px);transition:.4s var(--ease)}
-.toast.show{opacity:1;visibility:visible;transform:none}
-.toast .ic{color:var(--accent)}
+/* ============ contact ============ */
+#contact{background:linear-gradient(180deg,var(--bg-2),var(--bg))}
+.contact-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:start}
+.contact-left h2{font-family:var(--font-display);font-weight:800;font-size:clamp(2.1rem,4.4vw,3rem);letter-spacing:-.02em;line-height:1.1;margin:14px 0 16px}
+.contact-left .lead{color:var(--muted);margin-bottom:34px;max-width:420px}
+.c-info{display:flex;flex-direction:column;gap:14px;margin-bottom:34px}
+.c-row{display:flex;align-items:center;gap:16px;border:1px solid var(--line);border-radius:14px;padding:15px 18px;background:var(--card);transition:border-color .3s,transform .3s}
+.c-row:hover{border-color:rgba(236,178,74,.4);transform:translateX(5px)}
+.c-row i{width:42px;height:42px;border-radius:11px;background:var(--accent-dim);color:var(--accent);display:grid;place-items:center;font-size:1rem;flex-shrink:0}
+.c-row small{display:block;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-2)}
+.c-row b{font-size:.92rem;font-weight:700;word-break:break-all}
+.c-row .copy{margin-left:auto;color:var(--muted-2);font-size:.8rem;transition:color .3s;background:none;border:none;padding:6px}
+.c-row .copy:hover{color:var(--accent)}
+.contact-btns{display:flex;gap:12px;flex-wrap:wrap}
 
-/* ============ RESPONSIVE ============ */
-@media (max-width:1180px){
-  .bf-1{left:-16px}.bf-2{right:-16px}
+.form-card{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(165deg,var(--card),var(--bg-2));padding:38px;position:relative;overflow:hidden}
+.form-card::before{content:"";position:absolute;top:-80px;right:-80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,var(--accent-dim),transparent 70%);pointer-events:none}
+.form-card h3{font-family:var(--font-display);font-size:1.4rem;font-weight:700;margin-bottom:6px}
+.form-card > p{font-size:.86rem;color:var(--muted);margin-bottom:28px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line-strong);border-radius:11px;padding:13px 16px;color:var(--text);font-family:var(--font-body);font-size:.92rem;transition:border-color .3s,box-shadow .3s,background .3s;outline:none}
+.field textarea{resize:vertical;min-height:120px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-dim);background:rgba(255,255,255,.05)}
+.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239aa0aa' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+.field select option{background:var(--card)}
+.field .err{display:none;font-size:.74rem;color:#f0766b;margin-top:6px}
+.field.invalid input,.field.invalid textarea,.field.invalid select{border-color:#f0766b}
+.field.invalid .err{display:block}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-success{display:none;text-align:center;padding:30px 10px}
+.form-success.show{display:block;animation:fadeUp .5s ease}
+.form-success i{font-size:2.6rem;color:var(--accent);margin-bottom:16px}
+.form-success h4{font-family:var(--font-display);font-size:1.3rem;margin-bottom:8px}
+.form-success p{color:var(--muted);font-size:.9rem}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* ============ footer ============ */
+footer{border-top:1px solid var(--line);background:var(--bg);position:relative;z-index:2;padding:70px 0 0;overflow:hidden}
+.footer-watermark{position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);font-family:var(--font-display);font-weight:800;font-size:clamp(6rem,20vw,16rem);color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.05);letter-spacing:.02em;pointer-events:none;user-select:none;white-space:nowrap}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:44px;padding-bottom:50px;position:relative}
+.footer-brand .logo{margin-bottom:16px}
+.footer-brand p{color:var(--muted);font-size:.9rem;max-width:300px;margin-bottom:22px}
+.socials{display:flex;gap:10px}
+.socials a{width:42px;height:42px;border-radius:11px;border:1px solid var(--line-strong);display:grid;place-items:center;color:var(--muted);font-size:.95rem;transition:all .3s}
+.socials a:hover{color:#131007;background:var(--accent);border-color:var(--accent);transform:translateY(-4px);box-shadow:0 10px 22px -8px var(--accent-glow)}
+.f-col h4{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted-2);margin-bottom:20px}
+.f-col ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.f-col ul a,.f-col ul li{font-size:.88rem;color:var(--muted);display:flex;align-items:center;gap:10px;transition:color .3s}
+.f-col ul a:hover{color:var(--accent)}
+.f-col ul i{color:var(--accent);font-size:.75rem;width:16px}
+.footer-bottom{border-top:1px solid var(--line);padding:22px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;position:relative}
+.footer-bottom p{font-size:.8rem;color:var(--muted-2)}
+.footer-bottom p b{color:var(--muted)}
+
+/* ============ utilities ============ */
+#toTop{position:fixed;bottom:26px;right:26px;width:50px;height:50px;border-radius:14px;background:var(--card);border:1px solid var(--line-strong);color:var(--accent);font-size:1rem;z-index:90;opacity:0;visibility:hidden;transform:translateY(16px);transition:all .35s}
+#toTop.show{opacity:1;visibility:visible;transform:none}
+#toTop:hover{background:var(--accent);color:#131007;border-color:var(--accent)}
+#toast{position:fixed;bottom:30px;left:50%;transform:translate(-50%,80px);background:var(--card-2);border:1px solid var(--line-strong);color:var(--text);padding:13px 22px;border-radius:12px;font-size:.86rem;font-weight:600;z-index:300;box-shadow:0 20px 50px -16px rgba(0,0,0,.8);display:flex;align-items:center;gap:10px;transition:transform .45s cubic-bezier(.2,.7,.2,1);max-width:90%;text-align:center}
+#toast i{color:var(--accent)}
+#toast.show{transform:translate(-50%,0)}
+
+[data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
+[data-reveal].in-view{opacity:1;transform:none}
+
+/* ============ responsive ============ */
+@media(max-width:1024px){
+  .hero-grid{grid-template-columns:1fr;gap:70px}
+  .hero-visual{order:-1}
+  .portrait-wrap{width:min(340px,80%)}
+  .fc-1{left:-4%}.fc-2{right:-4%}
+  .hero-vertical{display:none}
+  .about-grid{grid-template-columns:1fr;gap:44px}
+  .about-card{position:static;max-width:480px}
+  .project{grid-template-columns:1fr;gap:44px}
+  .project.flip .proj-info{order:0}
+  .contact-grid{grid-template-columns:1fr;gap:48px}
+  .footer-grid{grid-template-columns:1fr 1fr}
 }
-@media (max-width:1024px){
-  .why-grid{grid-template-columns:repeat(2,1fr)}
+@media(max-width:860px){
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:block}
 }
-@media (max-width:980px){
-  .nav-links,.nav-right .btn{display:none}
-  .burger{display:flex}
-  .hero{padding-top:112px}
-  .hero-grid{grid-template-columns:1fr;gap:56px}
-  .photo-wrap{width:min(360px,88%)}
-  .about-grid{grid-template-columns:1fr}
-  .journey{position:static}
-  .project,.project.rev{grid-template-columns:1fr}
-  .project .p-visual,.project.rev .p-visual{order:-1;max-width:560px;margin-inline:auto;width:100%}
-  .contact-grid{grid-template-columns:1fr}
-  .exp-line{left:11px}
-  .exp-node{left:11px;top:28px}
-  .exp-item .exp-card{width:calc(100% - 44px);margin-left:44px !important;text-align:left !important}
-  .exp-item .exp-card::after{display:none}
-}
-@media (max-width:820px){
-  .services-grid{grid-template-columns:1fr}
-  .f-grid{grid-template-columns:1fr;gap:36px}
-}
-@media (max-width:640px){
-  .hero{padding-top:104px}
-  .hero-cta .btn{width:100%}
-  .p-cta .btn{width:100%}
-  .p-feats{grid-template-columns:1fr}
-  .why-grid{grid-template-columns:1fr}
-  .form-row{grid-template-columns:1fr}
-  .badge-float .bf-in{padding:10px 12px}
-  .bf-1{top:-18px;left:-8px}.bf-2{bottom:22px;right:-10px}
-  .bf-t{font-size:12px}.bf-s{font-size:10.5px}.bf-ico{width:34px;height:34px}
-  .c-btns .btn{width:100%}
-  .phone{right:-6px;bottom:-16px}
-  .scroll-cue{display:none}
-  .toast{right:16px;left:16px;bottom:76px;max-width:none}
-}
-@media (max-height:700px){.scroll-cue{display:none}}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
-  html{scroll-behavior:auto}
+@media(max-width:640px){
+  section{padding:80px 0}
+  .hero{padding-top:calc(var(--nav-h) + 30px)}
+  .hero-stats{flex-direction:column;gap:18px}
+  .stat + .stat{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:16px}
+  .f-row{grid-template-columns:1fr}
+  .form-card{padding:28px 22px}
+  .devices{padding-right:8px}
+  .phone{width:118px;right:-2px;bottom:-18px}
+  .footer-grid{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr}
+  .float-chip{padding:8px 12px;font-size:.7rem}
 }
 </style>
-<noscript><style>
-.loader{display:none}
-.reveal,.h-reveal{opacity:1 !important;transform:none !important}
-.exp-fill{height:100% !important}.exp-node{opacity:1 !important}
-</style></noscript>
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
+<div class="bg-grid"></div>
+<div class="bg-noise"></div>
+<div id="progress"></div>
 
-<!-- SVG ICON SPRITE -->
-<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
-  <symbol id="i-pen" viewBox="0 0 24 24"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></symbol>
-  <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.94 15.5 8.5 14.06 2.36 12.48a.5.5 0 0 1 0-.96L8.5 9.94 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0l1.58 6.14 1.44 1.44 6.14 1.58a.5.5 0 0 1 0 .96l-6.14 1.58-1.44 1.44-1.58 6.14a.5.5 0 0 1-.96 0z"/><path d="M20 3v3M21.5 4.5h-3"/></symbol>
-  <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></symbol>
-  <symbol id="i-package" viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></symbol>
-  <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
-  <symbol id="i-percent" viewBox="0 0 24 24"><path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></symbol>
-  <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
-  <symbol id="i-wand" viewBox="0 0 24 24"><path d="m4 20 11.5-11.5"/><path d="m13.5 6.5 4 4"/><path d="M18.5 2.5v3M17 4h3"/><path d="M20.5 11.5v2M19.5 12.5h2"/><path d="M11.5 2.5v2M10.5 3.5h2"/></symbol>
-  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
-  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
-  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
-  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
-  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
-  <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
-  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5a5.5 5.5 0 1 0-8.99 0c.79.8 1.27 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></symbol>
-  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7Z"/><path d="m2 12 10 5 10-5"/><path d="m2 17 10 5 10-5"/></symbol>
-  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
-  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></symbol>
-  <symbol id="i-device" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
-  <symbol id="i-chevup" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
-  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.65 15.02L2 22l5.12-1.33A10 10 0 1 0 12 2Z"/><path d="M8.7 8.2c.2-.5.5-.5.8-.5h.6c.2 0 .4 0 .6.5l.8 1.9c.1.2 0 .5-.2.7l-.5.6c-.1.2-.1.4 0 .6.4.7 1.6 1.9 2.6 2.3.2.1.4.1.6-.1l.6-.6c.2-.2.4-.2.6-.1l1.8.9c.3.2.4.3.4.5 0 .9-.7 1.7-1.6 1.7-2.7 0-7.4-3.8-7.9-6.9-.1-.6 0-1.1.2-1.5Z"/></symbol>
-  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></symbol>
-  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
-  <symbol id="i-in" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></symbol>
-  <symbol id="i-gh" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
-  <symbol id="i-be" viewBox="0 0 24 24"><path d="M3 6.5h4.6a2.3 2.3 0 0 1 0 4.6H3V6.5Z"/><path d="M3 11.1h5.2a2.45 2.45 0 0 1 0 4.9H3v-4.9Z"/><path d="M21.6 13.4h-5.7a2.85 2.85 0 1 0 2.75 3.55"/><path d="M15.2 7.6h5.4"/></symbol>
-  <symbol id="i-yt" viewBox="0 0 24 24"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path fill="currentColor" stroke="none" d="m10 15 5-3-5-3z"/></symbol>
-</svg>
-
-<!-- LOADER -->
-<div class="loader" id="loader" aria-hidden="true">
-  <div class="loader-inner">
-    <div class="loader-ring"><span class="loader-mono">R</span></div>
-    <span class="loader-name">RAKIB</span>
-  </div>
-</div>
-
-<!-- NAVIGATION -->
+<!-- ================= NAV ================= -->
 <header class="nav" id="nav">
   <div class="container nav-inner">
-    <a href="#home" class="logo" aria-label="Rakib — Home">Rakib<b>.</b></a>
-    <nav aria-label="Primary">
-      <ul class="nav-links">
+    <a href="#home" class="logo">Rakib<span class="dot">.</span><span class="tag">Portfolio</span></a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -496,355 +388,322 @@ footer{border-top:1px solid var(--border);background:#08080a;padding:56px 0 28px
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="nav-right">
-      <a href="#contact" class="btn btn-primary btn-sm">Let's Work</a>
-      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <a href="#contact" class="btn btn-primary btn-sm nav-cta">Let's Work <i class="fa-solid fa-arrow-right"></i></a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
-<!-- MOBILE MENU -->
+<!-- mobile menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <a class="mm-link" style="--d:.08s" href="#home"><em>01</em>Home</a>
-  <a class="mm-link" style="--d:.14s" href="#about"><em>02</em>About</a>
-  <a class="mm-link" style="--d:.2s" href="#skills"><em>03</em>Skills</a>
-  <a class="mm-link" style="--d:.26s" href="#services"><em>04</em>Services</a>
-  <a class="mm-link" style="--d:.32s" href="#projects"><em>05</em>Projects</a>
-  <a class="mm-link" style="--d:.38s" href="#experience"><em>06</em>Experience</a>
-  <a class="mm-link" style="--d:.44s" href="#contact"><em>07</em>Contact</a>
-  <div class="mm-cta"><a href="#contact" class="btn btn-primary" style="width:100%">Let's Work Together</a></div>
+  <a href="#home"><i>01</i>Home</a>
+  <a href="#about"><i>02</i>About</a>
+  <a href="#skills"><i>03</i>Skills</a>
+  <a href="#services"><i>04</i>Services</a>
+  <a href="#projects"><i>05</i>Projects</a>
+  <a href="#experience"><i>06</i>Experience</a>
+  <a href="#contact"><i>07</i>Contact</a>
+  <div class="mm-foot">
+    <a href="https://wa.me/8801402525700" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fa-brands fa-whatsapp"></i> WhatsApp Me</a>
+    <a href="mailto:esource202@gmail.com" class="btn btn-ghost btn-sm"><i class="fa-solid fa-envelope"></i> Email</a>
+  </div>
 </div>
 
-<main id="main">
-
 <!-- ================= HERO ================= -->
-<section class="hero" id="home" aria-label="Introduction">
-  <div class="orb orb-1"></div><div class="orb orb-2"></div>
+<section class="hero" id="home">
+  <div class="hero-glow" id="heroGlow"></div>
+  <div class="hero-glow-2"></div>
   <div class="container hero-grid">
-    <div>
-      <span class="status h-reveal" style="--d:.05s"><i></i>Available for Creative &amp; Digital Projects</span>
-      <h1 class="h-reveal" style="--d:.14s">Hi, I'm<br><span class="grad">Rakib.</span></h1>
-      <p class="hero-roles h-reveal" style="--d:.23s">Graphic Designer<span class="dotsep">•</span>AI Creative<span class="dotsep">•</span>Web Designer<span class="dotsep">•</span>Digital Entrepreneur</p>
-      <p class="hero-p h-reveal" style="--d:.31s">Turning ideas into creative visuals, AI-powered advertising and practical digital solutions.</p>
-      <div class="hero-cta h-reveal" style="--d:.39s">
-        <a href="#projects" class="btn btn-primary">View My Work <svg class="ic ic-sm"><use href="#i-arrow"/></svg></a>
-        <a href="#contact" class="btn btn-ghost">Let's Work Together</a>
+    <div class="hero-copy">
+      <div class="status-chip" data-reveal><span class="pulse"></span> Available for Creative &amp; Digital Projects</div>
+      <h1 data-reveal style="--d:80ms">Hi, I'm <span class="name"><em>Rakib.</em></span></h1>
+      <div class="hero-roles" data-reveal style="--d:160ms">
+        <span>Graphic Designer</span><span class="sep">•</span>
+        <span>AI Creative</span><span class="sep">•</span>
+        <span>Web Designer</span><span class="sep">•</span>
+        <span>Digital Entrepreneur</span>
       </div>
-      <div class="hero-loc h-reveal" style="--d:.47s">
-        <svg class="ic"><use href="#i-pin"/></svg><span>Siddhirganj, Narayanganj, Bangladesh</span>
+      <p class="hero-sub" data-reveal style="--d:240ms">Turning ideas into creative visuals, AI-powered advertising and practical digital solutions.</p>
+      <div class="hero-actions" data-reveal style="--d:320ms">
+        <a href="#projects" class="btn btn-primary">View My Work <i class="fa-solid fa-arrow-down"></i></a>
+        <a href="#contact" class="btn btn-ghost">Let's Work Together <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="hero-stats" data-reveal style="--d:400ms">
+        <div class="stat"><b><span data-count="3">0</span>+</b><small>Years Graphic Design</small></div>
+        <div class="stat"><b><span data-count="1.5" data-dec="1">0</span>+</b><small>Years AI Creative</small></div>
+        <div class="stat"><b><span data-count="2">0</span></b><small>Live Web Projects</small></div>
       </div>
     </div>
 
-    <!-- EDIT: PROFILE PHOTO — replace .photo-inner with:
-         <img src="your-photo.jpg" alt="Md Rakibul Hasan Rakib — Graphic Designer & AI Creative"> -->
-    <div class="photo-wrap h-reveal" style="--d:.3s">
-      <div class="photo-glow"></div>
-      <div class="photo-frame">
-        <div class="photo">
-          <div class="photo-inner">
-            <span class="photo-mono" aria-hidden="true">R</span>
-            <span class="photo-cap">Md Rakibul Hasan Rakib</span>
-          </div>
+    <div class="hero-visual" data-reveal style="--d:200ms">
+      <div class="portrait-wrap">
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <div class="portrait-frame">
+          <img src="https://dvxrhkgloakisnvqoxgl.supabase.co/storage/v1/object/sign/images/inputs/1788774619636_88qvuqv1t.png?token=eyJraWQiOiI0NWE1YWU1ZS0xNzg4LTRiMWYtYWM5OC1hMjgwNmQ2OTM4ZWMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvaW5wdXRzLzE3ODg3NzQ2MTk2MzZfODhxdnVxdjF0LnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODg3NzQ2NDAsImV4cCI6MTgyMDMxMDY0MH0.FYe0MjiYKOUXjGIKUdUQZsDoS8ba4QyIFZLBhlAF9XU" alt="Md Rakibul Hasan Rakib — Professional Portrait">
         </div>
-      </div>
-      <div class="badge-float bf-1 h-reveal" style="--d:.55s">
-        <div class="bf-in">
-          <span class="bf-ico"><svg class="ic"><use href="#i-pen"/></svg></span>
-          <span><span class="bf-t">Graphic Design</span><br><span class="bf-s">~3 Years</span></span>
-        </div>
-      </div>
-      <div class="badge-float bf-2 h-reveal" style="--d:.68s">
-        <div class="bf-in">
-          <span class="bf-ico"><svg class="ic"><use href="#i-sparkles"/></svg></span>
-          <span><span class="bf-t">AI Creative</span><br><span class="bf-s">~1.5 Years</span></span>
-        </div>
+        <div class="float-chip fc-1"><i class="fa-solid fa-palette"></i> Graphic Design</div>
+        <div class="float-chip fc-2"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Creative</div>
+        <div class="float-chip fc-3"><i class="fa-solid fa-globe"></i> Web Design</div>
+        <span class="hero-vertical">Portfolio — 2025 — Bangladesh</span>
       </div>
     </div>
   </div>
-  <div class="scroll-cue" aria-hidden="true"><span>Scroll</span><span class="line"></span></div>
 </section>
 
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Graphic Design <i class="fa-solid fa-circle"></i> AI Advertising <i class="fa-solid fa-circle"></i> Logo &amp; Branding <i class="fa-solid fa-circle"></i> Website Design <i class="fa-solid fa-circle"></i> Digital Products <i class="fa-solid fa-circle"></i> VAT Consulting <i class="fa-solid fa-circle"></i> Computer Operations <i class="fa-solid fa-circle"></i> Business Solutions <i class="fa-solid fa-circle"></i></span>
+    <span>Graphic Design <i class="fa-solid fa-circle"></i> AI Advertising <i class="fa-solid fa-circle"></i> Logo &amp; Branding <i class="fa-solid fa-circle"></i> Website Design <i class="fa-solid fa-circle"></i> Digital Products <i class="fa-solid fa-circle"></i> VAT Consulting <i class="fa-solid fa-circle"></i> Computer Operations <i class="fa-solid fa-circle"></i> Business Solutions <i class="fa-solid fa-circle"></i></span>
+  </div>
+</div>
+
 <!-- ================= ABOUT ================= -->
-<section class="section" id="about">
-  <div class="container about-grid">
-    <div class="about-copy reveal">
-      <div class="sec-head" style="margin-bottom:26px">
+<section id="about">
+  <div class="container">
+    <div class="sec-head" data-reveal>
+      <div>
         <span class="eyebrow">About Me</span>
-        <h2>Creative mind.<br>Practical approach.</h2>
+        <h2 class="sec-title">A creative professional building <span class="thin">useful digital solutions.</span></h2>
       </div>
-      <p>I'm <strong>Md Rakibul Hasan Rakib</strong> — known simply as Rakib — a creative professional based in Siddhirganj, Narayanganj, Bangladesh. My work sits where design, technology and business meet: <strong>graphic design, AI-powered creative work, web design and digital product development</strong>.</p>
-      <p>For around three years I've been designing logos, brand visuals and advertising materials. Over the last year and a half, I've brought AI tools into my workflow — AI image generation, prompt engineering and AI-assisted advertising creatives — to work faster and explore new creative possibilities.</p>
-      <p>Alongside creative work, I'm a <strong>computer operator, VAT consultant and businessman</strong>, currently in the 3rd year of my degree. This mix keeps my design decisions practical and business-aware. I continuously learn new technologies — AI, web technologies, creative design and digital business — and turn what I learn into useful digital projects and solutions.</p>
-      <p class="about-sign">Md Rakibul Hasan Rakib <span>"Rakib"</span></p>
-      <div class="facts">
-        <!-- EDIT: personal facts -->
-        <div class="fact"><span class="k">Name</span><span class="v">Md Rakibul Hasan Rakib</span></div>
-        <div class="fact"><span class="k">Location</span><span class="v">Siddhirganj, Narayanganj, BD</span></div>
-        <div class="fact"><span class="k">Email</span><span class="v"><a href="mailto:esource202@gmail.com">esource202@gmail.com</a></span></div>
-        <div class="fact"><span class="k">Focus</span><span class="v">Design · AI · Web · Business</span></div>
-        <div class="fact"><span class="k">Status</span><span class="v accent">Open to projects</span></div>
+      <span class="sec-index">/ 01</span>
+    </div>
+    <div class="about-grid">
+      <div class="about-card" data-reveal>
+        <div class="ac-img">
+          <img src="https://dvxrhkgloakisnvqoxgl.supabase.co/storage/v1/object/sign/images/inputs/1788774619636_88qvuqv1t.png?token=eyJraWQiOiI0NWE1YWU1ZS0xNzg4LTRiMWYtYWM5OC1hMjgwNmQ2OTM4ZWMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvaW5wdXRzLzE3ODg3NzQ2MTk2MzZfODhxdnVxdjF0LnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODg3NzQ2NDAsImV4cCI6MTgyMDMxMDY0MH0.FYe0MjiYKOUXjGIKUdUQZsDoS8ba4QyIFZLBhlAF9XU" alt="Rakib portrait">
+        </div>
+        <div class="ac-body">
+          <h3>Md Rakibul Hasan Rakib</h3>
+          <p>Siddhirganj, Narayanganj, Bangladesh</p>
+          <div class="sig">— Rakib</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p data-reveal>I'm <strong>Rakib</strong> — a multi-disciplinary creative professional from Siddhirganj, Narayanganj, combining <strong>graphic design, AI-powered creativity, web design and real business knowledge</strong> to build digital work that actually solves problems.</p>
+        <p data-reveal style="--d:100ms">With around <strong>3 years of experience in graphic design</strong> and <strong>1.5 years working with AI tools</strong>, I create everything from brand identities and advertising visuals to modern responsive websites and practical digital products. My background as a <strong>computer operator, VAT consultant and businessman</strong> means I understand the operational side of business — not just how things look, but how they need to work.</p>
+        <p data-reveal style="--d:200ms">I'm currently completing my <strong>degree (3rd year running)</strong> while continuously learning new technologies and developing practical digital projects. For me, design isn't decoration — it's a tool to help businesses communicate, sell and grow.</p>
+        <div class="facts" data-reveal style="--d:280ms">
+          <div class="fact"><small>Full Name</small><b>Md Rakibul Hasan Rakib</b></div>
+          <div class="fact"><small>Based In</small><b>Narayanganj, Bangladesh</b></div>
+          <div class="fact"><small>Experience</small><b>3+ Years in Design &amp; AI</b></div>
+          <div class="fact"><small>Education</small><b>Degree — 3rd Year Running</b></div>
+        </div>
+        <div class="about-do" data-reveal style="--d:360ms">
+          <span><i class="fa-solid fa-palette"></i>&nbsp; Graphic Design</span>
+          <span><i class="fa-solid fa-robot"></i>&nbsp; AI-Powered Creative Work</span>
+          <span><i class="fa-solid fa-laptop-code"></i>&nbsp; Website Design</span>
+          <span><i class="fa-solid fa-box-open"></i>&nbsp; Digital Products</span>
+          <span><i class="fa-solid fa-lightbulb"></i>&nbsp; Practical Digital Solutions</span>
+        </div>
       </div>
     </div>
-
-    <aside class="journey reveal" style="--d:.15s" aria-label="My journey timeline">
-      <h3><svg class="ic"><use href="#i-layers"/></svg> My Journey</h3>
-      <div class="tl">
-        <div class="tl-item">
-          <span class="tl-tag">3 Years</span>
-          <div class="tl-title">Graphic Design</div>
-          <p class="tl-sub">Brand visuals, logos &amp; creative advertising design</p>
-        </div>
-        <div class="tl-item">
-          <span class="tl-tag">1.5 Years</span>
-          <div class="tl-title">AI / AI Creative</div>
-          <p class="tl-sub">AI tools, image generation &amp; creative AI workflows</p>
-        </div>
-        <div class="tl-item">
-          <span class="tl-tag">Ongoing</span>
-          <div class="tl-title">Bachelor's Degree</div>
-          <p class="tl-sub">3rd year — currently running</p>
-        </div>
-        <div class="tl-item">
-          <span class="tl-tag">Now</span>
-          <div class="tl-title">Currently Learning</div>
-          <div class="tl-chips">
-            <span class="tl-chip">AI</span><span class="tl-chip">Web Technologies</span><span class="tl-chip">Creative Design</span><span class="tl-chip">Digital Business</span>
-          </div>
-        </div>
-      </div>
-    </aside>
   </div>
 </section>
 
 <!-- ================= SKILLS ================= -->
-<section class="section" id="skills">
+<section id="skills">
   <div class="container">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">Skills</span>
-      <h2>A toolbox built for modern creative work</h2>
-      <p class="sec-lead">Core skills developed through years of hands-on practice — creative, technical and business-focused.</p>
+    <div class="sec-head" data-reveal>
+      <div>
+        <span class="eyebrow">My Toolkit</span>
+        <h2 class="sec-title">Skills that turn ideas <span class="thin">into results.</span></h2>
+      </div>
+      <span class="sec-index">/ 02</span>
     </div>
     <div class="skills-grid">
-      <div class="skill-card reveal" style="--d:0s"><span class="skill-ico"><svg class="ic ic-lg"><use href="#i-pen"/></svg></span><h3>Graphic Design</h3><p>Logos, branding, social media creatives and advertising visuals.</p></div>
-      <div class="skill-card reveal" style="--d:.06s"><span class="skill-ico"><svg class="ic ic-lg"><use href="#i-sparkles"/></svg></span><h3>AI &amp; AI Tools</h3><p>AI image generation, prompt engineering and AI-assisted workflows.</p></div>
-      <div class="skill-card reveal" style="--d:.12s"><span class="skill-ico"><svg class="ic ic-lg"><use href="#i-layout"/></svg></span><h3>Web Design</h3><p>Modern, responsive websites designed around real business goals.</p></div>
-      <div class="skill-card reveal" style="--d:.18s"><span class="skill-ico"><svg class="ic ic-lg"><use href="#i-package"/></svg></span><h3>Digital Product Creation</h3><p>Practical digital products, templates and useful resources.</p></div>
-      <div class="skill-card reveal" style="--d:.24s"><span class="skill-ico"><svg class="ic ic-lg"><use href="#i-monitor"/></svg></span><h3>Computer Operations</h3><p>Reliable day-to-day computer operations and document handling.</p></div>
-      <div class="skill-card reveal" style="--d:.3s"><span class="skill-ico"><svg class="ic ic-lg"><use href="#i-percent"/></svg></span><h3>VAT Consulting</h3><p>VAT-related guidance and support for businesses.</p></div>
-      <div class="skill-card reveal" style="--d:.36s"><span class="skill-ico"><svg class="ic ic-lg"><use href="#i-briefcase"/></svg></span><h3>Business &amp; Digital Solutions</h3><p>Business-minded thinking behind every digital decision.</p></div>
-    </div>
-    <div class="add-skills reveal">
-      <p class="add-label">Also in my toolkit</p>
-      <div class="chips">
-        <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Canva</span><span class="chip">AI Image Generation</span><span class="chip">AI Prompt Engineering</span><span class="chip">Creative Advertising</span><span class="chip">Responsive Web Design</span>
+      <div class="skill-card" data-reveal data-num="01">
+        <div class="skill-icon"><i class="fa-solid fa-pen-nib"></i></div>
+        <h3>Graphic Design</h3>
+        <p>Logos, branding, social creatives and print materials with a sharp, professional finish.</p>
+        <div class="bar"><div class="bar-fill" data-level="90"></div></div>
+        <div class="bar-label"><span>Proficiency</span><span>90%</span></div>
+      </div>
+      <div class="skill-card" data-reveal style="--d:80ms" data-num="02">
+        <div class="skill-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <h3>AI &amp; AI Tools</h3>
+        <p>AI-powered advertising images, creative concepts and fast visual production workflows.</p>
+        <div class="bar"><div class="bar-fill" data-level="82"></div></div>
+        <div class="bar-label"><span>Proficiency</span><span>82%</span></div>
+      </div>
+      <div class="skill-card" data-reveal style="--d:160ms" data-num="03">
+        <div class="skill-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3>Web Design</h3>
+        <p>Modern, responsive websites for businesses, portfolios, restaurants and gyms.</p>
+        <div class="bar"><div class="bar-fill" data-level="78"></div></div>
+        <div class="bar-label"><span>Proficiency</span><span>78%</span></div>
+      </div>
+      <div class="skill-card" data-reveal data-num="04">
+        <div class="skill-icon"><i class="fa-solid fa-box-open"></i></div>
+        <h3>Digital Product Creation</h3>
+        <p>Templates, tools and resources designed to solve real, practical problems.</p>
+        <div class="bar"><div class="bar-fill" data-level="72"></div></div>
+        <div class="bar-label"><span>Proficiency</span><span>72%</span></div>
+      </div>
+      <div class="skill-card" data-reveal style="--d:80ms" data-num="05">
+        <div class="skill-icon"><i class="fa-solid fa-desktop"></i></div>
+        <h3>Computer Operations</h3>
+        <p>Confident, efficient handling of office systems, documents and digital workflows.</p>
+        <div class="bar"><div class="bar-fill" data-level="95"></div></div>
+        <div class="bar-label"><span>Proficiency</span><span>95%</span></div>
+      </div>
+      <div class="skill-card" data-reveal style="--d:160ms" data-num="06">
+        <div class="skill-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+        <h3>VAT Consulting</h3>
+        <p>Practical VAT and business compliance support grounded in hands-on experience.</p>
+        <div class="bar"><div class="bar-fill" data-level="85"></div></div>
+        <div class="bar-label"><span>Proficiency</span><span>85%</span></div>
+      </div>
+      <div class="skill-card" data-reveal style="--d:240ms" data-num="07">
+        <div class="skill-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <h3>Business &amp; Digital Solutions</h3>
+        <p>Combining business insight with digital tools to create solutions that work.</p>
+        <div class="bar"><div class="bar-fill" data-level="80"></div></div>
+        <div class="bar-label"><span>Proficiency</span><span>80%</span></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ================= SERVICES ================= -->
-<section class="section" id="services">
+<section id="services">
   <div class="container">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">Services</span>
-      <h2>What I can do for you</h2>
-      <p class="sec-lead">Professional creative &amp; digital services with clear pricing — no surprises.</p>
+    <div class="sec-head" data-reveal>
+      <div>
+        <span class="eyebrow">What I Offer</span>
+        <h2 class="sec-title">Services built for <span class="thin">businesses &amp; brands.</span></h2>
+      </div>
+      <span class="sec-index">/ 03</span>
     </div>
-    <!-- EDIT: prices & descriptions -->
     <div class="services-grid">
-      <article class="service-card reveal" style="--d:0s">
-        <span class="s-num" aria-hidden="true">01</span>
-        <span class="s-ico"><svg class="ic ic-lg"><use href="#i-pen"/></svg></span>
+      <div class="service-card" data-reveal>
+        <span class="svc-num">01</span>
         <h3>Graphic Design &amp; Logo Design</h3>
-        <p>Professional visual design, logo concepts, branding and creative materials for your business or brand.</p>
-        <div class="s-foot">
-          <div><span class="s-lbl">Price</span><span class="s-val">৳599 – ৳6,999</span></div>
-          <a href="#contact" class="s-link" data-service="Graphic & Logo Design">Get Started <svg class="ic"><use href="#i-arrow"/></svg></a>
+        <p class="desc">Professional visual design, logo concepts, branding and creative materials.</p>
+        <ul class="svc-list">
+          <li><i class="fa-solid fa-check"></i> Logo &amp; Brand Identity</li>
+          <li><i class="fa-solid fa-check"></i> Social Media Creatives</li>
+          <li><i class="fa-solid fa-check"></i> Print &amp; Business Materials</li>
+        </ul>
+        <div class="svc-price">
+          <span class="price-tag">৳599 – ৳6,999</span>
+          <a href="#contact" class="svc-cta">Start a Project <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-      </article>
-      <article class="service-card reveal" style="--d:.08s">
-        <span class="s-num" aria-hidden="true">02</span>
-        <span class="s-ico"><svg class="ic ic-lg"><use href="#i-wand"/></svg></span>
+      </div>
+      <div class="service-card" data-reveal style="--d:100ms">
+        <span class="svc-num">02</span>
         <h3>AI Advertising Image</h3>
-        <p>AI-powered advertising creatives and promotional visuals for products and businesses — fast and eye-catching.</p>
-        <div class="s-foot">
-          <div><span class="s-lbl">Price</span><span class="s-val">৳99 – ৳799</span></div>
-          <a href="#contact" class="s-link" data-service="AI Advertising Image">Get Started <svg class="ic"><use href="#i-arrow"/></svg></a>
+        <p class="desc">AI-powered advertising creatives and promotional visuals for products and businesses.</p>
+        <ul class="svc-list">
+          <li><i class="fa-solid fa-check"></i> Product Ad Creatives</li>
+          <li><i class="fa-solid fa-check"></i> Campaign Visuals</li>
+          <li><i class="fa-solid fa-check"></i> Fast Turnaround</li>
+        </ul>
+        <div class="svc-price">
+          <span class="price-tag">৳99 – ৳799</span>
+          <a href="#contact" class="svc-cta">Start a Project <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-      </article>
-      <article class="service-card reveal" style="--d:.16s">
-        <span class="s-num" aria-hidden="true">03</span>
-        <span class="s-ico"><svg class="ic ic-lg"><use href="#i-layout"/></svg></span>
+      </div>
+      <div class="service-card" data-reveal style="--d:200ms">
+        <span class="svc-num">03</span>
         <h3>Website Design</h3>
-        <p>Modern, responsive websites for businesses, portfolios, restaurants, gyms and digital projects.</p>
-        <div class="s-foot">
-          <div><span class="s-lbl">Price</span><span class="s-val">৳1,000 – ৳20,000</span></div>
-          <a href="#contact" class="s-link" data-service="Website Design">Get Started <svg class="ic"><use href="#i-arrow"/></svg></a>
+        <p class="desc">Modern, responsive websites for businesses, portfolios, restaurants, gyms and digital projects.</p>
+        <ul class="svc-list">
+          <li><i class="fa-solid fa-check"></i> Responsive &amp; Modern UI</li>
+          <li><i class="fa-solid fa-check"></i> Business &amp; Portfolio Sites</li>
+          <li><i class="fa-solid fa-check"></i> Restaurant / Gym Websites</li>
+        </ul>
+        <div class="svc-price">
+          <span class="price-tag">৳1,000 – ৳20,000</span>
+          <a href="#contact" class="svc-cta">Start a Project <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-      </article>
-      <article class="service-card reveal" style="--d:.24s">
-        <span class="s-num" aria-hidden="true">04</span>
-        <span class="s-ico"><svg class="ic ic-lg"><use href="#i-package"/></svg></span>
+      </div>
+      <div class="service-card" data-reveal style="--d:300ms">
+        <span class="svc-num">04</span>
         <h3>Digital Products</h3>
-        <p>Useful digital products, templates, tools and resources designed to solve practical problems.</p>
-        <div class="s-foot">
-          <div><span class="s-lbl">Price</span><span class="s-val">Custom Pricing</span></div>
-          <a href="#contact" class="s-link" data-service="Digital Product">Get Started <svg class="ic"><use href="#i-arrow"/></svg></a>
+        <p class="desc">Useful digital products, templates, tools and resources designed to solve practical problems.</p>
+        <ul class="svc-list">
+          <li><i class="fa-solid fa-check"></i> Templates &amp; Tools</li>
+          <li><i class="fa-solid fa-check"></i> Practical Resources</li>
+          <li><i class="fa-solid fa-check"></i> Custom Solutions</li>
+        </ul>
+        <div class="svc-price">
+          <span class="price-tag">Custom Pricing</span>
+          <a href="#contact" class="svc-cta">Start a Project <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-      </article>
+      </div>
     </div>
-    <p class="services-note reveal">Final pricing depends on project scope &amp; requirements — exact quote after a short discussion.</p>
   </div>
 </section>
 
 <!-- ================= PROJECTS ================= -->
-<section class="section" id="projects">
+<section id="projects">
   <div class="container">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">Featured Projects</span>
-      <h2>Real projects, built to work</h2>
-      <p class="sec-lead">A selection of live projects — designed, built and deployed.</p>
+    <div class="sec-head" data-reveal>
+      <div>
+        <span class="eyebrow">Featured Work</span>
+        <h2 class="sec-title">Real projects, <span class="thin">live &amp; running.</span></h2>
+      </div>
+      <span class="sec-index">/ 04</span>
     </div>
 
-    <!-- EDIT: PROJECT 01 -->
-    <article class="project reveal">
-      <div class="p-visual" aria-hidden="true">
-        <div class="laptop">
-          <div class="l-screen">
-            <div class="l-bar">
-              <span class="l-dot"></span><span class="l-dot"></span><span class="l-dot"></span>
-              <span class="l-url">esource202.github.io/Food-Manu</span>
-            </div>
-            <div class="l-view">
-              <div class="screen sc-light">
-                <div class="sc-nav">
-                  <span class="sc-logo"><span class="sc-logo-dot"></span><span class="b w-40"></span></span>
-                  <span class="sc-nav-links"><span class="b w-24"></span><span class="b w-24"></span><span class="b w-24"></span></span>
-                  <span class="pill pill-a">ORDER</span>
-                </div>
-                <div class="sc-hero">
-                  <span class="b w-60" style="height:13px"></span>
-                  <span class="b w-40"></span>
-                  <span class="pill pill-g">WHATSAPP ORDER</span>
-                </div>
-                <div class="sc-cats">
-                  <span class="sc-cat active">All Items</span><span class="sc-cat">Rice</span><span class="sc-cat">Burger</span><span class="sc-cat">Drinks</span>
-                </div>
-                <div class="sc-cards">
-                  <div class="sc-card"><span class="food-img"></span><span class="b w-70"></span><span class="sc-row"><span class="b w-35" style="height:6px"></span><span class="sc-add">ADD</span></span></div>
-                  <div class="sc-card"><span class="food-img"></span><span class="b w-60"></span><span class="sc-row"><span class="b w-35" style="height:6px"></span><span class="sc-add">ADD</span></span></div>
-                  <div class="sc-card"><span class="food-img"></span><span class="b w-50"></span><span class="sc-row"><span class="b w-35" style="height:6px"></span><span class="sc-add">ADD</span></span></div>
-                </div>
-                <div class="sc-foot"><span class="sc-note">Cart · 3 items · Cash on Delivery</span><span class="pill pill-a">GO TO CART</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="l-base"></div>
+    <!-- Project 01 -->
+    <article class="project">
+      <div class="proj-info" data-reveal>
+        <span class="proj-tag">Project 01</span>
+        <h3>Food Menu Website</h3>
+        <p class="pdesc">A modern restaurant food menu and ordering website — clean layout, responsive design and a smooth browsing experience for customers on any device.</p>
+        <div class="chips">
+          <span>Web Design</span><span>Business Website</span><span>Responsive Design</span>
         </div>
-        <div class="phone">
-          <div class="phone-notch"></div>
-          <div class="phone-view">
-            <div class="screen sc-light">
-              <div class="ph-pad">
-                <div class="ph-head"><span class="sc-logo"><span class="sc-logo-dot"></span></span><span class="b w-30" style="height:5px"></span></div>
-                <span class="ph-img"></span>
-                <span class="b w-80"></span>
-                <span class="b w-50"></span>
-                <span class="pill pill-g">ORDER NOW</span>
-              </div>
-            </div>
-          </div>
+        <div class="proj-actions">
+          <a href="https://esource202.github.io/Food-Manu/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Visit Live Site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="#contact" class="btn btn-ghost btn-sm">Build Something Similar</a>
         </div>
       </div>
-      <div class="p-info">
-        <span class="p-num">Project 01</span>
-        <h3>Food Menu Website</h3>
-        <div class="p-tags"><span class="tag">Web Design</span><span class="tag">Business Website</span><span class="tag">Responsive Design</span></div>
-        <p class="p-desc">A modern restaurant food menu and ordering website — built to turn hungry visitors into WhatsApp orders.</p>
-        <ul class="p-feats">
-          <li><svg class="ic"><use href="#i-check"/></svg>Digital food menu</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Category-based menu</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Product presentation</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Offers</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Shopping cart</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>WhatsApp ordering</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Cash-on-delivery workflow</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Responsive design</li>
-        </ul>
-        <div class="p-cta">
-          <a href="https://esource202.github.io/Food-Manu/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View Live Project <svg class="ic ic-sm"><use href="#i-ext"/></svg></a>
-          <a href="#contact" class="btn btn-ghost btn-sm" data-service="Website Design">Start a Similar Project</a>
+      <div class="devices" data-reveal style="--d:150ms">
+        <div class="laptop">
+          <div class="laptop-screen">
+            <span class="live-badge"><span class="pulse"></span> Live Preview</span>
+            <iframe class="device-frame" data-src="https://esource202.github.io/Food-Manu/" title="Food Menu Website — live preview" loading="lazy"></iframe>
+          </div>
+          <div class="laptop-base"></div>
+        </div>
+        <div class="phone">
+          <div class="phone-screen">
+            <iframe class="device-frame" data-src="https://esource202.github.io/Food-Manu/" title="Food Menu Website — mobile preview" loading="lazy"></iframe>
+          </div>
         </div>
       </div>
     </article>
 
-    <!-- EDIT: PROJECT 02 -->
-    <article class="project rev reveal">
-      <div class="p-visual" aria-hidden="true">
-        <div class="laptop">
-          <div class="l-screen">
-            <div class="l-bar">
-              <span class="l-dot"></span><span class="l-dot"></span><span class="l-dot"></span>
-              <span class="l-url">esource202.github.io/GYM</span>
-            </div>
-            <div class="l-view">
-              <div class="screen sc-dark">
-                <div class="sc-nav">
-                  <span class="sc-brand">OWN<i>GYM</i></span>
-                  <span class="sc-nav-links"><span class="b w-24"></span><span class="b w-24"></span><span class="b w-24"></span></span>
-                  <span class="pill pill-o">JOIN</span>
-                </div>
-                <div class="sc-hero-g">
-                  <span class="b b-gold w-70" style="height:14px"></span>
-                  <span class="b w-45"></span>
-                  <span class="b w-30"></span>
-                  <div class="sc-cta"><span class="pill pill-a">JOIN NOW</span><span class="pill pill-o">VIEW PLANS</span></div>
-                </div>
-                <div class="sc-plans">
-                  <div class="sc-plan"><span class="b w-50"></span><span class="b w-40" style="height:9px"></span><span class="b w-80" style="height:4px"></span><span class="b w-60" style="height:4px"></span><span class="pill pill-o" style="width:100%">SELECT</span></div>
-                  <div class="sc-plan hot"><span class="b w-50"></span><span class="b b-gold w-45" style="height:9px"></span><span class="b w-80" style="height:4px"></span><span class="b w-60" style="height:4px"></span><span class="pill pill-a" style="width:100%">SELECT</span></div>
-                  <div class="sc-plan"><span class="b w-50"></span><span class="b w-40" style="height:9px"></span><span class="b w-80" style="height:4px"></span><span class="b w-60" style="height:4px"></span><span class="pill pill-o" style="width:100%">SELECT</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="l-base"></div>
+    <!-- Project 02 -->
+    <article class="project flip">
+      <div class="proj-info" data-reveal>
+        <span class="proj-tag">Project 02</span>
+        <h3>OWN GYM Website</h3>
+        <p class="pdesc">A modern gym website featuring membership plans, fitness services, products and customer contact functionality — built to convert visitors into members.</p>
+        <div class="chips">
+          <span>Web Design</span><span>Gym / Fitness</span><span>Membership Plans</span>
         </div>
-        <div class="phone">
-          <div class="phone-notch"></div>
-          <div class="phone-view">
-            <div class="screen sc-dark">
-              <div class="ph-pad">
-                <span class="sc-brand">OWN<i>GYM</i></span>
-                <span class="b b-gold w-80" style="height:9px"></span>
-                <span class="b w-55"></span>
-                <span class="ph-img"></span>
-                <span class="pill pill-a">JOIN NOW</span>
-              </div>
-            </div>
-          </div>
+        <div class="proj-actions">
+          <a href="https://esource202.github.io/GYM/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Visit Live Site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="#contact" class="btn btn-ghost btn-sm">Build Something Similar</a>
         </div>
       </div>
-      <div class="p-info">
-        <span class="p-num">Project 02</span>
-        <h3>OWN GYM Website</h3>
-        <div class="p-tags"><span class="tag">Web Design</span><span class="tag">UI Design</span><span class="tag">Business Website</span></div>
-        <p class="p-desc">A modern gym website featuring membership plans, fitness services, products and customer contact functionality.</p>
-        <ul class="p-feats">
-          <li><svg class="ic"><use href="#i-check"/></svg>Premium gym landing page</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Membership plans</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Product shop</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Product details &amp; pricing</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Contact section</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>WhatsApp communication</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Join Now workflow</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Responsive design</li>
-        </ul>
-        <div class="p-cta">
-          <a href="https://esource202.github.io/GYM/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View Live Project <svg class="ic ic-sm"><use href="#i-ext"/></svg></a>
-          <a href="#contact" class="btn btn-ghost btn-sm" data-service="Website Design">Start a Similar Project</a>
+      <div class="devices" data-reveal style="--d:150ms">
+        <div class="laptop">
+          <div class="laptop-screen">
+            <span class="live-badge"><span class="pulse"></span> Live Preview</span>
+            <iframe class="device-frame" data-src="https://esource202.github.io/GYM/" title="OWN GYM Website — live preview" loading="lazy"></iframe>
+          </div>
+          <div class="laptop-base"></div>
+        </div>
+        <div class="phone">
+          <div class="phone-screen">
+            <iframe class="device-frame" data-src="https://esource202.github.io/GYM/" title="OWN GYM Website — mobile preview" loading="lazy"></iframe>
+          </div>
         </div>
       </div>
     </article>
@@ -852,302 +711,416 @@ footer{border-top:1px solid var(--border);background:#08080a;padding:56px 0 28px
 </section>
 
 <!-- ================= EXPERIENCE ================= -->
-<section class="section" id="experience">
+<section id="experience">
   <div class="container">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">Experience</span>
-      <h2>My journey so far</h2>
-      <p class="sec-lead">Hands-on, real-world experience — creative and practical.</p>
+    <div class="sec-head" data-reveal>
+      <div>
+        <span class="eyebrow">Journey</span>
+        <h2 class="sec-title">Experience that <span class="thin">keeps growing.</span></h2>
+      </div>
+      <span class="sec-index">/ 05</span>
     </div>
-    <div class="exp-wrap reveal">
-      <span class="exp-line" aria-hidden="true"><span class="exp-fill"></span></span>
-      <div class="exp-item">
-        <span class="exp-node" aria-hidden="true"></span>
-        <div class="exp-card">
-          <span class="exp-dur">≈ 3 Years</span>
+    <div class="timeline">
+      <div class="tl-item" data-reveal>
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <span class="tl-year">2022 — PRESENT</span>
           <h3>Graphic Design</h3>
-          <p>Logos, brand visuals, advertising creatives and design materials — building strong visuals for businesses and personal brands.</p>
+          <p>Designing logos, brand identities, social media creatives and marketing materials for businesses — building a sharp eye for visual communication over roughly three years.</p>
+          <span class="tl-dur"><i class="fa-solid fa-clock"></i> ~3 Years</span>
         </div>
       </div>
-      <div class="exp-item">
-        <span class="exp-node" aria-hidden="true"></span>
-        <div class="exp-card">
-          <span class="exp-dur">≈ 1.5 Years</span>
+      <div class="tl-item" data-reveal style="--d:120ms">
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <span class="tl-year">2023 — PRESENT</span>
           <h3>AI &amp; AI Creative Work</h3>
-          <p>AI image generation, prompt engineering and AI-powered advertising visuals — merging technology with creativity.</p>
+          <p>Using AI tools to produce advertising images, promotional visuals and creative concepts — delivering faster, smarter creative output for products and brands.</p>
+          <span class="tl-dur"><i class="fa-solid fa-clock"></i> ~1.5 Years</span>
         </div>
       </div>
-      <div class="exp-item">
-        <span class="exp-node" aria-hidden="true"></span>
-        <div class="exp-card">
-          <span class="exp-dur">Present</span>
-          <h3>Computer Operations · Business · VAT Consulting</h3>
-          <p>Ongoing hands-on work in computer operations, business activities and VAT-related consulting — grounding creative work in real-world practice.</p>
+      <div class="tl-item now" data-reveal style="--d:240ms">
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <span class="tl-year">ONGOING</span>
+          <h3>Computer Operations / Business / VAT-related Work</h3>
+          <p>Handling computer operations, business management and VAT consulting — combining practical business skills with digital expertise to serve real client needs.</p>
+          <span class="tl-dur"><i class="fa-solid fa-circle" style="font-size:.5rem"></i> Present</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= WHY WORK WITH ME ================= -->
-<section class="section" id="why">
+<!-- ================= WHY ================= -->
+<section id="why">
   <div class="container">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">Why Work With Me</span>
-      <h2>More than just design</h2>
-      <p class="sec-lead">Every project gets the same care — whether it's a logo, an AI ad creative or a full website.</p>
+    <div class="sec-head" data-reveal>
+      <div>
+        <span class="eyebrow">The Difference</span>
+        <h2 class="sec-title">Why work <span class="thin">with me?</span></h2>
+      </div>
+      <span class="sec-index">/ 06</span>
     </div>
     <div class="why-grid">
-      <div class="why-card reveal" style="--d:0s"><span class="why-ico"><svg class="ic ic-lg"><use href="#i-bulb"/></svg></span><h3>Creative Thinking</h3><p>Every project starts with ideas, not templates — design built around your goal.</p></div>
-      <div class="why-card reveal" style="--d:.06s"><span class="why-ico"><svg class="ic ic-lg"><use href="#i-layers"/></svg></span><h3>Practical Digital Solutions</h3><p>Work that solves real problems for real businesses — not just something that looks good.</p></div>
-      <div class="why-card reveal" style="--d:.12s"><span class="why-ico"><svg class="ic ic-lg"><use href="#i-sparkles"/></svg></span><h3>AI-Powered Creativity</h3><p>Modern AI tools speed up delivery and open more creative possibilities.</p></div>
-      <div class="why-card reveal" style="--d:.18s"><span class="why-ico"><svg class="ic ic-lg"><use href="#i-users"/></svg></span><h3>Client-Focused Work</h3><p>Clear communication, honest pricing and revisions until it feels right.</p></div>
-      <div class="why-card reveal" style="--d:.24s"><span class="why-ico"><svg class="ic ic-lg"><use href="#i-book"/></svg></span><h3>Continuous Learning</h3><p>Always exploring new tools, technologies and design trends to stay current.</p></div>
-      <div class="why-card reveal" style="--d:.3s"><span class="why-ico"><svg class="ic ic-lg"><use href="#i-device"/></svg></span><h3>Modern &amp; Responsive Design</h3><p>Clean, current design that works beautifully on every screen size.</p></div>
+      <div class="why-card" data-reveal>
+        <i class="fa-solid fa-lightbulb"></i>
+        <div><h3>Creative Thinking</h3><p>Fresh, original ideas tailored to your brand — never generic template work.</p></div>
+      </div>
+      <div class="why-card" data-reveal style="--d:80ms">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        <div><h3>Practical Digital Solutions</h3><p>Work that's built to solve real problems, not just look good in a portfolio.</p></div>
+      </div>
+      <div class="why-card" data-reveal style="--d:160ms">
+        <i class="fa-solid fa-robot"></i>
+        <div><h3>AI-Powered Creativity</h3><p>Leveraging modern AI tools for faster turnaround and bold advertising visuals.</p></div>
+      </div>
+      <div class="why-card" data-reveal>
+        <i class="fa-solid fa-handshake"></i>
+        <div><h3>Client-Focused Work</h3><p>Clear communication and revisions until the result truly fits your needs.</p></div>
+      </div>
+      <div class="why-card" data-reveal style="--d:80ms">
+        <i class="fa-solid fa-book-open"></i>
+        <div><h3>Continuous Learning</h3><p>Always exploring new tools and technologies to keep your projects current.</p></div>
+      </div>
+      <div class="why-card" data-reveal style="--d:160ms">
+        <i class="fa-solid fa-mobile-screen-button"></i>
+        <div><h3>Modern &amp; Responsive Design</h3><p>Every design and website looks sharp on desktop, tablet and mobile.</p></div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section class="section" id="contact">
-  <div class="orb orb-3"></div>
-  <div class="container contact-grid">
-    <div class="reveal">
-      <div class="sec-head" style="margin-bottom:8px">
-        <span class="eyebrow">Contact</span>
-        <h2>Have a project in mind?</h2>
-        <p class="sec-lead">Let's turn your idea into something useful, creative and professional.</p>
+<section id="contact">
+  <div class="container">
+    <div class="sec-head" data-reveal>
+      <div>
+        <span class="eyebrow">Get In Touch</span>
       </div>
-
-      <!-- EDIT: contact details -->
-      <ul class="c-list">
-        <li class="c-item"><span class="c-ico"><svg class="ic"><use href="#i-phone"/></svg></span><div><span class="k">Phone</span><a class="v" href="tel:01402525700">01402525700</a></div></li>
-        <li class="c-item"><span class="c-ico"><svg class="ic"><use href="#i-wa"/></svg></span><div><span class="k">WhatsApp</span><a class="v" href="https://wa.me/8801402525700" target="_blank" rel="noopener">01402525700</a></div></li>
-        <li class="c-item"><span class="c-ico"><svg class="ic"><use href="#i-mail"/></svg></span><div><span class="k">Email</span><a class="v" href="mailto:esource202@gmail.com">esource202@gmail.com</a></div></li>
-        <li class="c-item"><span class="c-ico"><svg class="ic"><use href="#i-pin"/></svg></span><div><span class="k">Location</span><span class="v">Siddhirganj, Narayanganj, Bangladesh</span></div></li>
-        <li class="c-item"><span class="c-ico"><svg class="ic"><use href="#i-fb"/></svg></span><div><span class="k">Facebook Page</span><a class="v" href="https://www.facebook.com/share/1C3Nk8SkyZ/" target="_blank" rel="noopener">Rakib on Facebook</a></div></li>
-      </ul>
-
-      <div class="c-btns">
-        <a href="https://wa.me/8801402525700" target="_blank" rel="noopener" class="btn btn-wa"><svg class="ic"><use href="#i-wa"/></svg>WhatsApp Me</a>
-        <a href="mailto:esource202@gmail.com" class="btn btn-ghost"><svg class="ic"><use href="#i-mail"/></svg>Send Email</a>
-        <a href="https://www.facebook.com/share/1C3Nk8SkyZ/" target="_blank" rel="noopener" class="btn btn-ghost"><svg class="ic"><use href="#i-fb"/></svg>Facebook Page</a>
-      </div>
-
-      <!-- EDIT: SOCIAL LINKS — replace the "#" placeholders with your real profile URLs -->
-      <p class="socials-label">Find me on</p>
-      <div class="socials">
-        <a class="soc" href="https://www.facebook.com/share/1C3Nk8SkyZ/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg class="ic"><use href="#i-fb"/></svg></a>
-        <a class="soc" href="#" data-toast="Instagram profile — coming soon." aria-label="Instagram (coming soon)" title="Instagram — link coming soon"><svg class="ic"><use href="#i-ig"/></svg></a>
-        <a class="soc" href="#" data-toast="LinkedIn profile — coming soon." aria-label="LinkedIn (coming soon)" title="LinkedIn — link coming soon"><svg class="ic"><use href="#i-in"/></svg></a>
-        <a class="soc" href="#" data-toast="GitHub profile — coming soon." aria-label="GitHub (coming soon)" title="GitHub — link coming soon"><svg class="ic"><use href="#i-gh"/></svg></a>
-        <a class="soc" href="#" data-toast="Behance profile — coming soon." aria-label="Behance (coming soon)" title="Behance — link coming soon"><svg class="ic"><use href="#i-be"/></svg></a>
-        <a class="soc" href="#" data-toast="YouTube channel — coming soon." aria-label="YouTube (coming soon)" title="YouTube — link coming soon"><svg class="ic"><use href="#i-yt"/></svg></a>
-      </div>
+      <span class="sec-index">/ 07</span>
     </div>
+    <div class="contact-grid">
+      <div class="contact-left" data-reveal>
+        <h2>Have a project in mind?</h2>
+        <p class="lead">Let's turn your idea into something useful, creative and professional.</p>
+        <div class="c-info">
+          <div class="c-row">
+            <i class="fa-solid fa-phone"></i>
+            <div><small>Phone</small><b>01402525700</b></div>
+            <button class="copy" data-copy="01402525700" aria-label="Copy phone number"><i class="fa-regular fa-copy"></i></button>
+          </div>
+          <div class="c-row">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div><small>WhatsApp</small><b>01402525700</b></div>
+            <button class="copy" data-copy="01402525700" aria-label="Copy WhatsApp number"><i class="fa-regular fa-copy"></i></button>
+          </div>
+          <div class="c-row">
+            <i class="fa-solid fa-envelope"></i>
+            <div><small>Email</small><b>esource202@gmail.com</b></div>
+            <button class="copy" data-copy="esource202@gmail.com" aria-label="Copy email"><i class="fa-regular fa-copy"></i></button>
+          </div>
+          <div class="c-row">
+            <i class="fa-solid fa-location-dot"></i>
+            <div><small>Location</small><b>Siddhirganj, Narayanganj, Bangladesh</b></div>
+          </div>
+          <div class="c-row">
+            <i class="fa-brands fa-facebook-f"></i>
+            <div><small>Facebook Page</small><b><a href="https://www.facebook.com/share/1C3Nk8SkyZ/" target="_blank" rel="noopener" style="color:var(--accent)">Follow Rakib</a></b></div>
+          </div>
+        </div>
+        <div class="contact-btns">
+          <a href="https://wa.me/8801402525700" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fa-brands fa-whatsapp"></i> WhatsApp Me</a>
+          <a href="mailto:esource202@gmail.com" class="btn btn-ghost btn-sm"><i class="fa-solid fa-envelope"></i> Send Email</a>
+          <a href="https://www.facebook.com/share/1C3Nk8SkyZ/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fa-brands fa-facebook-f"></i> Facebook Page</a>
+        </div>
+      </div>
 
-    <div class="form-card reveal" style="--d:.15s">
-      <h3>Tell me about your project</h3>
-      <p>Fill in the details below — I'll get back to you as soon as possible.</p>
-      <form id="contactForm" novalidate>
-        <div class="form-row">
-          <div class="field">
-            <label for="fname">Name</label>
-            <input id="fname" name="name" type="text" placeholder="Your name" required>
+      <div class="form-card" data-reveal style="--d:150ms">
+        <h3>Send a Message</h3>
+        <p>Tell me about your project and I'll get back to you quickly.</p>
+        <form id="contactForm" novalidate>
+          <div class="f-row">
+            <div class="field" id="fName">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name">
+              <span class="err">Please enter your name.</span>
+            </div>
+            <div class="field" id="fEmail">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+              <span class="err">Please enter a valid email.</span>
+            </div>
           </div>
-          <div class="field">
-            <label for="femail">Email</label>
-            <input id="femail" name="email" type="email" placeholder="you@example.com" required>
+          <div class="field" id="fType">
+            <label for="ptype">Project Type</label>
+            <select id="ptype" name="ptype">
+              <option value="" disabled selected>Select a service</option>
+              <option>Graphic Design / Logo</option>
+              <option>AI Advertising Image</option>
+              <option>Website Design</option>
+              <option>Digital Product</option>
+              <option>VAT / Business Consulting</option>
+              <option>Other</option>
+            </select>
+            <span class="err">Please choose a project type.</span>
           </div>
+          <div class="field" id="fMsg">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Describe your project, goals and timeline..."></textarea>
+            <span class="err">Please write a short message.</span>
+          </div>
+          <button type="submit" class="btn btn-primary" id="submitBtn" style="width:100%;justify-content:center">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <i class="fa-solid fa-circle-check"></i>
+          <h4>Message Ready!</h4>
+          <p>Thank you! For the fastest reply, send it directly via <a href="https://wa.me/8801402525700" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">WhatsApp</a> or <a href="mailto:esource202@gmail.com" style="color:var(--accent);font-weight:700">email</a>.</p>
         </div>
-        <div class="field">
-          <label for="ptype">Project Type</label>
-          <select id="ptype" name="type" required>
-            <option value="" disabled selected>Choose a project type</option>
-            <option>Graphic &amp; Logo Design</option>
-            <option>AI Advertising Image</option>
-            <option>Website Design</option>
-            <option>Digital Product</option>
-            <option>Other / Custom</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="fmsg">Message</label>
-          <textarea id="fmsg" name="message" placeholder="Tell me a little about your project, goals and timeline…" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" style="width:100%">Send Message <svg class="ic ic-sm"><use href="#i-send"/></svg></button>
-        <p class="form-note"><svg class="ic"><use href="#i-check"/></svg>This form opens your email app with your message pre-filled — ready for future backend integration.</p>
-      </form>
+      </div>
     </div>
   </div>
 </section>
 
-</main>
-
 <!-- ================= FOOTER ================= -->
 <footer>
+  <div class="footer-watermark">RAKIB</div>
   <div class="container">
-    <div class="f-grid">
-      <div class="f-brand">
-        <a href="#home" class="logo">Rakib<b>.</b></a>
-        <p>Graphic Designer • AI Creative • Web Designer — creating practical digital solutions from Bangladesh.</p>
-        <!-- EDIT: SOCIAL LINKS — replace "#" placeholders -->
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo">Rakib<span class="dot">.</span></a>
+        <p>Graphic Designer • AI Creative • Web Designer</p>
         <div class="socials">
-          <a class="soc" href="https://www.facebook.com/share/1C3Nk8SkyZ/" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ic"><use href="#i-fb"/></svg></a>
-          <a class="soc" href="#" data-toast="Instagram profile — coming soon." aria-label="Instagram (coming soon)"><svg class="ic"><use href="#i-ig"/></svg></a>
-          <a class="soc" href="#" data-toast="LinkedIn profile — coming soon." aria-label="LinkedIn (coming soon)"><svg class="ic"><use href="#i-in"/></svg></a>
-          <a class="soc" href="#" data-toast="GitHub profile — coming soon." aria-label="GitHub (coming soon)"><svg class="ic"><use href="#i-gh"/></svg></a>
-          <a class="soc" href="#" data-toast="Behance profile — coming soon." aria-label="Behance (coming soon)"><svg class="ic"><use href="#i-be"/></svg></a>
-          <a class="soc" href="#" data-toast="YouTube channel — coming soon." aria-label="YouTube (coming soon)"><svg class="ic"><use href="#i-yt"/></svg></a>
+          <a href="https://www.facebook.com/share/1C3Nk8SkyZ/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" data-soon="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" data-soon="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" data-soon="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" data-soon="Behance" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+          <a href="#" data-soon="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
-      <nav aria-label="Footer">
-        <h3 class="f-h">Quick Links</h3>
-        <div class="f-links">
-          <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
-        </div>
-      </nav>
-      <div>
-        <h3 class="f-h">Get in Touch</h3>
-        <ul class="f-contact">
-          <li><svg class="ic"><use href="#i-pin"/></svg>Siddhirganj, Narayanganj, Bangladesh</li>
-          <li><svg class="ic"><use href="#i-mail"/></svg><a href="mailto:esource202@gmail.com">esource202@gmail.com</a></li>
-          <li><svg class="ic"><use href="#i-phone"/></svg><a href="tel:01402525700">01402525700</a></li>
-          <li><svg class="ic"><use href="#i-fb"/></svg><a href="https://www.facebook.com/share/1C3Nk8SkyZ/" target="_blank" rel="noopener">Facebook Page</a></li>
+      <div class="f-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i> Siddhirganj, Narayanganj, Bangladesh</li>
+          <li><a href="mailto:esource202@gmail.com"><i class="fa-solid fa-envelope"></i> esource202@gmail.com</a></li>
+          <li><a href="tel:+8801402525700"><i class="fa-solid fa-phone"></i> 01402525700</a></li>
+          <li><a href="https://www.facebook.com/share/1C3Nk8SkyZ/" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i> Facebook Page</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about"><i class="fa-solid fa-angle-right"></i> About Me</a></li>
+          <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+          <li><a href="#projects"><i class="fa-solid fa-angle-right"></i> Projects</a></li>
+          <li><a href="#contact"><i class="fa-solid fa-angle-right"></i> Contact</a></li>
         </ul>
       </div>
     </div>
-    <div class="f-bottom">
-      <span>© 2026 <b>Rakib</b>. All Rights Reserved.</span>
-      <span>Designed &amp; built by <b>Rakib</b></span>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> <b>Rakib</b>. All rights reserved.</p>
+      <p>Designed &amp; built with <i class="fa-solid fa-heart" style="color:var(--accent)"></i> in Bangladesh</p>
     </div>
   </div>
 </footer>
 
-<button class="to-top" id="toTop" aria-label="Back to top"><svg class="ic"><use href="#i-chevup"/></svg></button>
+<button id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+<div id="toast"><i class="fa-solid fa-circle-info"></i><span id="toastMsg"></span></div>
 
 <script>
 (function(){
   "use strict";
-  var docEl = document.documentElement;
 
-  /* ---------- Loader ---------- */
-  var loader = document.getElementById('loader');
-  function finishLoad(){
-    if (document.body.classList.contains('loaded')) return;
-    loader.classList.add('done');
-    document.body.classList.add('loaded');
-    docEl.classList.remove('lock');
-  }
-  window.addEventListener('load', function(){ setTimeout(finishLoad, 500); });
-  setTimeout(finishLoad, 2600); // safety fallback
+  /* ---------- year ---------- */
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-  /* ---------- Sticky nav & back-to-top ---------- */
+  /* ---------- nav scroll state + progress + toTop ---------- */
   var nav = document.getElementById('nav');
+  var progress = document.getElementById('progress');
   var toTop = document.getElementById('toTop');
   function onScroll(){
-    nav.classList.toggle('scrolled', window.scrollY > 24);
-    toTop.classList.toggle('show', window.scrollY > 600);
+    var y = window.scrollY;
+    nav.classList.toggle('scrolled', y > 40);
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+    toTop.classList.toggle('show', y > 600);
   }
   window.addEventListener('scroll', onScroll, {passive:true});
   onScroll();
   toTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
 
-  /* ---------- Mobile menu ---------- */
-  var burger = document.getElementById('burger');
+  /* ---------- mobile menu ---------- */
+  var burger = document.getElementById('hamburger');
   var menu = document.getElementById('mobileMenu');
   function setMenu(open){
+    burger.classList.toggle('open', open);
     menu.classList.toggle('open', open);
-    burger.classList.toggle('active', open);
+    document.body.classList.toggle('menu-open', open);
     burger.setAttribute('aria-expanded', open);
-    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    docEl.classList.toggle('no-scroll', open);
   }
   burger.addEventListener('click', function(){ setMenu(!menu.classList.contains('open')); });
-  menu.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(){ setMenu(false); });
-  });
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
 
-  /* ---------- Scroll reveal ---------- */
-  var revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
-      });
-    }, {threshold:.14, rootMargin:'0px 0px -7% 0px'});
-    revealEls.forEach(function(el){ io.observe(el); });
-  } else {
-    revealEls.forEach(function(el){ el.classList.add('visible'); });
-  }
+  /* stagger mobile link animation */
+  menu.querySelectorAll('a').forEach(function(a,i){ a.style.transitionDelay = (0.08 + i*0.05) + 's'; });
 
-  /* ---------- Active nav link ---------- */
-  var navLinks = document.querySelectorAll('.nav-links a');
+  /* ---------- scrollspy ---------- */
   var sections = document.querySelectorAll('section[id]');
-  if ('IntersectionObserver' in window){
-    var secIO = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting){
-          navLinks.forEach(function(l){
-            l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id);
-          });
-        }
-      });
-    }, {rootMargin:'-42% 0px -52% 0px'});
-    sections.forEach(function(s){ secIO.observe(s); });
-  }
+  var navAnchors = document.querySelectorAll('#navLinks a');
+  var spy = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        navAnchors.forEach(function(a){
+          a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
+        });
+      }
+    });
+  }, {rootMargin:'-45% 0px -50% 0px'});
+  sections.forEach(function(s){ spy.observe(s); });
 
-  /* ---------- Toast ---------- */
-  var toastEl = null, toastTimer = null;
-  function toast(msg){
-    if (!toastEl){
-      toastEl = document.createElement('div');
-      toastEl.className = 'toast';
-      toastEl.setAttribute('role','status');
-      toastEl.innerHTML = '<svg class="ic"><use href="#i-check"/></svg><span></span>';
-      document.body.appendChild(toastEl);
+  /* ---------- reveal on scroll ---------- */
+  var revealer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in-view'); revealer.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  document.querySelectorAll('[data-reveal]').forEach(function(el){ revealer.observe(el); });
+
+  /* ---------- skill bars ---------- */
+  var barObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var fill = e.target;
+        fill.style.width = fill.dataset.level + '%';
+        barObs.unobserve(fill);
+      }
+    });
+  }, {threshold:0.4});
+  document.querySelectorAll('.bar-fill').forEach(function(b){ barObs.observe(b); });
+
+  /* ---------- counters ---------- */
+  function animateCount(el){
+    var target = parseFloat(el.dataset.count);
+    var dec = parseInt(el.dataset.dec || 0, 10);
+    var dur = 1400, start = null;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts - start)/dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = (target * eased).toFixed(dec);
+      if(p < 1) requestAnimationFrame(step);
+      else el.textContent = target.toFixed(dec);
     }
-    toastEl.querySelector('span').textContent = msg;
-    toastEl.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 3600);
+    requestAnimationFrame(step);
   }
+  var countObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ animateCount(e.target); countObs.unobserve(e.target); }
+    });
+  }, {threshold:0.6});
+  document.querySelectorAll('[data-count]').forEach(function(c){ countObs.observe(c); });
 
-  /* ---------- Placeholder social links ---------- */
-  document.querySelectorAll('[data-toast]').forEach(function(a){
-    a.addEventListener('click', function(e){ e.preventDefault(); toast(a.getAttribute('data-toast')); });
-  });
+  /* ---------- lazy load device iframes ---------- */
+  var frameObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var f = e.target;
+        if(f.dataset.src){ f.src = f.dataset.src; }
+        frameObs.unobserve(f);
+      }
+    });
+  }, {rootMargin:'200px'});
+  document.querySelectorAll('.device-frame').forEach(function(f){ frameObs.observe(f); });
 
-  /* ---------- Service → preselect project type ---------- */
-  var ptype = document.getElementById('ptype');
-  document.querySelectorAll('[data-service]').forEach(function(el){
-    el.addEventListener('click', function(){
-      if (!ptype) return;
-      var val = el.getAttribute('data-service');
-      Array.prototype.forEach.call(ptype.options, function(o){
-        if (o.text.replace(/\s+/g,' ').toLowerCase() === val.replace(/&/g,'&').replace(/\s+/g,' ').toLowerCase()){
-          ptype.value = o.value || o.text;
-          ptype.selectedIndex = o.index;
-        }
-      });
+  /* ---------- hero mouse glow ---------- */
+  var glow = document.getElementById('heroGlow');
+  var hero = document.getElementById('home');
+  var ticking = false;
+  hero.addEventListener('mousemove', function(ev){
+    if(ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var r = hero.getBoundingClientRect();
+      glow.style.transform = 'translate(' + (ev.clientX - r.left - 320) + 'px,' + (ev.clientY - r.top - 320) + 'px)';
+      ticking = false;
     });
   });
 
-  /* ---------- Contact form → mailto (backend-ready) ---------- */
-  var form = document.getElementById('contactForm');
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    var name = form.name.value.trim();
-    var email = form.email.value.trim();
-    var type = ptype.selectedIndex > 0 ? ptype.options[ptype.selectedIndex].text : 'General Inquiry';
-    var msg = form.message.value.trim();
-    if (!name || !email || !msg){ toast('Please fill in all fields before sending.'); return; }
-    var subject = encodeURIComponent('Project Inquiry (' + type + ') — ' + name);
-    var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nProject Type: ' + type + '\n\nMessage:\n' + msg);
-    window.location.href = 'mailto:esource202@gmail.com?subject=' + subject + '&body=' + body;
-    toast('Opening your email app — thank you, ' + name.split(' ')[0] + '!');
-    form.reset();
+  /* ---------- toast ---------- */
+  var toast = document.getElementById('toast');
+  var toastMsg = document.getElementById('toastMsg');
+  var toastTimer;
+  function showToast(msg){
+    toastMsg.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 3200);
+  }
+
+  /* ---------- copy buttons ---------- */
+  document.querySelectorAll('.copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var txt = btn.dataset.copy;
+      function done(){ showToast('Copied: ' + txt); }
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(done).catch(done);
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = txt; document.body.appendChild(ta); ta.select();
+        try{ document.execCommand('copy'); }catch(e){}
+        document.body.removeChild(ta); done();
+      }
+    });
   });
+
+  /* ---------- social coming soon ---------- */
+  document.querySelectorAll('[data-soon]').forEach(function(a){
+    a.addEventListener('click', function(ev){
+      ev.preventDefault();
+      showToast(a.dataset.soon + ' profile coming soon — connect via Facebook or WhatsApp.');
+    });
+  });
+
+  /* ---------- contact form ---------- */
+  var form = document.getElementById('contactForm');
+  var success = document.getElementById('formSuccess');
+  var submitBtn = document.getElementById('submitBtn');
+  function setInvalid(id, bad){
+    document.getElementById(id).classList.toggle('invalid', bad);
+    return bad;
+  }
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var name = document.getElementById('name').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var type = document.getElementById('ptype').value;
+    var msg = document.getElementById('message').value.trim();
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    var bad = false;
+    bad = setInvalid('fName', name.length < 2) || bad;
+    bad = setInvalid('fEmail', !emailOk) || bad;
+    bad = setInvalid('fType', !type) || bad;
+    bad = setInvalid('fMsg', msg.length < 5) || bad;
+    if(bad){ showToast('Please fill in the highlighted fields.'); return; }
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sending...';
+    setTimeout(function(){
+      form.style.display = 'none';
+      success.classList.add('show');
+      showToast('Thanks ' + name.split(' ')[0] + '! Your message is ready.');
+    }, 900);
+  });
+  /* clear invalid state on input */
+  ['name','email','ptype','message'].forEach(function(id){
+    var el = document.getElementById(id);
+    el.addEventListener('input', function(){ el.closest('.field').classList.remove('invalid'); });
+    el.addEventListener('change', function(){ el.closest('.field').classList.remove('invalid'); });
+  });
+
 })();
 </script>
 </body>
