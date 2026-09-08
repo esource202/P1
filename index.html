@@ -1,1470 +1,1806 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Md Rakibul Hasan Rakib | Creative Professional & Consultant (Portfolio 2026)</title>
-  <meta name="description" content="Official 2026 Portfolio of Md Rakibul Hasan Rakib (Rakib) — Graphic Designer, AI Creative Professional, Web Designer, and VAT Consultant based in Narayanganj, Bangladesh." />
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            display: ['"Space Grotesk"', 'sans-serif'],
-          },
-          colors: {
-            brand: {
-              50: '#ecfeff',
-              100: '#cffafe',
-              400: '#22d3ee',
-              500: '#06b6d4',
-              600: '#0891b2',
-              accent: '#6366f1',
-              emerald: '#10b981'
-            },
-            dark: {
-              base: '#07080b',
-              surface: '#0f1117',
-              card: '#141722',
-              cardHover: '#1a1f2e',
-              border: 'rgba(255, 255, 255, 0.08)'
-            }
-          },
-          animation: {
-            'glow-pulse': 'glowPulse 6s ease-in-out infinite',
-            'float-slow': 'float 5s ease-in-out infinite',
-          },
-          keyframes: {
-            glowPulse: {
-              '0%, 100%': { opacity: 0.35, transform: 'scale(1)' },
-              '50%': { opacity: 0.65, transform: 'scale(1.08)' },
-            },
-            float: {
-              '0%, 100%': { transform: 'translateY(0px)' },
-              '50%': { transform: 'translateY(-8px)' },
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <title>Md Rakibul Hasan Rakib | Portfolio 2026</title>
+  <meta name="description" content="Premium personal portfolio of Md Rakibul Hasan Rakib — Graphic Designer, AI Creative Professional, Web Designer, VAT Consultant and Business Owner from Narayanganj, Bangladesh." />
+  <meta name="theme-color" content="#080a10" />
 
   <style>
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #07080b;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #1e2433;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #22d3ee;
-    }
-
-    /* Glassmorphism Styles */
-    .glass-nav {
-      background: rgba(7, 8, 11, 0.78);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-    }
-
-    .glass-card {
-      background: rgba(16, 19, 27, 0.7);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .glass-card:hover {
-      border-color: rgba(34, 211, 238, 0.3);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px -15px rgba(6, 182, 212, 0.12);
+    :root{
+      --bg:#080a10;
+      --bg-2:#0c101b;
+      --card:rgba(255,255,255,.075);
+      --card-2:rgba(255,255,255,.105);
+      --border:rgba(255,255,255,.14);
+      --border-2:rgba(255,255,255,.22);
+      --text:#f4f7fb;
+      --muted:#aeb8c7;
+      --soft:#d8dee8;
+      --brand:#8cf3ff;
+      --brand-2:#a879ff;
+      --brand-3:#38ffb7;
+      --gold:#ffd37a;
+      --danger:#ff6d87;
+      --shadow:0 24px 80px rgba(0,0,0,.38);
+      --radius:28px;
+      --radius-sm:18px;
+      --max:1180px;
+      --nav-h:76px;
+      --ease:cubic-bezier(.2,.8,.2,1);
     }
 
-    .glow-bg {
-      background: radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.12) 0%, rgba(99, 102, 241, 0.05) 45%, transparent 70%);
+    *{box-sizing:border-box}
+    html{
+      scroll-behavior:smooth;
+      scroll-padding-top:calc(var(--nav-h) + 18px);
+    }
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 10% 15%, rgba(140,243,255,.17), transparent 34%),
+        radial-gradient(circle at 88% 12%, rgba(168,121,255,.18), transparent 33%),
+        radial-gradient(circle at 62% 86%, rgba(56,255,183,.10), transparent 34%),
+        linear-gradient(135deg, #06070b 0%, #0b0f19 48%, #07090f 100%);
+      overflow-x:hidden;
+      line-height:1.6;
     }
 
-    /* Gradient Text */
-    .text-gradient {
-      background: linear-gradient(135deg, #ffffff 20%, #a5f3fc 60%, #818cf8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .text-gradient-cyan {
-      background: linear-gradient(135deg, #22d3ee 0%, #6366f1 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:-2;
+      background:
+        linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+      background-size:54px 54px;
+      mask-image:radial-gradient(circle at center, black, transparent 78%);
     }
 
-    /* Shimmer button effect */
-    .btn-shine {
-      position: relative;
-      overflow: hidden;
+    body::after{
+      content:"";
+      position:fixed;
+      width:520px;
+      height:520px;
+      left:var(--cursor-x, 50%);
+      top:var(--cursor-y, 40%);
+      transform:translate(-50%,-50%);
+      pointer-events:none;
+      z-index:-1;
+      background:radial-gradient(circle, rgba(140,243,255,.12), transparent 62%);
+      filter:blur(18px);
+      opacity:.75;
+      transition:opacity .25s ease;
     }
-    .btn-shine::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -60%;
-      width: 40%;
-      height: 200%;
-      background: linear-gradient(
-        60deg,
-        rgba(255, 255, 255, 0) 20%,
-        rgba(255, 255, 255, 0.35) 50%,
-        rgba(255, 255, 255, 0) 80%
-      );
-      transform: rotate(25deg);
-      transition: all 0.7s ease;
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    button,input,textarea{font:inherit}
+    button{cursor:pointer}
+
+    .container{
+      width:min(100% - 36px, var(--max));
+      margin-inline:auto;
     }
-    .btn-shine:hover::after {
-      left: 130%;
+
+    .skip-link{
+      position:absolute;
+      left:16px;
+      top:-60px;
+      z-index:999;
+      padding:10px 14px;
+      border-radius:12px;
+      background:var(--text);
+      color:#07090f;
+      transition:.2s;
+    }
+    .skip-link:focus{top:12px}
+
+    .nav{
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      z-index:100;
+      height:var(--nav-h);
+      display:flex;
+      align-items:center;
+      border-bottom:1px solid transparent;
+      transition:background .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease), height .3s var(--ease);
+    }
+    .nav.scrolled{
+      height:68px;
+      background:rgba(6,8,13,.72);
+      backdrop-filter:blur(18px);
+      border-color:rgba(255,255,255,.11);
+      box-shadow:0 12px 36px rgba(0,0,0,.28);
+    }
+    .nav-wrap{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:max-content;
+    }
+    .brand-mark{
+      width:42px;
+      height:42px;
+      display:grid;
+      place-items:center;
+      border-radius:16px;
+      background:
+        linear-gradient(135deg, rgba(140,243,255,.95), rgba(168,121,255,.92));
+      color:#061018;
+      font-weight:900;
+      letter-spacing:-.08em;
+      box-shadow:0 12px 28px rgba(140,243,255,.18);
+    }
+    .brand-text strong{
+      display:block;
+      font-size:15px;
+      line-height:1.1;
+    }
+    .brand-text span{
+      display:block;
+      font-size:12px;
+      color:var(--muted);
+      margin-top:2px;
+    }
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:4px;
+      list-style:none;
+      padding:0;
+      margin:0;
+    }
+    .nav-links a{
+      display:inline-flex;
+      align-items:center;
+      min-height:42px;
+      padding:9px 12px;
+      border-radius:999px;
+      color:rgba(244,247,251,.78);
+      font-size:14px;
+      font-weight:650;
+      transition:.22s var(--ease);
+    }
+    .nav-links a:hover,
+    .nav-links a.active{
+      color:#071019;
+      background:linear-gradient(135deg, var(--brand), var(--brand-3));
+      box-shadow:0 10px 26px rgba(140,243,255,.16);
+    }
+    .menu-btn{
+      display:none;
+      width:46px;
+      height:46px;
+      align-items:center;
+      justify-content:center;
+      border:1px solid var(--border);
+      border-radius:16px;
+      background:rgba(255,255,255,.07);
+      color:var(--text);
+    }
+    .menu-btn span{
+      width:20px;
+      height:2px;
+      background:currentColor;
+      position:relative;
+      transition:.22s;
+    }
+    .menu-btn span::before,
+    .menu-btn span::after{
+      content:"";
+      position:absolute;
+      left:0;
+      width:20px;
+      height:2px;
+      background:currentColor;
+      transition:.22s;
+    }
+    .menu-btn span::before{top:-7px}
+    .menu-btn span::after{top:7px}
+    .menu-btn[aria-expanded="true"] span{background:transparent}
+    .menu-btn[aria-expanded="true"] span::before{top:0;transform:rotate(45deg)}
+    .menu-btn[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg)}
+
+    main{padding-top:var(--nav-h)}
+
+    .hero{
+      position:relative;
+      min-height:calc(100vh - var(--nav-h));
+      display:flex;
+      align-items:center;
+      padding:58px 0 84px;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:8% 0 auto 50%;
+      width:min(48vw, 620px);
+      height:min(48vw, 620px);
+      transform:translateX(-10%);
+      background:
+        radial-gradient(circle, rgba(140,243,255,.16), transparent 60%),
+        conic-gradient(from 120deg, transparent, rgba(168,121,255,.14), transparent, rgba(56,255,183,.10), transparent);
+      filter:blur(20px);
+      border-radius:50%;
+      pointer-events:none;
+      animation:floatGlow 9s var(--ease) infinite alternate;
+    }
+    @keyframes floatGlow{
+      from{transform:translateX(-13%) translateY(-8px) scale(.96)}
+      to{transform:translateX(-5%) translateY(14px) scale(1.04)}
+    }
+    .hero-grid{
+      position:relative;
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:48px;
+      align-items:center;
+    }
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 12px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      background:rgba(255,255,255,.065);
+      color:var(--soft);
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.02em;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
+    }
+    .eyebrow::before{
+      content:"";
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--brand-3);
+      box-shadow:0 0 18px var(--brand-3);
+    }
+    h1,h2,h3,p{margin-top:0}
+    .hero h1{
+      margin:24px 0 14px;
+      max-width:760px;
+      font-size:clamp(42px, 7vw, 84px);
+      line-height:.96;
+      letter-spacing:-.07em;
+    }
+    .gradient-text{
+      background:linear-gradient(135deg, #fff 6%, var(--brand) 39%, var(--brand-2) 72%, #fff 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+    .hero-subtitle{
+      margin:0 0 18px;
+      max-width:780px;
+      color:#e6edf7;
+      font-size:clamp(19px, 2.1vw, 27px);
+      line-height:1.25;
+      font-weight:800;
+      letter-spacing:-.035em;
+    }
+    .hero-intro{
+      max-width:690px;
+      color:var(--muted);
+      font-size:17px;
+      margin-bottom:28px;
+    }
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      align-items:center;
+    }
+    .btn{
+      position:relative;
+      isolation:isolate;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:50px;
+      padding:13px 18px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(255,255,255,.075);
+      color:var(--text);
+      font-weight:850;
+      letter-spacing:-.01em;
+      transition:transform .22s var(--ease), box-shadow .22s var(--ease), border-color .22s var(--ease), background .22s var(--ease);
+      overflow:hidden;
+      user-select:none;
+    }
+    .btn::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      background:linear-gradient(135deg, rgba(255,255,255,.22), transparent 45%);
+      opacity:.6;
+    }
+    .btn:hover{
+      transform:translateY(-3px);
+      border-color:rgba(140,243,255,.42);
+      box-shadow:0 18px 42px rgba(0,0,0,.25), 0 0 24px rgba(140,243,255,.13);
+    }
+    .btn:active{transform:translateY(-1px) scale(.99)}
+    .btn-primary{
+      color:#061018;
+      background:linear-gradient(135deg, var(--brand), var(--brand-3));
+      border-color:transparent;
+      box-shadow:0 18px 38px rgba(140,243,255,.16);
+    }
+    .btn-purple{
+      background:linear-gradient(135deg, rgba(168,121,255,.92), rgba(140,243,255,.85));
+      color:#060b12;
+      border-color:transparent;
+    }
+    .btn-small{
+      min-height:42px;
+      padding:10px 14px;
+      font-size:14px;
+    }
+
+    .quick-info{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:12px;
+      margin-top:34px;
+      max-width:760px;
+    }
+    .info-pill{
+      padding:14px;
+      border:1px solid var(--border);
+      border-radius:18px;
+      background:rgba(255,255,255,.06);
+      backdrop-filter:blur(14px);
+    }
+    .info-pill span{
+      display:block;
+      color:var(--muted);
+      font-size:12px;
+      margin-bottom:3px;
+    }
+    .info-pill strong{
+      display:block;
+      font-size:14px;
+      line-height:1.28;
+    }
+
+    .profile-wrap{
+      justify-self:end;
+      width:min(440px, 100%);
+    }
+    .profile-card{
+      position:relative;
+      padding:16px;
+      border:1px solid var(--border-2);
+      border-radius:38px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.13), rgba(255,255,255,.055)),
+        radial-gradient(circle at 20% 15%, rgba(140,243,255,.18), transparent 38%);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      transform:translateZ(0);
+    }
+    .profile-card::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      border-radius:inherit;
+      padding:1px;
+      background:linear-gradient(135deg, rgba(140,243,255,.7), transparent 32%, rgba(168,121,255,.58), transparent 72%, rgba(56,255,183,.45));
+      -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite:xor;
+      mask-composite:exclude;
+      pointer-events:none;
+    }
+    .profile-img-box{
+      position:relative;
+      aspect-ratio:1/1.12;
+      border-radius:28px;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 50% 30%, rgba(255,255,255,.18), transparent 32%),
+        linear-gradient(135deg, rgba(140,243,255,.16), rgba(168,121,255,.12)),
+        #0d111b;
+      display:grid;
+      place-items:center;
+    }
+    .profile-img-box img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:grayscale(100%) contrast(1.08) brightness(.92);
+      transition:transform .65s var(--ease), filter .45s var(--ease);
+    }
+    .profile-card:hover img{
+      transform:scale(1.035);
+      filter:grayscale(88%) contrast(1.08) brightness(.98);
+    }
+    .profile-placeholder{
+      position:absolute;
+      inset:0;
+      display:none;
+      place-items:center;
+      text-align:center;
+      padding:24px;
+      color:var(--soft);
+      background:linear-gradient(135deg, rgba(140,243,255,.10), rgba(168,121,255,.10));
+    }
+    .profile-placeholder strong{
+      display:block;
+      font-size:72px;
+      line-height:1;
+      letter-spacing:-.08em;
+    }
+    .profile-placeholder span{
+      display:block;
+      color:var(--muted);
+      margin-top:10px;
+    }
+    .profile-badge{
+      position:absolute;
+      left:26px;
+      right:26px;
+      bottom:26px;
+      padding:14px 16px;
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:22px;
+      background:rgba(5,8,13,.72);
+      backdrop-filter:blur(18px);
+      box-shadow:0 18px 42px rgba(0,0,0,.32);
+    }
+    .profile-badge strong{display:block;font-size:16px}
+    .profile-badge span{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+
+    section{
+      position:relative;
+      padding:82px 0;
+    }
+    .section-head{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:24px;
+      margin-bottom:32px;
+    }
+    .section-kicker{
+      display:inline-flex;
+      color:var(--brand);
+      font-size:13px;
+      font-weight:900;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:9px;
+    }
+    .section-title{
+      margin:0;
+      font-size:clamp(30px, 4vw, 54px);
+      line-height:1.04;
+      letter-spacing:-.055em;
+    }
+    .section-desc{
+      max-width:650px;
+      color:var(--muted);
+      margin:12px 0 0;
+      font-size:16px;
+    }
+
+    .glass{
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.052));
+      box-shadow:0 18px 60px rgba(0,0,0,.24);
+      backdrop-filter:blur(16px);
+    }
+    .card{
+      border:1px solid var(--border);
+      border-radius:var(--radius-sm);
+      background:rgba(255,255,255,.064);
+      transition:transform .25s var(--ease), border-color .25s var(--ease), background .25s var(--ease), box-shadow .25s var(--ease);
+    }
+    .card:hover{
+      transform:translateY(-7px);
+      border-color:rgba(140,243,255,.32);
+      background:rgba(255,255,255,.09);
+      box-shadow:0 22px 52px rgba(0,0,0,.26);
+    }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:22px;
+    }
+    .about-copy{
+      padding:30px;
+    }
+    .about-copy p{
+      color:var(--muted);
+      font-size:16.5px;
+      margin-bottom:16px;
+    }
+    .about-copy p:last-child{margin-bottom:0}
+    .identity-list{
+      display:grid;
+      gap:12px;
+    }
+    .identity-item{
+      display:flex;
+      align-items:flex-start;
+      gap:13px;
+      padding:17px;
+      border-radius:20px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.055);
+    }
+    .icon{
+      flex:0 0 auto;
+      width:42px;
+      height:42px;
+      display:grid;
+      place-items:center;
+      border-radius:16px;
+      background:linear-gradient(135deg, rgba(140,243,255,.18), rgba(168,121,255,.14));
+      border:1px solid rgba(255,255,255,.10);
+      font-size:20px;
+    }
+    .identity-item strong{display:block;line-height:1.2}
+    .identity-item span{display:block;color:var(--muted);font-size:14px;margin-top:2px;word-break:break-word}
+
+    .skills-grid{
+      display:grid;
+      grid-template-columns:repeat(4, minmax(0, 1fr));
+      gap:14px;
+    }
+    .skill{
+      position:relative;
+      padding:18px 16px;
+      min-height:96px;
+      overflow:hidden;
+    }
+    .skill::before{
+      content:"";
+      position:absolute;
+      inset:auto -20px -45px auto;
+      width:90px;
+      height:90px;
+      border-radius:50%;
+      background:rgba(140,243,255,.09);
+      filter:blur(2px);
+      transition:.25s var(--ease);
+    }
+    .skill:hover::before{transform:scale(1.25);background:rgba(168,121,255,.13)}
+    .skill .icon{width:38px;height:38px;border-radius:14px;margin-bottom:12px}
+    .skill strong{display:block;font-size:15px;line-height:1.25}
+
+    .experience-grid{
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      gap:22px;
+      align-items:start;
+    }
+    .experience-summary{
+      padding:30px;
+      position:sticky;
+      top:96px;
+    }
+    .experience-summary p{color:var(--muted);margin-bottom:0}
+    .timeline{
+      position:relative;
+      display:grid;
+      gap:14px;
+    }
+    .timeline::before{
+      content:"";
+      position:absolute;
+      left:28px;
+      top:14px;
+      bottom:14px;
+      width:1px;
+      background:linear-gradient(var(--brand), rgba(168,121,255,.5), transparent);
+    }
+    .timeline-item{
+      position:relative;
+      display:grid;
+      grid-template-columns:58px 1fr;
+      gap:14px;
+    }
+    .dot{
+      width:58px;
+      height:58px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:rgba(255,255,255,.07);
+      border:1px solid var(--border);
+      z-index:1;
+      box-shadow:0 0 0 8px rgba(8,10,16,.75);
+    }
+    .timeline-card{
+      padding:22px;
+    }
+    .timeline-card h3{margin:0 0 4px;font-size:19px;letter-spacing:-.02em}
+    .timeline-card .time{color:var(--brand);font-weight:800;font-size:14px;margin-bottom:8px}
+    .timeline-card p{color:var(--muted);margin:0}
+
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:18px;
+    }
+    .service{
+      position:relative;
+      padding:24px;
+      overflow:hidden;
+    }
+    .service::after{
+      content:"";
+      position:absolute;
+      right:-58px;
+      top:-58px;
+      width:150px;
+      height:150px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(140,243,255,.16), transparent 68%);
+      transition:.3s var(--ease);
+    }
+    .service:hover::after{transform:scale(1.25)}
+    .service h3{margin:14px 0 8px;font-size:20px;letter-spacing:-.025em}
+    .service p{color:var(--muted);margin:0 0 18px;font-size:14.5px}
+    .price{
+      display:inline-flex;
+      align-items:center;
+      min-height:36px;
+      padding:7px 12px;
+      border-radius:999px;
+      background:rgba(255,211,122,.11);
+      color:var(--gold);
+      border:1px solid rgba(255,211,122,.22);
+      font-weight:900;
+    }
+
+    .vat-business-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+    .focus-card{
+      padding:28px;
+      min-height:100%;
+    }
+    .focus-card h3{
+      font-size:24px;
+      margin:14px 0 10px;
+      letter-spacing:-.03em;
+    }
+    .focus-card p{color:var(--muted);margin:0 0 16px}
+    .check-list{
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:grid;
+      gap:10px;
+    }
+    .check-list li{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      color:var(--soft);
+    }
+    .check-list li::before{
+      content:"✓";
+      flex:0 0 auto;
+      width:24px;
+      height:24px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:rgba(56,255,183,.12);
+      color:var(--brand-3);
+      font-weight:900;
+      font-size:13px;
+    }
+
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:20px;
+    }
+    .project{
+      overflow:hidden;
+    }
+    .project-visual{
+      min-height:210px;
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      background:
+        radial-gradient(circle at 25% 20%, rgba(140,243,255,.22), transparent 34%),
+        radial-gradient(circle at 80% 30%, rgba(168,121,255,.18), transparent 34%),
+        linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.035));
+      border-bottom:1px solid var(--border);
+    }
+    .project-number{
+      align-self:flex-start;
+      padding:7px 11px;
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:999px;
+      color:var(--brand);
+      background:rgba(0,0,0,.18);
+      font-weight:900;
+      font-size:13px;
+    }
+    .browser-mock{
+      margin-top:36px;
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:18px;
+      background:rgba(4,7,12,.58);
+      overflow:hidden;
+      box-shadow:0 22px 50px rgba(0,0,0,.25);
+    }
+    .mock-top{
+      display:flex;
+      gap:6px;
+      padding:10px 12px;
+      border-bottom:1px solid rgba(255,255,255,.10);
+    }
+    .mock-top i{
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--brand);
+      opacity:.8;
+    }
+    .mock-lines{
+      padding:16px;
+      display:grid;
+      gap:10px;
+    }
+    .mock-lines span{
+      height:10px;
+      border-radius:999px;
+      background:linear-gradient(90deg, rgba(255,255,255,.24), rgba(255,255,255,.06));
+    }
+    .mock-lines span:nth-child(1){width:72%}
+    .mock-lines span:nth-child(2){width:92%}
+    .mock-lines span:nth-child(3){width:55%}
+    .project-body{padding:24px}
+    .project-body h3{margin:0 0 10px;font-size:23px;letter-spacing:-.03em}
+    .project-body p{color:var(--muted);margin-bottom:18px}
+    .tag-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-bottom:18px;
+    }
+    .tag{
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.10);
+      color:var(--soft);
+      font-size:12px;
+      font-weight:800;
+    }
+
+    .social-grid{
+      display:grid;
+      grid-template-columns:repeat(4, minmax(0,1fr));
+      gap:16px;
+    }
+    .social-card{
+      padding:20px;
+      min-height:170px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .social-card h3{margin:12px 0 4px;font-size:18px;letter-spacing:-.02em}
+    .social-card p{color:var(--muted);font-size:14px;margin:0 0 16px}
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:22px;
+      align-items:start;
+    }
+    .contact-panel{
+      padding:28px;
+    }
+    .contact-list{
+      display:grid;
+      gap:12px;
+      margin-top:20px;
+    }
+    .contact-link{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:14px;
+      border:1px solid var(--border);
+      border-radius:18px;
+      background:rgba(255,255,255,.055);
+      transition:.22s var(--ease);
+      word-break:break-word;
+    }
+    .contact-link:hover{
+      transform:translateY(-3px);
+      border-color:rgba(140,243,255,.32);
+      background:rgba(255,255,255,.08);
+    }
+    .contact-link span:nth-child(2){
+      color:var(--soft);
+      font-weight:750;
+    }
+
+    .form{
+      padding:28px;
+      display:grid;
+      gap:14px;
+    }
+    .field{
+      display:grid;
+      gap:7px;
+    }
+    .field label{
+      color:var(--soft);
+      font-size:13px;
+      font-weight:850;
+    }
+    .field input,
+    .field textarea{
+      width:100%;
+      border:1px solid var(--border);
+      border-radius:17px;
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      outline:none;
+      padding:14px 15px;
+      transition:.2s var(--ease);
+    }
+    .field textarea{min-height:134px;resize:vertical}
+    .field input:focus,
+    .field textarea:focus{
+      border-color:rgba(140,243,255,.55);
+      box-shadow:0 0 0 4px rgba(140,243,255,.09);
+      background:rgba(255,255,255,.08);
+    }
+    .field.error input,
+    .field.error textarea{
+      border-color:rgba(255,109,135,.72);
+      box-shadow:0 0 0 4px rgba(255,109,135,.08);
+    }
+    .error-text{
+      display:none;
+      color:var(--danger);
+      font-size:12px;
+      font-weight:700;
+    }
+    .field.error .error-text{display:block}
+    .form-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:4px;
+    }
+    .form-note{
+      color:var(--muted);
+      font-size:13px;
+      margin:0;
+    }
+    .status{
+      min-height:24px;
+      color:var(--brand-3);
+      font-weight:800;
+      font-size:14px;
+    }
+
+    footer{
+      padding:34px 0;
+      border-top:1px solid var(--border);
+      background:rgba(0,0,0,.16);
+    }
+    .footer-wrap{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .footer-wrap strong{color:var(--text)}
+
+    .to-top{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:90;
+      width:48px;
+      height:48px;
+      display:grid;
+      place-items:center;
+      border-radius:16px;
+      border:1px solid var(--border);
+      background:rgba(8,10,16,.72);
+      color:var(--text);
+      backdrop-filter:blur(14px);
+      box-shadow:0 18px 42px rgba(0,0,0,.28);
+      transform:translateY(18px);
+      opacity:0;
+      pointer-events:none;
+      transition:.25s var(--ease);
+    }
+    .to-top.show{
+      transform:translateY(0);
+      opacity:1;
+      pointer-events:auto;
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(22px);
+      transition:opacity .72s var(--ease), transform .72s var(--ease);
+    }
+    .reveal.visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+    .stagger > *{
+      transition-delay:calc(var(--i, 0) * 70ms);
+    }
+
+    .hero .reveal:nth-child(1){transition-delay:70ms}
+    .hero .reveal:nth-child(2){transition-delay:150ms}
+    .hero .reveal:nth-child(3){transition-delay:230ms}
+    .hero .reveal:nth-child(4){transition-delay:310ms}
+
+    @media (max-width:1080px){
+      .nav-links a{padding-inline:9px;font-size:13px}
+      .hero-grid{grid-template-columns:1fr;gap:36px}
+      .profile-wrap{justify-self:start;width:min(440px, 100%)}
+      .quick-info{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .skills-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .social-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+
+    @media (max-width:880px){
+      :root{--nav-h:70px}
+      .container{width:min(100% - 28px, var(--max))}
+      .menu-btn{display:inline-flex}
+      .nav-links{
+        position:fixed;
+        left:14px;
+        right:14px;
+        top:74px;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:8px;
+        padding:14px;
+        border:1px solid var(--border);
+        border-radius:24px;
+        background:rgba(7,10,16,.94);
+        backdrop-filter:blur(20px);
+        box-shadow:var(--shadow);
+        transform:translateY(-14px) scale(.98);
+        opacity:0;
+        visibility:hidden;
+        pointer-events:none;
+        transition:.22s var(--ease);
+      }
+      .nav-links.open{
+        transform:translateY(0) scale(1);
+        opacity:1;
+        visibility:visible;
+        pointer-events:auto;
+      }
+      .nav-links a{
+        justify-content:center;
+        border:1px solid rgba(255,255,255,.08);
+        background:rgba(255,255,255,.045);
+      }
+      .hero{padding:44px 0 62px;min-height:auto}
+      section{padding:62px 0}
+      .section-head{display:block}
+      .about-grid,
+      .experience-grid,
+      .vat-business-grid,
+      .projects-grid,
+      .contact-grid{
+        grid-template-columns:1fr;
+      }
+      .experience-summary{position:relative;top:auto}
+      .skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .services-grid{grid-template-columns:1fr}
+    }
+
+    @media (max-width:560px){
+      body::after{display:none}
+      .brand-text span{display:none}
+      .hero h1{font-size:clamp(39px, 13vw, 62px)}
+      .hero-subtitle{font-size:18px}
+      .quick-info{grid-template-columns:1fr}
+      .profile-card{border-radius:30px;padding:12px}
+      .profile-img-box{border-radius:22px}
+      .profile-badge{left:20px;right:20px;bottom:20px}
+      .section-title{font-size:32px}
+      .about-copy,
+      .contact-panel,
+      .form,
+      .focus-card{padding:22px}
+      .skills-grid,
+      .social-grid{grid-template-columns:1fr}
+      .timeline-item{grid-template-columns:46px 1fr;gap:12px}
+      .timeline::before{left:23px}
+      .dot{width:46px;height:46px;font-size:16px}
+      .footer-wrap{flex-direction:column;align-items:flex-start}
+      .form-actions .btn{width:100%}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *,
+      *::before,
+      *::after{
+        animation-duration:.001ms !important;
+        animation-iteration-count:1 !important;
+        scroll-behavior:auto !important;
+        transition-duration:.001ms !important;
+      }
+      .reveal{opacity:1;transform:none}
     }
   </style>
 </head>
 
-<body class="bg-dark-base text-slate-300 font-sans antialiased selection:bg-brand-500 selection:text-white relative overflow-x-hidden">
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
 
-  <!-- Ambient Glow Blobs in Background -->
-  <div class="fixed top-0 left-1/4 w-[600px] h-[600px] rounded-full glow-bg pointer-events-none -z-10 animate-glow-pulse blur-3xl opacity-60"></div>
-  <div class="fixed bottom-10 right-10 w-[500px] h-[500px] rounded-full bg-brand-accent/5 pointer-events-none -z-10 blur-3xl"></div>
+  <header class="nav" id="navbar">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand" aria-label="Go to home">
+        <span class="brand-mark">RK</span>
+        <span class="brand-text">
+          <strong>Rakib</strong>
+          <span>Portfolio 2026</span>
+        </span>
+      </a>
 
-  <!-- Toast Notification -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 bg-dark-card border border-brand-500/40 text-white px-5 py-3.5 rounded-xl shadow-2xl flex items-center space-x-3 pointer-events-none">
-    <i class="fa-solid fa-circle-check text-brand-400 text-lg"></i>
-    <span id="toast-message" class="text-sm font-medium">Copied to clipboard!</span>
-  </div>
-
-  <!-- 1. STICKY NAVBAR -->
-  <header class="fixed top-0 left-0 right-0 z-40 glass-nav transition-all duration-300" id="navbar">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        <!-- Logo / Name -->
-        <a href="#hero" class="group flex items-center space-x-3 focus:outline-none">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-400 to-brand-accent p-[1px] shadow-lg shadow-brand-500/20 group-hover:shadow-brand-500/40 transition">
-            <div class="w-full h-full bg-dark-base rounded-[11px] flex items-center justify-center font-display font-bold text-white text-lg tracking-wider">
-              R
-            </div>
-          </div>
-          <div>
-            <div class="text-white font-display font-bold text-lg tracking-tight group-hover:text-brand-400 transition">
-              Rakib<span class="text-brand-400">.</span>
-            </div>
-            <div class="text-[10px] text-slate-400 font-medium tracking-widest uppercase -mt-1">
-              Portfolio 2026
-            </div>
-          </div>
-        </a>
-
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
-          <a href="#about" class="nav-link px-3.5 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">About</a>
-          <a href="#skills" class="nav-link px-3.5 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">Skills</a>
-          <a href="#experience" class="nav-link px-3.5 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">Experience</a>
-          <a href="#services" class="nav-link px-3.5 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">Services</a>
-          <a href="#vat-business" class="nav-link px-3.5 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">VAT & Trading</a>
-          <a href="#projects" class="nav-link px-3.5 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">Projects</a>
-          <a href="#contact" class="nav-link px-3.5 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition font-medium">Contact</a>
-        </nav>
-
-        <!-- CTA & Quick Connect -->
-        <div class="hidden md:flex items-center space-x-3">
-          <a href="https://wa.me/88014025700" target="_blank" rel="noopener noreferrer" 
-             class="btn-shine inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-brand-500 to-brand-accent text-white font-semibold text-xs tracking-wide uppercase shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 hover:opacity-95 transition active:scale-95">
-            <i class="fa-brands fa-whatsapp text-sm"></i>
-            <span>WhatsApp</span>
-          </a>
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <button id="mobileMenuBtn" type="button" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 border border-white/10 focus:outline-none" aria-label="Toggle Navigation Menu">
-          <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+      <nav aria-label="Primary navigation">
+        <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">
+          <span aria-hidden="true"></span>
         </button>
-      </div>
-    </div>
-
-    <!-- Mobile Drawer -->
-    <div id="mobileMenu" class="hidden md:hidden border-b border-white/10 bg-dark-surface/95 backdrop-blur-2xl px-6 py-5 transition-all">
-      <div class="flex flex-col space-y-3">
-        <a href="#about" class="mobile-link text-slate-300 hover:text-brand-400 py-2 text-base font-medium">About</a>
-        <a href="#skills" class="mobile-link text-slate-300 hover:text-brand-400 py-2 text-base font-medium">Skills</a>
-        <a href="#experience" class="mobile-link text-slate-300 hover:text-brand-400 py-2 text-base font-medium">Experience</a>
-        <a href="#services" class="mobile-link text-slate-300 hover:text-brand-400 py-2 text-base font-medium">Services & Pricing</a>
-        <a href="#vat-business" class="mobile-link text-slate-300 hover:text-brand-400 py-2 text-base font-medium">VAT & Business</a>
-        <a href="#projects" class="mobile-link text-slate-300 hover:text-brand-400 py-2 text-base font-medium">Featured Projects</a>
-        <a href="#contact" class="mobile-link text-slate-300 hover:text-brand-400 py-2 text-base font-medium">Contact</a>
-        <div class="pt-3 border-t border-white/10 flex gap-3">
-          <a href="https://wa.me/88014025700" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg font-medium text-sm">
-            <i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp
-          </a>
-          <a href="tel:01402525700" class="flex-1 text-center py-2.5 bg-white/10 hover:bg-white/15 text-white rounded-lg font-medium text-sm">
-            <i class="fa-solid fa-phone mr-1"></i> Call Now
-          </a>
-        </div>
-      </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#vat-business">VAT & Business</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#social">Social</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <!-- 2. HERO SECTION -->
-    <section id="hero" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
-          <!-- Hero Text -->
-          <div class="lg:col-span-7 text-center lg:text-left order-2 lg:order-1">
-            <div class="inline-flex items-center space-x-2.5 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-400 text-xs font-semibold tracking-wider uppercase mb-6 backdrop-blur-md">
-              <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
-              <span>Portfolio 2026 Edition</span>
+  <main id="main">
+    <section class="hero" id="home" aria-label="Hero section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow reveal">Personal Portfolio 2026 • Siddhirganj, Narayanganj</span>
+          <h1 class="reveal">Md Rakibul Hasan <span class="gradient-text">Rakib</span></h1>
+          <p class="hero-subtitle reveal">Graphic Designer • AI Creative Professional • Web Designer</p>
+          <p class="hero-intro reveal">
+            I am Rakib, a creative professional working with AI, graphic design, web design, digital products, business operations and VAT-related online work. I focus on clean visual communication, practical digital solutions and professional support for real business needs.
+          </p>
+
+          <div class="cta-row reveal">
+            <a class="btn btn-primary" href="#projects">View My Work <span aria-hidden="true">↗</span></a>
+            <a class="btn" href="#contact">Contact Me <span aria-hidden="true">→</span></a>
+          </div>
+
+          <div class="quick-info stagger" aria-label="Quick professional information">
+            <div class="info-pill reveal" style="--i:1"><span>Display Name</span><strong>Rakib</strong></div>
+            <div class="info-pill reveal" style="--i:2"><span>Phone / WhatsApp</span><strong>01402525700</strong></div>
+            <div class="info-pill reveal" style="--i:3"><span>Email</span><strong>esource202@gmail.com</strong></div>
+          </div>
+        </div>
+
+        <div class="profile-wrap reveal">
+          <div class="profile-card" aria-label="Profile image area">
+            <div class="profile-img-box">
+              <img
+                src="https://dvxrhkgloakisnvqoxgl.supabase.co/storage/v1/object/sign/images/inputs/1788868207805_f3bv2ez8y.png?token=eyJraWQiOiI0NWE1YWU1ZS0xNzg4LTRiMWYtYWM5OC1hMjgwNmQ2OTM4ZWMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvaW5wdXRzLzE3ODg4NjgyMDc4MDVfZjNidjJlejh5LnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODg4NjgyMzEsImV4cCI6MTgyMDQwNDIzMX0.i_G4I_k_vHH8akuyiA0hrWCp5CpmKVJ9s2eqp5E-la4"
+                alt="Black and white profile portrait of Md Rakibul Hasan Rakib"
+                loading="eager"
+                decoding="async"
+                id="profileImage"
+              />
+              <div class="profile-placeholder" id="profileFallback" aria-hidden="true">
+                <div>
+                  <strong>RK</strong>
+                  <span>Premium profile image area</span>
+                </div>
+              </div>
+              <div class="profile-badge">
+                <strong>Creative-Tech Professional</strong>
+                <span>AI • Design • Web • VAT • Business</span>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white mb-4 leading-tight">
-              Md Rakibul Hasan <span class="text-gradient">Rakib</span>
-            </h1>
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-kicker">About</span>
+            <h2 class="section-title">Creative work, digital systems and business support.</h2>
+          </div>
+          <p class="section-desc">
+            A professional overview of Rakib’s work areas, combining creative design skills with practical online and business operations.
+          </p>
+        </div>
 
-            <p class="text-lg sm:text-xl font-medium text-slate-300 mb-6 flex flex-wrap items-center justify-center lg:justify-start gap-2">
-              <span class="text-brand-400 font-semibold">Graphic Designer</span>
-              <span class="text-slate-600">•</span>
-              <span class="text-slate-200">AI Creative Professional</span>
-              <span class="text-slate-600">•</span>
-              <span class="text-indigo-400 font-semibold">Web Designer</span>
+        <div class="about-grid">
+          <article class="about-copy glass reveal">
+            <p>
+              Md Rakibul Hasan Rakib is a creative professional from Siddhirganj, Narayanganj, Bangladesh. He works across graphic design, AI creative work, web design, digital product creation, computer operations, business activities and VAT-related online support.
             </p>
-
-            <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
-              Based in Siddhirganj, Narayanganj. Bridging digital visual creativity, artificial intelligence workflows, web design, and structured VAT consultancy &amp; trading operations with high standard precision.
+            <p>
+              His work style is practical, modern and focused on clear communication. In design, he creates visual assets such as logos, advertising images and responsive web interfaces. In AI creative work, he explores AI image generation, prompt engineering and creative advertising ideas.
             </p>
-
-            <!-- Call to Actions -->
-            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <a href="#projects" class="w-full sm:w-auto btn-shine px-8 py-3.5 rounded-xl bg-gradient-to-r from-brand-500 to-brand-accent text-white font-bold text-sm tracking-wide shadow-xl shadow-brand-500/25 hover:shadow-brand-500/40 hover:-translate-y-0.5 transition flex items-center justify-center space-x-2">
-                <span>View My Work</span>
-                <i class="fa-solid fa-arrow-down text-xs"></i>
-              </a>
-
-              <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 text-white font-semibold text-sm border border-white/10 hover:border-brand-400/40 transition flex items-center justify-center space-x-2">
-                <span>Contact Me</span>
-                <i class="fa-regular fa-paper-plane text-xs"></i>
-              </a>
-
-              <a href="https://wa.me/88014025700" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-semibold text-sm transition flex items-center justify-center space-x-2" title="Direct WhatsApp">
-                <i class="fa-brands fa-whatsapp text-base"></i>
-                <span class="sm:inline">01402525700</span>
-              </a>
-            </div>
-
-            <!-- Quick Pill Highlights -->
-            <div class="mt-10 pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-3 gap-4 text-left">
-              <div class="bg-dark-card/50 p-3 rounded-lg border border-white/5">
-                <div class="text-xs text-slate-400">VAT Returns Handled</div>
-                <div class="text-lg font-bold text-white font-display">~38 Companies</div>
-              </div>
-              <div class="bg-dark-card/50 p-3 rounded-lg border border-white/5">
-                <div class="text-xs text-slate-400">Graphic Experience</div>
-                <div class="text-lg font-bold text-brand-400 font-display">~3 Years</div>
-              </div>
-              <div class="bg-dark-card/50 p-3 rounded-lg border border-white/5 col-span-2 sm:col-span-1">
-                <div class="text-xs text-slate-400">Location</div>
-                <div class="text-sm font-semibold text-slate-200">Narayanganj, BD</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Hero Image Profile Card -->
-          <div class="lg:col-span-5 flex justify-center order-1 lg:order-2">
-            <div class="relative group">
-              <!-- Glow Aura -->
-              <div class="absolute -inset-1.5 bg-gradient-to-tr from-brand-500 via-indigo-600 to-cyan-400 rounded-3xl blur-xl opacity-40 group-hover:opacity-75 transition duration-700 animate-glow-pulse"></div>
-              
-              <!-- Container -->
-              <div class="relative w-72 sm:w-80 md:w-96 rounded-2xl bg-dark-surface border border-white/15 p-3.5 shadow-2xl backdrop-blur-xl">
-                <!-- Image Wrapper -->
-                <div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden bg-dark-base border border-white/10">
-                  <img 
-                    src="https://dvxrhkgloakisnvqoxgl.supabase.co/storage/v1/object/sign/images/inputs/1788860135422_gumyo2qh7.png?token=eyJraWQiOiI0NWE1YWU1ZS0xNzg4LTRiMWYtYWM5OC1hMjgwNmQ2OTM4ZWMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvaW5wdXRzLzE3ODg4NjAxMzU0MjJfZ3VteW8ycWg3LnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODg4NjAxNTEsImV4cCI6MTgyMDM5NjE1MX0.AHq5ftXmhtEGR2dNoyBGvKqT7WNSx2NwsrE_dK6Nlpo" 
-                    alt="Md Rakibul Hasan Rakib portrait" 
-                    class="w-full h-full object-cover object-top filter grayscale contrast-110 hover:contrast-100 hover:grayscale-0 transition duration-500"
-                    loading="eager"
-                  />
-                  <!-- Gradient Overlay -->
-                  <div class="absolute inset-0 bg-gradient-to-t from-dark-base via-transparent to-transparent opacity-80"></div>
-                  
-                  <div class="absolute bottom-3 left-3 right-3 p-3 rounded-lg bg-dark-surface/90 border border-white/10 backdrop-blur-md flex items-center justify-between">
-                    <div>
-                      <p class="text-xs text-brand-400 font-semibold tracking-wide">AVAILABLE IN 2026</p>
-                      <p class="text-sm font-bold text-white">Md Rakibul Hasan (Rakib)</p>
-                    </div>
-                    <span class="inline-flex items-center px-2 py-1 rounded bg-emerald-500/20 text-emerald-400 text-[11px] font-medium border border-emerald-500/30">
-                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping mr-1.5"></span>
-                      Active
-                    </span>
-                  </div>
-                </div>
-
-                <!-- Subtle Decorative Info Tags -->
-                <div class="mt-3 flex items-center justify-between px-1 text-xs text-slate-400">
-                  <span><i class="fa-solid fa-location-dot text-brand-400 mr-1"></i> Siddhirganj</span>
-                  <span><i class="fa-solid fa-code text-indigo-400 mr-1"></i> Design &amp; Web</span>
-                  <span><i class="fa-solid fa-file-invoice-dollar text-emerald-400 mr-1"></i> VAT Work</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. ABOUT SECTION -->
-    <section id="about" class="py-20 bg-dark-surface/50 border-t border-b border-white/5 relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-14">
-          <h2 class="text-xs font-bold text-brand-400 uppercase tracking-widest mb-2">Professional Profile</h2>
-          <p class="font-display text-3xl sm:text-4xl font-extrabold text-white">About Rakib</p>
-          <div class="w-16 h-1 bg-gradient-to-r from-brand-400 to-brand-accent mx-auto mt-4 rounded-full"></div>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          
-          <!-- Narrative -->
-          <div class="lg:col-span-7 glass-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
-            <div>
-              <div class="flex items-center space-x-3 mb-5">
-                <div class="w-10 h-10 rounded-lg bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-400 text-lg">
-                  <i class="fa-solid fa-user-astronaut"></i>
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold text-white">Multi-Disciplinary Professional</h3>
-                  <p class="text-xs text-slate-400">Bridging Creative Arts &amp; Commercial Precision</p>
-                </div>
-              </div>
-
-              <div class="space-y-4 text-slate-300 text-base leading-relaxed">
-                <p>
-                  I am <strong class="text-white">Md Rakibul Hasan Rakib</strong> (display name <strong class="text-white">Rakib</strong>), a creative professional and consultant based in <span class="text-slate-100">Siddhirganj, Narayanganj, Bangladesh</span>. My focus spans <span class="text-brand-400 font-medium">Artificial Intelligence workflows, Graphic Design, Web Design, Digital Product Creation, Business, and structured online VAT compliance</span>.
-                </p>
-                <p>
-                  With an analytical mindset and a genuine passion for modern tools, I approach every project with clarity and confidence. Whether constructing high-impact AI advertising visuals, creating vector brand identities, coding responsive web interfaces, or managing complex tax return compliance for industrial and commercial businesses, I emphasize real-world effectiveness over hype.
-                </p>
-                <p>
-                  In addition to creative digital endeavors, I run active supplier and trading operations, maintaining hands-on responsibility in real commerce, vendor relations, and business administration.
-                </p>
-              </div>
-            </div>
-
-            <!-- Identity Badges -->
-            <div class="mt-8 pt-6 border-t border-white/10">
-              <span class="text-xs uppercase text-slate-400 tracking-wider font-semibold block mb-3">Core Identity Pillars</span>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-slate-200">Graphic Designer</span>
-                <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-slate-200">AI Creative Professional</span>
-                <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-slate-200">Web Designer</span>
-                <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-slate-200">VAT Consultant</span>
-                <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-slate-200">Computer Operator</span>
-                <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-slate-200">Supplier/Trading Owner</span>
-                <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-slate-200">Digital Product Creator</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Fast Facts / Highlights Cards -->
-          <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
-            
-            <div class="glass-card p-5 rounded-2xl flex items-start space-x-4">
-              <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl shrink-0">
-                <i class="fa-solid fa-wand-magic-sparkles"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-white text-base">AI Creative &amp; Learning</h4>
-                <p class="text-slate-400 text-xs mt-1">1.5 years dedicated practice with generative imagery, prompt engineering &amp; digital advertising synthesis.</p>
-              </div>
-            </div>
-
-            <div class="glass-card p-5 rounded-2xl flex items-start space-x-4">
-              <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-xl shrink-0">
-                <i class="fa-solid fa-pen-nib"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-white text-base">Graphic &amp; Brand Design</h4>
-                <p class="text-slate-400 text-xs mt-1">Approximately 3 years shaping visual assets, custom logo designs, marketing collateral, and Canva production.</p>
-              </div>
-            </div>
-
-            <div class="glass-card p-5 rounded-2xl flex items-start space-x-4">
-              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl shrink-0">
-                <i class="fa-solid fa-file-invoice"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-white text-base">VAT Returns &amp; Compliance</h4>
-                <p class="text-slate-400 text-xs mt-1">Active monthly online return filing for ~38 registered companies and consultative advisory for ~8 enterprises.</p>
-              </div>
-            </div>
-
-            <div class="glass-card p-5 rounded-2xl flex items-start space-x-4">
-              <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl shrink-0">
-                <i class="fa-solid fa-boxes-packing"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-white text-base">Supplier &amp; Trading Business</h4>
-                <p class="text-slate-400 text-xs mt-1">Active business owner overseeing merchandise distribution, client orders, and corporate supplies.</p>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 4. SKILLS SECTION -->
-    <section id="skills" class="py-20 relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-14">
-          <h2 class="text-xs font-bold text-brand-400 uppercase tracking-widest mb-2">Technical &amp; Creative Arsenal</h2>
-          <p class="font-display text-3xl sm:text-4xl font-extrabold text-white">Core Skills &amp; Competencies</p>
-          <div class="w-16 h-1 bg-gradient-to-r from-brand-400 to-brand-accent mx-auto mt-4 rounded-full"></div>
-          <p class="text-slate-400 text-sm mt-4">A balanced blend of digital creativity, web engineering, enterprise operations, and tax advisory.</p>
-        </div>
-
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          
-          <!-- Skill Card 1 -->
-          <div class="glass-card p-4 rounded-xl flex items-center space-x-3.5 group">
-            <div class="w-10 h-10 rounded-lg bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400 text-lg group-hover:scale-110 transition">
-              <i class="fa-solid fa-palette"></i>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-white group-hover:text-brand-400 transition">Graphic Design</div>
-              <div class="text-[11px] text-slate-400">Layout &amp; Identity</div>
-            </div>
-          </div>
-
-          <!-- Skill Card 2 -->
-          <div class="glass-card p-4 rounded-xl flex items-center space-x-3.5 group">
-            <div class="w-10 h-10 rounded-lg bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400 text-lg group-hover:scale-110 transition">
-              <i class="fa-solid fa-vector-square"></i>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-white group-hover:text-brand-400 transition">Logo Design</div>
-              <div class="text-[11px] text-slate-400">Vector Branding</div>
-            </div>
-          </div>
-
-          <!-- Skill Card 3 -->
-          <div class="glass-card p-4 rounded-xl flex items-center space-x-3.5 group">
-            <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-lg group-hover:scale-110 transition">
-              <i class="fa-solid fa-robot"></i>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-white group-hover:text-indigo-400 transition">AI Image Gen</div>
-              <div class="text-[11px] text-slate-400">Midjourney &amp; Diffusion</div>
-            </div>
-          </div>
-
-          <!-- Skill Card 4 -->
-          <div class="glass-card p-4 rounded-xl flex items-center space-x-3.5 group">
-            <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-lg group-hover:scale-110 transition">
-              <i class="fa-solid fa-terminal"></i>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-white group-hover:text-indigo-400 transition">Prompt Engineering</div>
-              <div class="text-[11px] text-slate-400">Precision Directives</div>
-            </div>
-          </div>
-
-          <!-- Skill Card 5 -->
-          <div class="glass-card p-4 rounded-xl flex items-center space-x-3.5 group">
-            <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-lg group-hover:scale-110 transition">
-              <i class="fa-solid fa-bullhorn"></i>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-white group-hover:text-indigo-400 transition">AI Creative Ads</div>
-              <div class="text-[11px] text-slate-400">Commercial Concepts</div>
-            </div>
-          </div>
-
-          <!-- Skill Card 6 -->
-          <div class="glass-card p-4 rounded-xl flex items-center space-x-3.5 group">
-            <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-lg group-hover:scale-110 transition">
-              <i class="fa-solid fa-code"></i>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-white group-hover:text-cyan-400 transition">Web Design</div>
-              <div class="text-[11px] text-slate-400">UI / Frontend</div>
-            </div>
-          </div>
-
-          <!-- Skill Card 7 -->
-          <div class="glass-card p-4 rounded-xl flex items-center space-x-3.5 group">
-            <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-lg group-hover:scale-110 transition">
-              <i class="fa-brands fa-html5"></i>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-white group-hover:text-cyan-400 transition">HTML &amp; CSS</div>
-              <div class="text-[11px] text-slate-400">Modern Layouts</div>
-            </div>
-          </div>
-
-          <!-- Skill Card 8 -->
-          <div class="glass-card p-4 rounded-xl flex items-center space-x-3.5 group">
-            <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-lg group-hover:scale-110 transition">
-              <i class="fa-brands fa-js"></i>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-white group-hover:text-cyan-400 transition">JavaScript</div>
-              <div class="text-[11px] text-slate-400">Dynamic Interactivity</div>
-            </div>
-          </div>
-
-          <!-- Skill Card 9 -->
-          <div class="glass-card p-4 rounded-xl flex items-center space-x-3.5 group">
-            <div class="w-10 h-10 rounded-lg bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400 text-lg group-hover:scale-110 transition">
-              <i class="fa-solid fa-paintbrush"></i>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-white group-hover:text-brand-400 transition">Canva Pro</div>
-              <div class="text-[11px] text-slate-400">Rapid Social Assets</div>
-            </div>
-          </div>
-
-          <!-- Skill Card 10 -->
-          <div class="glass-card p-4 rounded-xl flex items-center space-x-3.5 group">
-            <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-lg group-hover:scale-110 transition">
-              <i class="fa-solid fa-mobile-screen-button"></i>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-white group-hover:text-cyan-400 transition">Responsive Design</div>
-              <div class="text-[11px] text-slate-400">Mobile &amp; Desktop</div>
-            </div>
-          </div>
-
-          <!-- Skill Card 11 -->
-          <div class="glass-card p-4 rounded-xl flex items-center space-x-3.5 group">
-            <div class="w-10 h-10 rounded-lg bg-slate-500/10 border border-slate-500/20 flex items-center justify-center text-slate-300 text-lg group-hover:scale-110 transition">
-              <i class="fa-solid fa-desktop"></i>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-white group-hover:text-slate-200 transition">Computer Ops</div>
-              <div class="text-[11px] text-slate-400">Office &amp; Data Systems</div>
-            </div>
-          </div>
-
-          <!-- Skill Card 12 -->
-          <div class="glass-card p-4 rounded-xl flex items-center space-x-3.5 group">
-            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-lg group-hover:scale-110 transition">
-              <i class="fa-solid fa-receipt"></i>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-white group-hover:text-emerald-400 transition">VAT Online Return</div>
-              <div class="text-[11px] text-slate-400">NBR Compliance (9.1)</div>
-            </div>
-          </div>
-
-          <!-- Skill Card 13 -->
-          <div class="glass-card p-4 rounded-xl flex items-center space-x-3.5 group">
-            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-lg group-hover:scale-110 transition">
-              <i class="fa-solid fa-chart-line"></i>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-white group-hover:text-emerald-400 transition">VAT Consulting</div>
-              <div class="text-[11px] text-slate-400">Tax Bookkeeping</div>
-            </div>
-          </div>
-
-          <!-- Skill Card 14 -->
-          <div class="glass-card p-4 rounded-xl flex items-center space-x-3.5 group">
-            <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-lg group-hover:scale-110 transition">
-              <i class="fa-solid fa-truck-ramp-box"></i>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-white group-hover:text-amber-400 transition">Supplier Management</div>
-              <div class="text-[11px] text-slate-400">Inventory &amp; B2B Trading</div>
-            </div>
-          </div>
-
-          <!-- Skill Card 15 & 16 span / grouped -->
-          <div class="glass-card p-4 rounded-xl flex items-center space-x-3.5 group col-span-2 sm:col-span-1 lg:col-span-2">
-            <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-lg group-hover:scale-110 transition shrink-0">
-              <i class="fa-solid fa-box-open"></i>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-white group-hover:text-purple-300 transition">Digital Product Creation</div>
-              <div class="text-[11px] text-slate-400">Templates, UI Kits, Menus &amp; Custom Digital Assets</div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 5. EXPERIENCE SECTION -->
-    <section id="experience" class="py-20 bg-dark-surface/40 border-t border-b border-white/5 relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-xs font-bold text-brand-400 uppercase tracking-widest mb-2">Track Record</h2>
-          <p class="font-display text-3xl sm:text-4xl font-extrabold text-white">Experience &amp; Current Engagements</p>
-          <div class="w-16 h-1 bg-gradient-to-r from-brand-400 to-brand-accent mx-auto mt-4 rounded-full"></div>
-          <p class="text-slate-400 text-sm mt-4">Actual day-to-day work, active client accounts, and industry timelines.</p>
-        </div>
-
-        <div class="relative border-l-2 border-white/10 ml-4 md:ml-32 pl-6 md:pl-10 space-y-12 max-w-4xl">
-          
-          <!-- Experience Item 1 -->
-          <div class="relative group">
-            <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-dark-base border-2 border-brand-400 group-hover:bg-brand-400 transition"></div>
-            <div class="glass-card p-6 rounded-2xl">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <h3 class="text-lg font-bold text-white group-hover:text-brand-400 transition">VAT Online Return Operations</h3>
-                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-brand-500/10 text-brand-400 border border-brand-500/20">Active Ongoing</span>
-              </div>
-              <div class="text-xs text-brand-400 font-medium mb-3">NBR Online Portal • Siddhirganj / Narayanganj &amp; Beyond</div>
-              <p class="text-slate-300 text-sm leading-relaxed">
-                Currently managing regular monthly VAT return submissions (Mushak 9.1) for approximately <strong class="text-white">38 registered companies</strong>. Handling sales records, purchase registers (Mushak 6.1, 6.2), treasury challans, and timely digital declarations according to National Board of Revenue requirements.
-              </p>
-            </div>
-          </div>
-
-          <!-- Experience Item 2 -->
-          <div class="relative group">
-            <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-dark-base border-2 border-emerald-400 group-hover:bg-emerald-400 transition"></div>
-            <div class="glass-card p-6 rounded-2xl">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition">VAT Consultancy &amp; Advisory</h3>
-                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Active Advisory</span>
-              </div>
-              <div class="text-xs text-emerald-400 font-medium mb-3">Consultant to 8 Enterprises</div>
-              <p class="text-slate-300 text-sm leading-relaxed">
-                Serving as dedicated VAT Consultant for <strong class="text-white">8 companies</strong>. Providing structured guidance on tax rate assessments, withholding VAT (VDS), audit trail preparedness, documentation compliance, and day-to-day commercial VAT operations.
-              </p>
-            </div>
-          </div>
-
-          <!-- Experience Item 3 -->
-          <div class="relative group">
-            <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-dark-base border-2 border-indigo-400 group-hover:bg-indigo-400 transition"></div>
-            <div class="glass-card p-6 rounded-2xl">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition">Graphic Design Practice</h3>
-                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">~3 Years Experience</span>
-              </div>
-              <div class="text-xs text-indigo-400 font-medium mb-3">Brand Identity, Logo Design &amp; Digital Collateral</div>
-              <p class="text-slate-300 text-sm leading-relaxed">
-                3 years of active graphic creation including logo vectors, company profiles, social media banners, promotional flyers, and corporate stationery utilizing modern design suites and Canva.
-              </p>
-            </div>
-          </div>
-
-          <!-- Experience Item 4 -->
-          <div class="relative group">
-            <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-dark-base border-2 border-cyan-400 group-hover:bg-cyan-400 transition"></div>
-            <div class="glass-card p-6 rounded-2xl">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition">AI Creative &amp; Learning</h3>
-                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">~1.5 Years Dedicated</span>
-              </div>
-              <div class="text-xs text-cyan-400 font-medium mb-3">Generative AI, Prompt Architecture &amp; Commercial Advertising</div>
-              <p class="text-slate-300 text-sm leading-relaxed">
-                Mastering generative image synthesis and prompt engineering to produce studio-grade advertising visuals, product mockups, and creative social ads with hyper-detailed realism.
-              </p>
-            </div>
-          </div>
-
-          <!-- Experience Item 5 -->
-          <div class="relative group">
-            <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-dark-base border-2 border-amber-400 group-hover:bg-amber-400 transition"></div>
-            <div class="glass-card p-6 rounded-2xl">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Supplier / Trading Business &amp; Web Design</h3>
-                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">Active Business Operations</span>
-              </div>
-              <div class="text-xs text-amber-400 font-medium mb-3">Commercial Supplies &amp; Digital Solutions</div>
-              <p class="text-slate-300 text-sm leading-relaxed">
-                Operating a trading and supplier venture catering to commercial supply demands, coupled with continuous design and frontend development of modern web solutions and digital product assets.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 6. SERVICES & PRICING SECTION -->
-    <section id="services" class="py-20 relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-14">
-          <h2 class="text-xs font-bold text-brand-400 uppercase tracking-widest mb-2">Transparent Offerings</h2>
-          <p class="font-display text-3xl sm:text-4xl font-extrabold text-white">Services &amp; Pricing</p>
-          <div class="w-16 h-1 bg-gradient-to-r from-brand-400 to-brand-accent mx-auto mt-4 rounded-full"></div>
-          <p class="text-slate-400 text-sm mt-4">Direct personal collaboration with clear pricing ranges in Bangladeshi Taka (BDT).</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          
-          <!-- Service 1 -->
-          <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-2 border-t-brand-400 relative">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-xl mb-5">
-                <i class="fa-solid fa-pen-ruler"></i>
-              </div>
-              <h3 class="font-bold text-lg text-white mb-2">Graphic Design &amp; Logo Design</h3>
-              <p class="text-slate-400 text-xs mb-4 leading-relaxed">
-                Clean vector logos, business branding packages, social media creative packs, banners, and marketing material tailored to your identity.
-              </p>
-              
-              <ul class="text-xs text-slate-300 space-y-2 mb-6">
-                <li class="flex items-center space-x-2">
-                  <i class="fa-solid fa-check text-brand-400 text-[10px]"></i>
-                  <span>Custom Logo Creation</span>
-                </li>
-                <li class="flex items-center space-x-2">
-                  <i class="fa-solid fa-check text-brand-400 text-[10px]"></i>
-                  <span>Vector &amp; High-Res Export</span>
-                </li>
-                <li class="flex items-center space-x-2">
-                  <i class="fa-solid fa-check text-brand-400 text-[10px]"></i>
-                  <span>Social Media Brand Kit</span>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <div class="pt-4 border-t border-white/10 mb-4">
-                <span class="text-[11px] text-slate-400 uppercase tracking-wider block">Pricing</span>
-                <span class="text-xl font-display font-extrabold text-white">৳599 – ৳6,999</span>
-              </div>
-              <a href="https://wa.me/88014025700?text=Hi%20Rakib,%20I%20am%20interested%20in%20Graphic%20Design%20or%20Logo%20Design." 
-                 target="_blank" rel="noopener noreferrer" 
-                 class="w-full text-center py-2.5 rounded-lg bg-white/5 hover:bg-brand-500 hover:text-white text-brand-400 text-xs font-semibold border border-brand-500/20 transition block">
-                Inquire via WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <!-- Service 2 -->
-          <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-2 border-t-indigo-400 relative">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-5">
-                <i class="fa-solid fa-wand-magic"></i>
-              </div>
-              <h3 class="font-bold text-lg text-white mb-2">AI Advertising Image</h3>
-              <p class="text-slate-400 text-xs mb-4 leading-relaxed">
-                Hyper-realistic, captivating advertising visuals, commercial product shoots, and creative concepts generated through prompt architecture.
-              </p>
-              
-              <ul class="text-xs text-slate-300 space-y-2 mb-6">
-                <li class="flex items-center space-x-2">
-                  <i class="fa-solid fa-check text-indigo-400 text-[10px]"></i>
-                  <span>Commercial Ad Concepts</span>
-                </li>
-                <li class="flex items-center space-x-2">
-                  <i class="fa-solid fa-check text-indigo-400 text-[10px]"></i>
-                  <span>Photorealistic Lighting &amp; Detail</span>
-                </li>
-                <li class="flex items-center space-x-2">
-                  <i class="fa-solid fa-check text-indigo-400 text-[10px]"></i>
-                  <span>High-Resolution Generation</span>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <div class="pt-4 border-t border-white/10 mb-4">
-                <span class="text-[11px] text-slate-400 uppercase tracking-wider block">Pricing</span>
-                <span class="text-xl font-display font-extrabold text-white">৳99 – ৳799</span>
-              </div>
-              <a href="https://wa.me/88014025700?text=Hi%20Rakib,%20I%20am%20interested%20in%20AI%20Advertising%20Images." 
-                 target="_blank" rel="noopener noreferrer" 
-                 class="w-full text-center py-2.5 rounded-lg bg-white/5 hover:bg-indigo-500 hover:text-white text-indigo-400 text-xs font-semibold border border-indigo-500/20 transition block">
-                Inquire via WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <!-- Service 3 -->
-          <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-2 border-t-cyan-400 relative">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-5">
-                <i class="fa-solid fa-laptop-code"></i>
-              </div>
-              <h3 class="font-bold text-lg text-white mb-2">Website Design</h3>
-              <p class="text-slate-400 text-xs mb-4 leading-relaxed">
-                Responsive websites, restaurant digital menus, fitness club portals, business landing pages, and interactive frontend interfaces.
-              </p>
-              
-              <ul class="text-xs text-slate-300 space-y-2 mb-6">
-                <li class="flex items-center space-x-2">
-                  <i class="fa-solid fa-check text-cyan-400 text-[10px]"></i>
-                  <span>Fully Mobile Responsive</span>
-                </li>
-                <li class="flex items-center space-x-2">
-                  <i class="fa-solid fa-check text-cyan-400 text-[10px]"></i>
-                  <span>WhatsApp / Direct Ordering Flow</span>
-                </li>
-                <li class="flex items-center space-x-2">
-                  <i class="fa-solid fa-check text-cyan-400 text-[10px]"></i>
-                  <span>Clean HTML, CSS &amp; JavaScript</span>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <div class="pt-4 border-t border-white/10 mb-4">
-                <span class="text-[11px] text-slate-400 uppercase tracking-wider block">Pricing</span>
-                <span class="text-xl font-display font-extrabold text-white">৳1,000 – ৳20,000</span>
-              </div>
-              <a href="https://wa.me/88014025700?text=Hi%20Rakib,%20I%20am%20interested%20in%20Website%20Design." 
-                 target="_blank" rel="noopener noreferrer" 
-                 class="w-full text-center py-2.5 rounded-lg bg-white/5 hover:bg-cyan-500 hover:text-white text-cyan-400 text-xs font-semibold border border-cyan-500/20 transition block">
-                Inquire via WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <!-- Service 4 -->
-          <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-2 border-t-purple-400 relative">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl mb-5">
-                <i class="fa-solid fa-layer-group"></i>
-              </div>
-              <h3 class="font-bold text-lg text-white mb-2">Digital Products</h3>
-              <p class="text-slate-400 text-xs mb-4 leading-relaxed">
-                Ready-to-use digital templates, food menu digital kits, business spreadsheets, and reusable visual graphic systems built for productivity.
-              </p>
-              
-              <ul class="text-xs text-slate-300 space-y-2 mb-6">
-                <li class="flex items-center space-x-2">
-                  <i class="fa-solid fa-check text-purple-400 text-[10px]"></i>
-                  <span>Ready-Made Templates</span>
-                </li>
-                <li class="flex items-center space-x-2">
-                  <i class="fa-solid fa-check text-purple-400 text-[10px]"></i>
-                  <span>Digital Menu Formats</span>
-                </li>
-                <li class="flex items-center space-x-2">
-                  <i class="fa-solid fa-check text-purple-400 text-[10px]"></i>
-                  <span>Bespoke Digital Packages</span>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <div class="pt-4 border-t border-white/10 mb-4">
-                <span class="text-[11px] text-slate-400 uppercase tracking-wider block">Pricing</span>
-                <span class="text-xl font-display font-extrabold text-white">Custom Pricing</span>
-              </div>
-              <a href="https://wa.me/88014025700?text=Hi%20Rakib,%20I%20am%20interested%20in%20Digital%20Products." 
-                 target="_blank" rel="noopener noreferrer" 
-                 class="w-full text-center py-2.5 rounded-lg bg-white/5 hover:bg-purple-600 hover:text-white text-purple-400 text-xs font-semibold border border-purple-500/20 transition block">
-                Discuss Requirements
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 7. VAT & BUSINESS SECTION -->
-    <section id="vat-business" class="py-20 bg-dark-surface/50 border-t border-b border-white/5 relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
-          <div class="lg:col-span-6 space-y-6">
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold tracking-wider uppercase">
-              <i class="fa-solid fa-building-columns"></i>
-              <span>Commercial &amp; Tax Solutions</span>
-            </div>
-
-            <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white leading-tight">
-              VAT Consultancy &amp; <br />
-              <span class="text-gradient">Supplier / Trading Business</span>
-            </h2>
-
-            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Beyond digital creativity, Rakib maintains deep hands-on commercial experience within Bangladesh's statutory VAT system and direct trading supply chains.
+            <p>
+              Alongside creative work, Rakib is active in supplier and trading business and provides professional VAT consulting support and online VAT-related assistance. His portfolio presents real work areas, real projects and contact options without exaggerated claims.
             </p>
+          </article>
 
-            <div class="space-y-3">
-              <div class="flex items-start space-x-3.5 p-3.5 rounded-xl bg-dark-card border border-white/5">
-                <i class="fa-solid fa-file-circle-check text-emerald-400 text-lg mt-0.5"></i>
-                <div>
-                  <h4 class="text-white text-sm font-bold">Online VAT Return Filing (~38 Companies)</h4>
-                  <p class="text-slate-400 text-xs mt-0.5">Regular monthly submission of NBR Mushak 9.1 returns, maintaining accurate input-output tax ledgers and government compliance.</p>
-                </div>
-              </div>
-
-              <div class="flex items-start space-x-3.5 p-3.5 rounded-xl bg-dark-card border border-white/5">
-                <i class="fa-solid fa-handshake-angle text-emerald-400 text-lg mt-0.5"></i>
-                <div>
-                  <h4 class="text-white text-sm font-bold">VAT Consulting (~8 Companies)</h4>
-                  <p class="text-slate-400 text-xs mt-0.5">Advising commercial enterprises on tax optimization, documentation, challan verification, and regulatory compliance.</p>
-                </div>
-              </div>
-
-              <div class="flex items-start space-x-3.5 p-3.5 rounded-xl bg-dark-card border border-white/5">
-                <i class="fa-solid fa-boxes-stacked text-amber-400 text-lg mt-0.5"></i>
-                <div>
-                  <h4 class="text-white text-sm font-bold">Active Supplier &amp; Trading Business</h4>
-                  <p class="text-slate-400 text-xs mt-0.5">Commercial sourcing, distribution, and corporate supply operations managed directly through our dedicated business channel.</p>
-                </div>
-              </div>
+          <aside class="identity-list stagger">
+            <div class="identity-item reveal" style="--i:1">
+              <span class="icon" aria-hidden="true">📍</span>
+              <div><strong>Location</strong><span>Siddhirganj, Narayanganj, Bangladesh</span></div>
             </div>
-
-            <!-- Facebook Business Link CTA -->
-            <div class="pt-2">
-              <a href="https://www.facebook.com/share/1ccJmyvEPd/" target="_blank" rel="noopener noreferrer" 
-                 class="inline-flex items-center space-x-3 px-6 py-3 rounded-xl bg-[#1877F2]/15 hover:bg-[#1877F2]/25 text-[#1877F2] border border-[#1877F2]/30 font-semibold text-sm transition">
-                <i class="fa-brands fa-facebook text-lg"></i>
-                <span>Visit Facebook Business Page</span>
-                <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
-              </a>
+            <div class="identity-item reveal" style="--i:2">
+              <span class="icon" aria-hidden="true">💼</span>
+              <div><strong>Profession</strong><span>Computer Operator • VAT Consultant • Businessman • Graphic Designer • AI Creative Professional • AI Learner • Web Designer • Digital Product Creator • Supplier/Trading Business Owner</span></div>
             </div>
-          </div>
-
-          <!-- Visual Stat Display Card -->
-          <div class="lg:col-span-6">
-            <div class="glass-card p-6 sm:p-8 rounded-2xl relative overflow-hidden border border-emerald-500/20">
-              <div class="absolute top-0 right-0 w-48 h-48 bg-emerald-500/10 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none"></div>
-
-              <h3 class="text-xs uppercase font-bold text-slate-400 tracking-wider mb-6 flex items-center justify-between">
-                <span>Operational Footprint</span>
-                <span class="text-emerald-400 font-mono">2026 STATUS</span>
-              </h3>
-
-              <div class="grid grid-cols-2 gap-4 mb-6">
-                <div class="p-4 rounded-xl bg-dark-base/80 border border-white/5">
-                  <div class="text-3xl sm:text-4xl font-display font-extrabold text-emerald-400">38+</div>
-                  <div class="text-xs font-medium text-slate-300 mt-1">Companies for Monthly VAT Return</div>
-                </div>
-                <div class="p-4 rounded-xl bg-dark-base/80 border border-white/5">
-                  <div class="text-3xl sm:text-4xl font-display font-extrabold text-brand-400">8+</div>
-                  <div class="text-xs font-medium text-slate-300 mt-1">Companies for VAT Advisory &amp; Consulting</div>
-                </div>
-              </div>
-
-              <div class="p-4 rounded-xl bg-dark-base/80 border border-white/5 space-y-3">
-                <div class="text-xs font-semibold text-slate-300">Operational Focus Areas</div>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-2.5 py-1 rounded bg-white/5 text-[11px] text-slate-300">Mushak 9.1</span>
-                  <span class="px-2.5 py-1 rounded bg-white/5 text-[11px] text-slate-300">Mushak 6.3 Invoicing</span>
-                  <span class="px-2.5 py-1 rounded bg-white/5 text-[11px] text-slate-300">VDS Certification</span>
-                  <span class="px-2.5 py-1 rounded bg-white/5 text-[11px] text-slate-300">NBR Compliance</span>
-                  <span class="px-2.5 py-1 rounded bg-white/5 text-[11px] text-slate-300">Industrial Supplies</span>
-                  <span class="px-2.5 py-1 rounded bg-white/5 text-[11px] text-slate-300">Wholesale Sourcing</span>
-                </div>
-              </div>
-
-              <div class="mt-6 text-center">
-                <span class="text-xs text-slate-400">Need corporate VAT filing or commercial supplies?</span>
-                <div class="mt-2">
-                  <a href="tel:01402525700" class="text-xs font-bold text-white hover:text-emerald-400 transition inline-flex items-center space-x-1">
-                    <i class="fa-solid fa-phone text-emerald-400 mr-1"></i>
-                    <span>Direct Call: 01402525700</span>
-                  </a>
-                </div>
-              </div>
-
+            <div class="identity-item reveal" style="--i:3">
+              <span class="icon" aria-hidden="true">✉️</span>
+              <div><strong>Email</strong><span>esource202@gmail.com</span></div>
             </div>
-          </div>
-
+            <div class="identity-item reveal" style="--i:4">
+              <span class="icon" aria-hidden="true">☎️</span>
+              <div><strong>Phone / WhatsApp</strong><span>01402525700</span></div>
+            </div>
+          </aside>
         </div>
-
       </div>
     </section>
 
-    <!-- 8. FEATURED PROJECTS (Strictly the 2 real projects) -->
-    <section id="projects" class="py-20 relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-14">
-          <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-400 text-xs font-semibold tracking-wider uppercase mb-3">
-            <i class="fa-solid fa-code"></i>
-            <span>Live Portfolio Work</span>
+    <section id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-kicker">Skills</span>
+            <h2 class="section-title">Design, AI, web, VAT and business capabilities.</h2>
           </div>
-          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">Featured Web Projects</h2>
-          <div class="w-16 h-1 bg-gradient-to-r from-brand-400 to-brand-accent mx-auto mt-4 rounded-full"></div>
-          <p class="text-slate-400 text-sm mt-4">Real, interactive, deployed web applications designed and developed for clients.</p>
+          <p class="section-desc">A focused skill set built around creative production, online work and operational support.</p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          
-          <!-- PROJECT 1: Food Menu Website -->
-          <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group border border-white/10 hover:border-brand-400/50 transition duration-300">
-            <div>
-              <!-- Browser Mockup Header -->
-              <div class="bg-dark-surface px-4 py-3 border-b border-white/10 flex items-center justify-between">
-                <div class="flex items-center space-x-1.5">
-                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
-                  <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
-                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
-                </div>
-                <div class="text-[11px] font-mono text-slate-400 truncate max-w-[220px]">
-                  esource202.github.io/Food-Manu/
-                </div>
-                <div class="text-slate-500 text-xs">
-                  <i class="fa-solid fa-lock text-[10px] text-emerald-400"></i>
-                </div>
-              </div>
-
-              <!-- Project Banner / Visual Representation -->
-              <div class="relative bg-gradient-to-br from-[#1c1917] to-[#0f172a] p-8 border-b border-white/5 flex items-center justify-center overflow-hidden">
-                <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-amber-500/10 rounded-full blur-2xl"></div>
-                <div class="text-center relative z-10 py-6">
-                  <div class="w-16 h-16 rounded-2xl bg-amber-500/20 text-amber-400 border border-amber-500/30 flex items-center justify-center text-3xl mx-auto mb-3 shadow-lg group-hover:scale-110 transition duration-300">
-                    <i class="fa-solid fa-utensils"></i>
-                  </div>
-                  <h4 class="font-display font-bold text-2xl text-white">Food Menu Website</h4>
-                  <p class="text-xs text-amber-300/80 mt-1 font-mono">Digital Restaurant &amp; Order System</p>
-                </div>
-              </div>
-
-              <!-- Project Details -->
-              <div class="p-6">
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] text-slate-300">HTML5</span>
-                  <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] text-slate-300">CSS3</span>
-                  <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] text-slate-300">JavaScript</span>
-                  <span class="px-2.5 py-1 rounded-md bg-brand-500/15 border border-brand-500/30 text-[11px] text-brand-300 font-semibold">WhatsApp Order</span>
-                </div>
-
-                <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                  A responsive digital restaurant menu website built for modern dining establishments. Features structured food categories, promotional deals, real-time cart functionality, direct WhatsApp ordering integration, and Cash-on-Delivery (COD) checkout options.
-                </p>
-
-                <div class="space-y-2 text-xs text-slate-400">
-                  <div class="flex items-center space-x-2">
-                    <i class="fa-solid fa-check text-brand-400"></i>
-                    <span>Interactive category filtering &amp; food specials</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <i class="fa-solid fa-check text-brand-400"></i>
-                    <span>Seamless shopping cart &amp; instant WhatsApp order dispatch</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <i class="fa-solid fa-check text-brand-400"></i>
-                    <span>100% mobile-optimized for restaurant visitors</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Action Button -->
-            <div class="p-6 pt-0">
-              <a href="https://esource202.github.io/Food-Manu/" 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
-                 class="w-full btn-shine py-3 px-4 rounded-xl bg-gradient-to-r from-brand-500 to-brand-accent text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 transition">
-                <span>View Live Project</span>
-                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- PROJECT 2: OWN GYM Website -->
-          <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group border border-white/10 hover:border-brand-400/50 transition duration-300">
-            <div>
-              <!-- Browser Mockup Header -->
-              <div class="bg-dark-surface px-4 py-3 border-b border-white/10 flex items-center justify-between">
-                <div class="flex items-center space-x-1.5">
-                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
-                  <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
-                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
-                </div>
-                <div class="text-[11px] font-mono text-slate-400 truncate max-w-[220px]">
-                  esource202.github.io/GYM/
-                </div>
-                <div class="text-slate-500 text-xs">
-                  <i class="fa-solid fa-lock text-[10px] text-emerald-400"></i>
-                </div>
-              </div>
-
-              <!-- Project Banner / Visual Representation -->
-              <div class="relative bg-gradient-to-br from-[#18181b] to-[#09090b] p-8 border-b border-white/5 flex items-center justify-center overflow-hidden">
-                <div class="absolute -left-8 -bottom-8 w-36 h-36 bg-cyan-500/10 rounded-full blur-2xl"></div>
-                <div class="text-center relative z-10 py-6">
-                  <div class="w-16 h-16 rounded-2xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center text-3xl mx-auto mb-3 shadow-lg group-hover:scale-110 transition duration-300">
-                    <i class="fa-solid fa-dumbbell"></i>
-                  </div>
-                  <h4 class="font-display font-bold text-2xl text-white">OWN GYM Website</h4>
-                  <p class="text-xs text-cyan-300/80 mt-1 font-mono">Fitness Club, Plans &amp; Shop Portal</p>
-                </div>
-              </div>
-
-              <!-- Project Details -->
-              <div class="p-6">
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] text-slate-300">Responsive UI</span>
-                  <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] text-slate-300">E-Commerce Shop</span>
-                  <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] text-slate-300">Membership Tiers</span>
-                  <span class="px-2.5 py-1 rounded-md bg-emerald-500/15 border border-emerald-500/30 text-[11px] text-emerald-300 font-semibold">Join Now Flow</span>
-                </div>
-
-                <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                  A high-energy gym and fitness platform featuring membership plan tiers, integrated supplement and merchandise shop with product details, clear transparent pricing, an inquiry contact module, and immediate WhatsApp "Join Now" actions.
-                </p>
-
-                <div class="space-y-2 text-xs text-slate-400">
-                  <div class="flex items-center space-x-2">
-                    <i class="fa-solid fa-check text-cyan-400"></i>
-                    <span>Membership packages &amp; transparent fitness pricing</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <i class="fa-solid fa-check text-cyan-400"></i>
-                    <span>Product catalog with item breakdowns</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <i class="fa-solid fa-check text-cyan-400"></i>
-                    <span>Interactive WhatsApp registration triggers</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Action Button -->
-            <div class="p-6 pt-0">
-              <a href="https://esource202.github.io/GYM/" 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
-                 class="w-full btn-shine py-3 px-4 rounded-xl bg-gradient-to-r from-brand-500 to-brand-accent text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 transition">
-                <span>View Live Project</span>
-                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-              </a>
-            </div>
-          </div>
-
+        <div class="skills-grid stagger">
+          <div class="skill card reveal" style="--i:1"><span class="icon">🎨</span><strong>Graphic Design</strong></div>
+          <div class="skill card reveal" style="--i:2"><span class="icon">✒️</span><strong>Logo Design</strong></div>
+          <div class="skill card reveal" style="--i:3"><span class="icon">🧠</span><strong>AI Image Generation</strong></div>
+          <div class="skill card reveal" style="--i:4"><span class="icon">💬</span><strong>AI Prompt Engineering</strong></div>
+          <div class="skill card reveal" style="--i:5"><span class="icon">📣</span><strong>AI Creative Advertising</strong></div>
+          <div class="skill card reveal" style="--i:6"><span class="icon">🖥️</span><strong>Web Design</strong></div>
+          <div class="skill card reveal" style="--i:7"><span class="icon">🔤</span><strong>HTML</strong></div>
+          <div class="skill card reveal" style="--i:8"><span class="icon">🎛️</span><strong>CSS</strong></div>
+          <div class="skill card reveal" style="--i:9"><span class="icon">⚙️</span><strong>JavaScript</strong></div>
+          <div class="skill card reveal" style="--i:10"><span class="icon">🧩</span><strong>Canva</strong></div>
+          <div class="skill card reveal" style="--i:11"><span class="icon">📱</span><strong>Responsive Web Design</strong></div>
+          <div class="skill card reveal" style="--i:12"><span class="icon">⌨️</span><strong>Computer Operations</strong></div>
+          <div class="skill card reveal" style="--i:13"><span class="icon">🧾</span><strong>VAT Online Return</strong></div>
+          <div class="skill card reveal" style="--i:14"><span class="icon">📌</span><strong>VAT Consulting</strong></div>
+          <div class="skill card reveal" style="--i:15"><span class="icon">🤝</span><strong>Business & Supplier Management</strong></div>
+          <div class="skill card reveal" style="--i:16"><span class="icon">💎</span><strong>Digital Product Creation</strong></div>
         </div>
-
       </div>
     </section>
 
-    <!-- 9. CONTACT SECTION -->
-    <section id="contact" class="py-20 bg-dark-surface/60 border-t border-white/5 relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-14">
-          <h2 class="text-xs font-bold text-brand-400 uppercase tracking-widest mb-2">Get In Touch</h2>
-          <p class="font-display text-3xl sm:text-4xl font-extrabold text-white">Let’s Connect Directly</p>
-          <div class="w-16 h-1 bg-gradient-to-r from-brand-400 to-brand-accent mx-auto mt-4 rounded-full"></div>
-          <p class="text-slate-400 text-sm mt-4">Available for graphic design, AI imagery, web design projects, digital products, and VAT consultations.</p>
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-kicker">Experience</span>
+            <h2 class="section-title">Practical experience across creative and business work.</h2>
+          </div>
+          <p class="section-desc">Presented exactly around Rakib’s current and known work areas.</p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start max-w-5xl mx-auto">
-          
-          <!-- Contact Cards -->
-          <div class="lg:col-span-6 space-y-4">
-            
-            <!-- WhatsApp / Phone Item -->
-            <div class="glass-card p-5 rounded-2xl flex items-center justify-between">
-              <div class="flex items-center space-x-4">
-                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xl shrink-0">
-                  <i class="fa-brands fa-whatsapp"></i>
-                </div>
-                <div>
-                  <div class="text-xs text-slate-400">Phone &amp; WhatsApp</div>
-                  <div class="text-base font-bold text-white tracking-wide">01402525700</div>
-                  <div class="text-[11px] text-emerald-400">Available Daily</div>
-                </div>
-              </div>
-              <div class="flex items-center space-x-2">
-                <button onclick="copyToClipboard('01402525700', 'Phone number copied!')" class="p-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white transition" title="Copy Number">
-                  <i class="fa-regular fa-copy text-sm"></i>
-                </button>
-                <a href="https://wa.me/88014025700" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition flex items-center space-x-1.5">
-                  <i class="fa-brands fa-whatsapp"></i>
-                  <span>Chat</span>
-                </a>
-              </div>
-            </div>
+        <div class="experience-grid">
+          <aside class="experience-summary glass reveal">
+            <span class="eyebrow">Current Work Areas</span>
+            <h3 style="font-size:28px;line-height:1.12;letter-spacing:-.04em;margin:18px 0 12px;">Creative services, VAT support and active supplier/trading business.</h3>
+            <p>
+              Rakib combines design, AI learning, online VAT work and business management. His supplier and trading business is currently running.
+            </p>
+          </aside>
 
-            <!-- Email Item -->
-            <div class="glass-card p-5 rounded-2xl flex items-center justify-between">
-              <div class="flex items-center space-x-4">
-                <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/30 text-brand-400 flex items-center justify-center text-xl shrink-0">
-                  <i class="fa-regular fa-envelope"></i>
-                </div>
-                <div>
-                  <div class="text-xs text-slate-400">Email Address</div>
-                  <div class="text-base font-bold text-white tracking-wide truncate max-w-[190px] sm:max-w-none">esource202@gmail.com</div>
-                  <div class="text-[11px] text-brand-400">Online Inquiries</div>
-                </div>
+          <div class="timeline stagger">
+            <article class="timeline-item reveal" style="--i:1">
+              <div class="dot" aria-hidden="true">🎨</div>
+              <div class="timeline-card card">
+                <h3>Graphic Design</h3>
+                <div class="time">Approximately 3 years</div>
+                <p>Visual design work including graphics, logo concepts, advertising visuals and digital creative assets.</p>
               </div>
-              <div class="flex items-center space-x-2">
-                <button onclick="copyToClipboard('esource202@gmail.com', 'Email address copied!')" class="p-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white transition" title="Copy Email">
-                  <i class="fa-regular fa-copy text-sm"></i>
-                </button>
-                <a href="mailto:esource202@gmail.com" class="px-3.5 py-2 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold transition flex items-center space-x-1.5">
-                  <i class="fa-solid fa-paper-plane"></i>
-                  <span>Mail</span>
-                </a>
-              </div>
-            </div>
+            </article>
 
-            <!-- Location Item -->
-            <div class="glass-card p-5 rounded-2xl flex items-center space-x-4">
-              <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 flex items-center justify-center text-xl shrink-0">
-                <i class="fa-solid fa-location-dot"></i>
+            <article class="timeline-item reveal" style="--i:2">
+              <div class="dot" aria-hidden="true">🧠</div>
+              <div class="timeline-card card">
+                <h3>AI Creative / AI Learning</h3>
+                <div class="time">Approximately 1.5 years</div>
+                <p>AI creative exploration focused on image generation, prompt engineering and modern advertising visuals.</p>
               </div>
-              <div>
-                <div class="text-xs text-slate-400">Location</div>
-                <div class="text-base font-bold text-white">Siddhirganj, Narayanganj</div>
-                <div class="text-[11px] text-slate-400">Dhaka Division, Bangladesh</div>
+            </article>
+
+            <article class="timeline-item reveal" style="--i:3">
+              <div class="dot" aria-hidden="true">🧾</div>
+              <div class="timeline-card card">
+                <h3>VAT Online Return</h3>
+                <div class="time">Currently works with approximately 38 companies</div>
+                <p>Online VAT return-related work and support for ongoing VAT tasks.</p>
               </div>
-            </div>
+            </article>
 
-            <!-- Social Links Panel -->
-            <div class="glass-card p-5 rounded-2xl">
-              <div class="text-xs text-slate-400 mb-3 font-semibold uppercase tracking-wider">Social &amp; Business Channels</div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <a href="https://www.facebook.com/share/1C3Nk8SkyZ/" target="_blank" rel="noopener noreferrer" 
-                   class="flex items-center space-x-3 p-3 rounded-xl bg-white/5 hover:bg-[#1877F2]/20 border border-white/5 hover:border-[#1877F2]/40 text-slate-200 transition group">
-                  <i class="fa-brands fa-facebook text-xl text-[#1877F2] group-hover:scale-110 transition"></i>
-                  <div class="text-left">
-                    <span class="text-xs font-bold block text-white">Personal Profile</span>
-                    <span class="text-[11px] text-slate-400">Facebook / Rakib</span>
-                  </div>
-                </a>
-
-                <a href="https://www.facebook.com/share/1ccJmyvEPd/" target="_blank" rel="noopener noreferrer" 
-                   class="flex items-center space-x-3 p-3 rounded-xl bg-white/5 hover:bg-amber-500/20 border border-white/5 hover:border-amber-500/40 text-slate-200 transition group">
-                  <i class="fa-solid fa-store text-xl text-amber-400 group-hover:scale-110 transition"></i>
-                  <div class="text-left">
-                    <span class="text-xs font-bold block text-white">Trading Business</span>
-                    <span class="text-[11px] text-slate-400">Facebook Page</span>
-                  </div>
-                </a>
+            <article class="timeline-item reveal" style="--i:4">
+              <div class="dot" aria-hidden="true">📌</div>
+              <div class="timeline-card card">
+                <h3>VAT Consulting</h3>
+                <div class="time">Currently works with approximately 8 companies</div>
+                <p>Professional VAT consulting support and online VAT-related assistance.</p>
               </div>
-            </div>
+            </article>
 
+            <article class="timeline-item reveal" style="--i:5">
+              <div class="dot" aria-hidden="true">🤝</div>
+              <div class="timeline-card card">
+                <h3>Supplier & Trading Business</h3>
+                <div class="time">Approximately 6 years of running business experience • Currently active</div>
+                <p>Active supplier and trading business experience with practical business management involvement.</p>
+              </div>
+            </article>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- Direct Quick Message Form -->
-          <div class="lg:col-span-6 glass-card p-6 sm:p-8 rounded-2xl border border-white/10">
-            <h3 class="text-xl font-display font-bold text-white mb-2">Send a Direct Message</h3>
-            <p class="text-xs text-slate-400 mb-6">Fill in your note and it will create an instant WhatsApp message draft for Rakib.</p>
+    <section id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-kicker">Services & Pricing</span>
+            <h2 class="section-title">Premium service cards with clear starting ranges.</h2>
+          </div>
+          <p class="section-desc">Pricing depends on project scope, required work and discussion.</p>
+        </div>
 
-            <form id="contactForm" class="space-y-4" onsubmit="handleMessageSubmit(event)">
-              <div>
-                <label for="senderName" class="block text-xs font-medium text-slate-300 mb-1.5">Your Name</label>
-                <input 
-                  type="text" 
-                  id="senderName" 
-                  required
-                  placeholder="e.g. Tanvir Ahmed" 
-                  class="w-full px-4 py-2.5 rounded-xl bg-dark-base/80 border border-white/10 text-white text-sm focus:outline-none focus:border-brand-400 transition"
-                />
+        <div class="services-grid stagger">
+          <article class="service card reveal" style="--i:1">
+            <span class="icon">🎨</span>
+            <h3>Graphic Design & Logo Design</h3>
+            <p>Clean visual graphics and logo design support for personal, business and digital use.</p>
+            <span class="price">৳599–৳6,999</span>
+          </article>
+
+          <article class="service card reveal" style="--i:2">
+            <span class="icon">📣</span>
+            <h3>AI Advertising Image</h3>
+            <p>Modern AI-powered advertising images using creative direction and prompt-based visual generation.</p>
+            <span class="price">৳99–৳799</span>
+          </article>
+
+          <article class="service card reveal" style="--i:3">
+            <span class="icon">🖥️</span>
+            <h3>Website Design</h3>
+            <p>Responsive web design using HTML, CSS and JavaScript for clean, mobile-friendly presentation.</p>
+            <span class="price">৳1,000–৳20,000</span>
+          </article>
+
+          <article class="service card reveal" style="--i:4">
+            <span class="icon">💎</span>
+            <h3>Digital Products</h3>
+            <p>Digital product creation support based on concept, format, content needs and intended use.</p>
+            <span class="price">Custom Pricing</span>
+          </article>
+
+          <article class="service card reveal" style="--i:5">
+            <span class="icon">🤝</span>
+            <h3>Supplier & Trading Business</h3>
+            <p>Professional supplier and trading business support based on active business experience, scope and availability.</p>
+            <span class="price">Custom Pricing</span>
+          </article>
+
+          <article class="service card reveal" style="--i:6">
+            <span class="icon">🧾</span>
+            <h3>VAT Consulting</h3>
+            <p>Professional VAT consulting support, online VAT return-related assistance and practical VAT work guidance.</p>
+            <span class="price">Custom Pricing</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="vat-business">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-kicker">VAT & Business</span>
+            <h2 class="section-title">Online VAT work and currently running business activity.</h2>
+          </div>
+          <p class="section-desc">A dedicated section for Rakib’s VAT-related support and supplier/trading business profile.</p>
+        </div>
+
+        <div class="vat-business-grid">
+          <article class="focus-card glass reveal">
+            <span class="icon">🧾</span>
+            <h3>VAT Online Return & Consulting</h3>
+            <p>
+              Rakib currently works with approximately 38 companies for VAT online return-related work and approximately 8 companies for VAT consulting support.
+            </p>
+            <ul class="check-list">
+              <li>Professional VAT consulting support</li>
+              <li>Online VAT-related assistance</li>
+              <li>Computer operation and documentation-focused work</li>
+            </ul>
+          </article>
+
+          <article class="focus-card glass reveal">
+            <span class="icon">🤝</span>
+            <h3>Supplier & Trading Business</h3>
+            <p>
+              Rakib has approximately 6 years of running business experience and his supplier and trading business is currently active.
+            </p>
+            <ul class="check-list">
+              <li>Currently running business activity</li>
+              <li>Supplier and trading business management experience</li>
+              <li>Professional business communication and scope-based discussion</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-kicker">Featured Projects</span>
+            <h2 class="section-title">Real projects only.</h2>
+          </div>
+          <p class="section-desc">Only the two real project links provided by Rakib are shown here.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project card reveal">
+            <div class="project-visual">
+              <span class="project-number">PROJECT 01</span>
+              <div class="browser-mock" aria-hidden="true">
+                <div class="mock-top"><i></i><i></i><i></i></div>
+                <div class="mock-lines"><span></span><span></span><span></span></div>
               </div>
-
-              <div>
-                <label for="serviceSelect" class="block text-xs font-medium text-slate-300 mb-1.5">Service You Are Interested In</label>
-                <select 
-                  id="serviceSelect" 
-                  class="w-full px-4 py-2.5 rounded-xl bg-dark-base border border-white/10 text-white text-sm focus:outline-none focus:border-brand-400 transition">
-                  <option value="Graphic Design & Logo Design">Graphic Design &amp; Logo Design (৳599–৳6,999)</option>
-                  <option value="AI Advertising Image">AI Advertising Image (৳99–৳799)</option>
-                  <option value="Website Design">Website Design (৳1,000–৳20,000)</option>
-                  <option value="Digital Products">Digital Products (Custom Pricing)</option>
-                  <option value="VAT Online Return (9.1)">VAT Online Return (9.1 Filing)</option>
-                  <option value="VAT Consulting">VAT Consulting &amp; Advisory</option>
-                  <option value="Supplier/Trading Inquiry">Supplier / Trading Business Inquiry</option>
-                  <option value="Other Inquiries">Other Inquiries</option>
-                </select>
+            </div>
+            <div class="project-body">
+              <h3>Food Menu Website</h3>
+              <p>Responsive digital restaurant menu with food categories, offers, cart functionality, WhatsApp ordering and COD/order features.</p>
+              <div class="tag-row">
+                <span class="tag">Responsive</span>
+                <span class="tag">Cart</span>
+                <span class="tag">WhatsApp</span>
               </div>
+              <a class="btn btn-primary btn-small" href="https://esource202.github.io/Food-Manu/" target="_blank" rel="noopener noreferrer">View Live Project <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
 
-              <div>
-                <label for="senderMessage" class="block text-xs font-medium text-slate-300 mb-1.5">Your Message / Requirements</label>
-                <textarea 
-                  id="senderMessage" 
-                  rows="4" 
-                  required
-                  placeholder="Describe what you need..." 
-                  class="w-full px-4 py-2.5 rounded-xl bg-dark-base/80 border border-white/10 text-white text-sm focus:outline-none focus:border-brand-400 transition resize-none"></textarea>
+          <article class="project card reveal">
+            <div class="project-visual">
+              <span class="project-number">PROJECT 02</span>
+              <div class="browser-mock" aria-hidden="true">
+                <div class="mock-top"><i></i><i></i><i></i></div>
+                <div class="mock-lines"><span></span><span></span><span></span></div>
               </div>
+            </div>
+            <div class="project-body">
+              <h3>OWN GYM Website</h3>
+              <p>Responsive gym website featuring membership plans, shop/products, product details, pricing, contact and WhatsApp/Join Now actions.</p>
+              <div class="tag-row">
+                <span class="tag">Responsive</span>
+                <span class="tag">Membership</span>
+                <span class="tag">Products</span>
+              </div>
+              <a class="btn btn-primary btn-small" href="https://esource202.github.io/GYM/" target="_blank" rel="noopener noreferrer">View Live Project <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-              <button 
-                type="submit" 
-                class="w-full btn-shine py-3.5 px-6 rounded-xl bg-gradient-to-r from-brand-500 via-indigo-600 to-brand-accent text-white font-bold text-sm tracking-wide uppercase shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 transition flex items-center justify-center space-x-2">
-                <i class="fa-brands fa-whatsapp text-base"></i>
-                <span>Send to WhatsApp Now</span>
+    <section id="social">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-kicker">Facebook & Social Links</span>
+            <h2 class="section-title">Connect with Rakib through official links.</h2>
+          </div>
+          <p class="section-desc">The business page, personal profile and digital service page are clearly separated.</p>
+        </div>
+
+        <div class="social-grid stagger">
+          <article class="social-card card reveal" style="--i:1">
+            <div>
+              <span class="icon">🏢</span>
+              <h3>Business Facebook Page</h3>
+              <p>Official business page link.</p>
+            </div>
+            <a class="btn btn-small" href="https://www.facebook.com/share/1ccJmyvEPd/" target="_blank" rel="noopener noreferrer">Open Page</a>
+          </article>
+
+          <article class="social-card card reveal" style="--i:2">
+            <div>
+              <span class="icon">👤</span>
+              <h3>Personal Facebook Profile</h3>
+              <p>Personal profile of Rakib.</p>
+            </div>
+            <a class="btn btn-small" href="https://www.facebook.com/share/14x5ig8ChUu/" target="_blank" rel="noopener noreferrer">Open Profile</a>
+          </article>
+
+          <article class="social-card card reveal" style="--i:3">
+            <div>
+              <span class="icon">💻</span>
+              <h3>Digital Service Facebook Page</h3>
+              <p>Digital service page link.</p>
+            </div>
+            <a class="btn btn-small" href="https://www.facebook.com/share/19M9NFum6S/" target="_blank" rel="noopener noreferrer">Open Page</a>
+          </article>
+
+          <article class="social-card card reveal" style="--i:4">
+            <div>
+              <span class="icon">💬</span>
+              <h3>WhatsApp</h3>
+              <p>Direct WhatsApp contact.</p>
+            </div>
+            <a class="btn btn-primary btn-small" href="https://wa.me/88014025700" target="_blank" rel="noopener noreferrer">Message Now</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-kicker">Contact</span>
+            <h2 class="section-title">Let’s discuss your design, VAT or business need.</h2>
+          </div>
+          <p class="section-desc">Use email, phone, WhatsApp or the quick contact form below.</p>
+        </div>
+
+        <div class="contact-grid">
+          <aside class="contact-panel glass reveal">
+            <span class="eyebrow">Available Contact Options</span>
+            <div class="contact-list">
+              <a class="contact-link" href="tel:01402525700">
+                <span class="icon">☎️</span><span>01402525700</span>
+              </a>
+              <a class="contact-link" href="mailto:esource202@gmail.com">
+                <span class="icon">✉️</span><span>esource202@gmail.com</span>
+              </a>
+              <a class="contact-link" href="https://wa.me/88014025700" target="_blank" rel="noopener noreferrer">
+                <span class="icon">💬</span><span>WhatsApp: +88014025700</span>
+              </a>
+              <button class="contact-link" type="button" id="copyEmail" style="text-align:left;color:inherit;cursor:pointer;">
+                <span class="icon">📋</span><span>Copy Email Address</span>
               </button>
-            </form>
-          </div>
+            </div>
+          </aside>
 
+          <form class="form glass reveal" id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Your Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Enter your name" required />
+              <span class="error-text">Please enter your name.</span>
+            </div>
+
+            <div class="field">
+              <label for="email">Your Email or Phone</label>
+              <input id="email" name="email" type="text" autocomplete="email" placeholder="Email or phone number" required />
+              <span class="error-text">Please enter a valid contact detail.</span>
+            </div>
+
+            <div class="field">
+              <label for="topic">Topic</label>
+              <input id="topic" name="topic" type="text" placeholder="Graphic design, website, VAT, business..." required />
+              <span class="error-text">Please enter a topic.</span>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+              <span class="error-text">Please write a message.</span>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Send Email <span aria-hidden="true">↗</span></button>
+              <button class="btn btn-purple" type="button" id="whatsAppFromForm">Send WhatsApp <span aria-hidden="true">💬</span></button>
+            </div>
+            <p class="form-note">This form opens your email app or WhatsApp with the message prepared. No backend is required.</p>
+            <div class="status" id="formStatus" role="status" aria-live="polite"></div>
+          </form>
         </div>
-
       </div>
     </section>
   </main>
 
-  <!-- 10. FOOTER -->
-  <footer class="bg-dark-base border-t border-white/10 py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-        
-        <div class="flex items-center space-x-3 text-center md:text-left">
-          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-400 to-brand-accent p-[1px]">
-            <div class="w-full h-full bg-dark-base rounded-[7px] flex items-center justify-center font-display font-bold text-white text-sm">
-              R
-            </div>
-          </div>
-          <div>
-            <span class="text-white font-display font-bold text-base">Md Rakibul Hasan Rakib</span>
-            <span class="text-xs text-slate-500 block">Personal Portfolio • Edition 2026</span>
-          </div>
-        </div>
-
-        <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
-          <a href="#hero" class="hover:text-brand-400 transition">Back to Top</a>
-          <a href="#about" class="hover:text-brand-400 transition">About</a>
-          <a href="#skills" class="hover:text-brand-400 transition">Skills</a>
-          <a href="#services" class="hover:text-brand-400 transition">Pricing</a>
-          <a href="#vat-business" class="hover:text-brand-400 transition">VAT &amp; Business</a>
-          <a href="#projects" class="hover:text-brand-400 transition">Projects</a>
-          <a href="#contact" class="hover:text-brand-400 transition">Contact</a>
-        </div>
-
-        <div class="text-xs text-slate-500 text-center md:text-right">
-          <div>Siddhirganj, Narayanganj, Bangladesh</div>
-          <div class="mt-0.5">© 2026 Rakib. All Rights Reserved.</div>
-        </div>
-
-      </div>
+  <footer>
+    <div class="container footer-wrap">
+      <div>© <span id="year"></span> <strong>Md Rakibul Hasan Rakib</strong>. Portfolio 2026.</div>
+      <div>Graphic Designer • AI Creative Professional • Web Designer</div>
     </div>
   </footer>
 
-  <!-- Interactive JavaScript -->
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
+
   <script>
-    // 1. Mobile Menu Drawer Toggle
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuIcon = document.getElementById('menuIcon');
+    (function(){
+      "use strict";
 
-    mobileMenuBtn.addEventListener('click', () => {
-      const isHidden = mobileMenu.classList.contains('hidden');
-      if (isHidden) {
-        mobileMenu.classList.remove('hidden');
-        menuIcon.classList.remove('fa-bars');
-        menuIcon.classList.add('fa-xmark');
-      } else {
-        mobileMenu.classList.add('hidden');
-        menuIcon.classList.remove('fa-xmark');
-        menuIcon.classList.add('fa-bars');
+      const $ = (selector, scope = document) => scope.querySelector(selector);
+      const $$ = (selector, scope = document) => Array.from(scope.querySelectorAll(selector));
+
+      const nav = $("#navbar");
+      const menuBtn = $("#menuBtn");
+      const navLinks = $("#navLinks");
+      const toTop = $("#toTop");
+      const year = $("#year");
+      const profileImage = $("#profileImage");
+      const profileFallback = $("#profileFallback");
+
+      if (year) year.textContent = new Date().getFullYear();
+
+      if (profileImage && profileFallback) {
+        profileImage.addEventListener("error", function(){
+          profileImage.style.display = "none";
+          profileFallback.style.display = "grid";
+          profileFallback.setAttribute("aria-hidden", "false");
+        }, { once:true });
       }
-    });
 
-    // Close mobile menu on link click
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        menuIcon.classList.remove('fa-xmark');
-        menuIcon.classList.add('fa-bars');
-      });
-    });
+      function setNavState(){
+        const y = window.scrollY || document.documentElement.scrollTop;
+        if (nav) nav.classList.toggle("scrolled", y > 20);
+        if (toTop) toTop.classList.toggle("show", y > 520);
+      }
 
-    // 2. Active Nav Link on Scroll
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
+      setNavState();
+      window.addEventListener("scroll", setNavState, { passive:true });
 
-    window.addEventListener('scroll', () => {
-      let scrollY = window.pageYOffset;
+      if (menuBtn && navLinks) {
+        menuBtn.addEventListener("click", function(){
+          const open = navLinks.classList.toggle("open");
+          menuBtn.setAttribute("aria-expanded", String(open));
+          menuBtn.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+        });
 
-      sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 120;
-        const sectionId = current.getAttribute('id');
+        $$("#navLinks a").forEach(function(link){
+          link.addEventListener("click", function(){
+            navLinks.classList.remove("open");
+            menuBtn.setAttribute("aria-expanded", "false");
+            menuBtn.setAttribute("aria-label", "Open navigation menu");
+          });
+        });
 
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-          navLinks.forEach(link => {
-            if (link.getAttribute('href') === '#' + sectionId) {
-              link.classList.add('text-brand-400', 'bg-white/5');
-              link.classList.remove('text-slate-300');
-            } else {
-              link.classList.remove('text-brand-400', 'bg-white/5');
-              link.classList.add('text-slate-300');
+        document.addEventListener("click", function(event){
+          if (!navLinks.classList.contains("open")) return;
+          const target = event.target;
+          if (target && !navLinks.contains(target) && !menuBtn.contains(target)) {
+            navLinks.classList.remove("open");
+            menuBtn.setAttribute("aria-expanded", "false");
+          }
+        });
+      }
+
+      if (toTop) {
+        toTop.addEventListener("click", function(){
+          window.scrollTo({ top:0, behavior:"smooth" });
+        });
+      }
+
+      const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      const revealItems = $$(".reveal");
+      if ("IntersectionObserver" in window && !reducedMotion) {
+        const observer = new IntersectionObserver(function(entries, obs){
+          entries.forEach(function(entry){
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              obs.unobserve(entry.target);
             }
           });
-        }
-      });
-    });
+        }, { threshold:0.12, rootMargin:"0px 0px -40px 0px" });
 
-    // 3. Clipboard copy with sleek Toast
-    function copyToClipboard(text, message) {
-      if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(text);
+        revealItems.forEach(function(item){ observer.observe(item); });
       } else {
-        const textArea = document.createElement('textarea');
-        textArea.value = text;
-        textArea.style.position = 'fixed';
-        textArea.style.left = '-999999px';
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
-        try {
-          document.execCommand('copy');
-        } catch (err) {
-          console.error('Fallback copy failed', err);
-        }
-        textArea.remove();
+        revealItems.forEach(function(item){ item.classList.add("visible"); });
       }
 
-      showToast(message || 'Copied to clipboard!');
-    }
+      const sections = $$("main section[id]");
+      const navAnchors = $$(".nav-links a");
 
-    function showToast(message) {
-      const toast = document.getElementById('toast');
-      const toastMsg = document.getElementById('toast-message');
-      toastMsg.innerText = message;
+      if ("IntersectionObserver" in window && sections.length && navAnchors.length) {
+        const activeObserver = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if (!entry.isIntersecting) return;
+            const id = entry.target.getAttribute("id");
+            navAnchors.forEach(function(anchor){
+              anchor.classList.toggle("active", anchor.getAttribute("href") === "#" + id);
+            });
+          });
+        }, { threshold:0.28, rootMargin:"-18% 0px -58% 0px" });
 
-      toast.classList.remove('translate-y-24', 'opacity-0');
-      toast.classList.add('translate-y-0', 'opacity-100');
+        sections.forEach(function(section){ activeObserver.observe(section); });
+      }
 
-      setTimeout(() => {
-        toast.classList.remove('translate-y-0', 'opacity-100');
-        toast.classList.add('translate-y-24', 'opacity-0');
-      }, 2600);
-    }
+      let cursorTicking = false;
+      function updateCursor(event){
+        if (window.innerWidth < 900 || reducedMotion) return;
+        if (cursorTicking) return;
+        cursorTicking = true;
+        window.requestAnimationFrame(function(){
+          document.body.style.setProperty("--cursor-x", event.clientX + "px");
+          document.body.style.setProperty("--cursor-y", event.clientY + "px");
+          cursorTicking = false;
+        });
+      }
+      window.addEventListener("pointermove", updateCursor, { passive:true });
 
-    // 4. Contact Form to WhatsApp Draft
-    function handleMessageSubmit(e) {
-      e.preventDefault();
-      const name = document.getElementById('senderName').value.trim();
-      const service = document.getElementById('serviceSelect').value;
-      const message = document.getElementById('senderMessage').value.trim();
+      const contactForm = $("#contactForm");
+      const formStatus = $("#formStatus");
+      const whatsAppFromForm = $("#whatsAppFromForm");
 
-      const fullText = `Hello Rakib, my name is ${name}. I am contacting you regarding "${service}". Message: ${message}`;
-      const encodedText = encodeURIComponent(fullText);
-      const whatsappURL = `https://wa.me/88014025700?text=${encodedText}`;
+      function encodeMessage(){
+        const name = ($("#name") && $("#name").value.trim()) || "";
+        const contact = ($("#email") && $("#email").value.trim()) || "";
+        const topic = ($("#topic") && $("#topic").value.trim()) || "";
+        const message = ($("#message") && $("#message").value.trim()) || "";
+        return {
+          name,
+          contact,
+          topic,
+          message,
+          text:
+            "Hello Rakib,%0A%0A" +
+            "Name: " + encodeURIComponent(name) + "%0A" +
+            "Contact: " + encodeURIComponent(contact) + "%0A" +
+            "Topic: " + encodeURIComponent(topic) + "%0A" +
+            "Message: " + encodeURIComponent(message)
+        };
+      }
 
-      showToast('Opening WhatsApp with your message...');
-      setTimeout(() => {
-        window.open(whatsappURL, '_blank');
-      }, 500);
-    }
+      function validateForm(){
+        if (!contactForm) return false;
+        let ok = true;
+        const fields = [
+          { el: $("#name"), min: 2 },
+          { el: $("#email"), min: 5 },
+          { el: $("#topic"), min: 2 },
+          { el: $("#message"), min: 8 }
+        ];
+
+        fields.forEach(function(item){
+          const field = item.el ? item.el.closest(".field") : null;
+          const valid = item.el && item.el.value.trim().length >= item.min;
+          if (field) field.classList.toggle("error", !valid);
+          if (!valid) ok = false;
+        });
+
+        if (formStatus) {
+          formStatus.textContent = ok ? "" : "Please complete the required fields.";
+          formStatus.style.color = ok ? "var(--brand-3)" : "var(--danger)";
+        }
+        return ok;
+      }
+
+      if (contactForm) {
+        contactForm.addEventListener("input", function(event){
+          const field = event.target && event.target.closest ? event.target.closest(".field") : null;
+          if (field) field.classList.remove("error");
+          if (formStatus) formStatus.textContent = "";
+        });
+
+        contactForm.addEventListener("submit", function(event){
+          event.preventDefault();
+          if (!validateForm()) return;
+          const data = encodeMessage();
+          const subject = encodeURIComponent("Portfolio Contact: " + data.topic);
+          const body = encodeURIComponent(
+            "Hello Rakib,\n\n" +
+            "Name: " + data.name + "\n" +
+            "Contact: " + data.contact + "\n" +
+            "Topic: " + data.topic + "\n" +
+            "Message: " + data.message
+          );
+          if (formStatus) {
+            formStatus.style.color = "var(--brand-3)";
+            formStatus.textContent = "Opening your email app...";
+          }
+          window.location.href = "mailto:esource202@gmail.com?subject=" + subject + "&body=" + body;
+        });
+      }
+
+      if (whatsAppFromForm) {
+        whatsAppFromForm.addEventListener("click", function(){
+          if (!validateForm()) return;
+          const data = encodeMessage();
+          if (formStatus) {
+            formStatus.style.color = "var(--brand-3)";
+            formStatus.textContent = "Opening WhatsApp...";
+          }
+          window.open("https://wa.me/88014025700?text=" + data.text, "_blank", "noopener,noreferrer");
+        });
+      }
+
+      const copyEmail = $("#copyEmail");
+      if (copyEmail) {
+        copyEmail.addEventListener("click", function(){
+          const email = "esource202@gmail.com";
+          function done(success){
+            const label = copyEmail.querySelector("span:last-child");
+            if (label) {
+              const original = "Copy Email Address";
+              label.textContent = success ? "Email Copied: " + email : email;
+              window.setTimeout(function(){ label.textContent = original; }, 2200);
+            }
+          }
+
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(email).then(function(){ done(true); }).catch(function(){ done(false); });
+          } else {
+            const temp = document.createElement("textarea");
+            temp.value = email;
+            temp.style.position = "fixed";
+            temp.style.opacity = "0";
+            document.body.appendChild(temp);
+            temp.select();
+            try { document.execCommand("copy"); done(true); }
+            catch(e) { done(false); }
+            document.body.removeChild(temp);
+          }
+        });
+      }
+    })();
   </script>
 </body>
 </html>
